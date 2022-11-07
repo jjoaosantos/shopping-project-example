@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root {
+    --color-theme: #ff7d66;
+    --contrast-color: #240011;
+    --complementary-color: #ff674d;
+    --paper-color: #ffa899;
+    --bright-color: #f9e6e6;
+    --footer-color: rgb(15, 15, 15);
+    --shadow-color: #2400119e;
+
+    --text-font: "Noto Sans", sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+html, body {
+    background-color: var(--paper-color);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--color-theme);
+    padding: 0px 8px 20px 8px;
+}
+
+header form {
+    text-align: right;
+}
+
+header form label {
+    background-color: #f9e6e652;
+    padding: 5px;
+    border-radius: 14px;
+    transition: background-color .8s;
+}
+
+header form label input {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    padding-left: 4px;
+    border: none;
+    outline: none;
+}
+
+header form label input::placeholder {
+    color: rgba(0, 0, 0, 0.795);
+}
+
+header form label span#searchIcon {
+    font-size: 13px;
+    padding-left: 6px;
+}
+
+span#menuIcon {
+    display: block;
+    background-color: var(--complementary-color);
+    color: var(--contrast-color);
+    text-align: center;
+    width: 100vw;
+}
+
+span#menuIcon:hover {
+    box-shadow: inset -2px 0px 5px 1px var(--shadow-color);
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+nav {
+    background-color: var(--bright-color);
+    width: 100vw;
+    padding: 4px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 5px;
+    transition: background-color .3s;
+}
+
+nav ul li:hover {
+    background-color: #ffcdcd;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: small;
+    transition: .4s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--complementary-color);
+    font-weight: bold;
+}
+
+nav ul li a:focus-within {
+    outline-color: var(--complementary-color);
+}
+
+/* form#navigator-filter {
+    background-color: white;
+    width: 90vw;
+    height: 30px;
+    padding: 6px;
+    border-radius: 6px 6px 0px 0px;
+} */
+
+form#navigator-filter > div {
+    display: inline-block;
+}
+
+main {
+    background-color: white;
+    text-align: center;
+    width: 90vw;
+    height: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 35px;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0px 1px 2px 0px var(--shadow-color);
+}
+
+main aside {
+    text-align: left;
+    width: 100%;
+    background-color: var(--color-theme);
+    margin-bottom: 10px;
+    padding: 6px;
+}
+
+main aside h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+main aside form#navigator-filter {
+    background-color: var(--bright-color);
+    text-align: right;
+    font-size: small;
+    padding: 0px 6px;
+}
+
+main div {
+    display: inline-block;
+    background-color: aquamarine;
+    width: 42%;
+    height: 33%;
+    margin: 5px 3px;
+}
+
+footer {
+    background-color: rgb(61, 61, 61);
+    width: 100vw;
+    height: 26%;
+    box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
+}

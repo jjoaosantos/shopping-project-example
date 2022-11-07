@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchFor</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <h1><a href="#home"><img src="images/searchfor-logo.png" alt="SearchFor Home" width="144px"></a></h1>
+        <form>
+            <label for="searchInput" id="searchLabel">
+                <span role="img" id="searchIcon" class="material-symbols-outlined" aria-hidden="true">
+                    search
+                </span>
+                <input type="search" name="searchInput" id="searchInput" placeholder="Search for">
+            </label>
+        </form>
+    </header>
+    <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
+    <nav id="navigator-list" aria-hidden="true">
+        <ul id="list"></ul>
+    </nav>
+    <main>
+        <aside>
+            <h2>Filter</h2>
+            <form id="navigator-filter">
+                <label for="marcas">Bradings</label>
+                <select name="marcas" id="marcas">
+                    <option value="">all</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="iphone">Iphone</option>
+                </select>
+                <!-- <div>
+                    <label for="condicao">condição</label>
+                    <select name="condicao" id="condicao">
+                        <option value=""></option>
+                        <option value="novo">Novo</option>
+                        <option value="usado">Usado</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="price">Price</label>
+                </div> -->
+            </form>
+        </aside>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+</html>
