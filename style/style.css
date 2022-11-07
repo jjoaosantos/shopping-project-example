@@ -143,14 +143,18 @@ main aside {
 }
 
 main aside h2 {
+    display: inline-block;
     font-size: 14px;
     font-weight: normal;
+    width: 9%;
 }
 
 main aside form#navigator-filter {
+    display: inline-block;
     background-color: var(--bright-color);
     text-align: right;
     font-size: small;
+    width: 90%;
     padding: 0px 6px;
 }
 
@@ -163,7 +167,7 @@ main div {
 }
 
 footer {
-    background-color: rgb(61, 61, 61);
+    background-color: var(--footer-color);
     width: 100vw;
     height: 26%;
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
