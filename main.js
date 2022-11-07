@@ -1,8 +1,20 @@
 const searchInput = document.getElementById("searchInput");
 const searchLabel = document.getElementById("searchLabel");
+const priceRange = document.getElementById("price");
+const priceValue = document.getElementById("priceValue");
 const menuIcon = document.getElementById("menuIcon");
 const navBar = document.getElementById("navigator-list");
 const ul = document.getElementById("list");
+
+priceValue.textContent = "$200,00 - $1000,00";
+
+priceRange.addEventListener("change", () => {
+    if (priceRange.value === "1000") {
+        priceValue.textContent = `$${priceRange.value},00`;
+    } else {
+        priceValue.textContent = `$${priceRange.value},00 - $1000,00`;
+    }
+});
 
 searchInput.addEventListener("focusin", () => {
     searchLabel.style.backgroundColor = "#f9e6e6";

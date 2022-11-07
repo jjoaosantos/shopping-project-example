@@ -13,10 +13,10 @@
 }
 
 * {
+    font-family: var(--text-font);
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: var(--text-font);
 }
 
 html, body {
@@ -100,8 +100,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
     color: var(--complementary-color);
+    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -109,23 +109,11 @@ nav ul li a:focus-within {
     outline-color: var(--complementary-color);
 }
 
-/* form#navigator-filter {
-    background-color: white;
-    width: 90vw;
-    height: 30px;
-    padding: 6px;
-    border-radius: 6px 6px 0px 0px;
-} */
-
-form#navigator-filter > div {
-    display: inline-block;
-}
-
 main {
     background-color: white;
     text-align: center;
     width: 90vw;
-    height: 100%;
+    min-height: 200px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -135,18 +123,24 @@ main {
 }
 
 main aside {
-    text-align: left;
-    width: 100%;
+    position: relative;
     background-color: var(--color-theme);
-    margin-bottom: 10px;
+    text-align: right;
+    line-height: 20px;
+    width: 100%;
+    margin-bottom: 20px;
     padding: 6px;
 }
 
 main aside h2 {
+    position: absolute;
     display: inline-block;
     font-size: 14px;
     font-weight: normal;
+    line-height: 50%;
     width: 9%;
+    left: 0px;
+    top: 25px;
 }
 
 main aside form#navigator-filter {
@@ -155,20 +149,25 @@ main aside form#navigator-filter {
     text-align: right;
     font-size: small;
     width: 90%;
-    padding: 0px 6px;
+    padding: 4px 6px;
+    border-radius: 6px;
+}
+
+main aside form#navigator-filter label {
+    padding: 3px;
 }
 
 main div {
     display: inline-block;
     background-color: aquamarine;
     width: 42%;
-    height: 33%;
+    height: 200px;
     margin: 5px 3px;
 }
 
 footer {
     background-color: var(--footer-color);
     width: 100vw;
-    height: 26%;
+    height: 200px;
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
 }

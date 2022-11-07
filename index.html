@@ -28,21 +28,23 @@
         <aside>
             <h2>Filter</h2>
             <form id="navigator-filter">
-                <label for="marcas">Bradings</label>
-                <select name="marcas" id="marcas">
-                    <option value="">all</option>
-                    <option value="samsung">Samsung</option>
-                    <option value="iphone">Iphone</option>
-                </select>
+                <label for="marcas">Bradings
+                    <select name="marcas" id="marcas">
+                        <option value="">all</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="iphone">Iphone</option>
+                    </select>
+                </label>
                 <label for="statusN">New
                     <input type="radio" name="status" id="statusN">
                 </label>
                 <label for="statusU">Used
                     <input type="radio" name="status" id="statusU">
                 </label>
-                <label for="price">
-                    <input type="range" name="price" id="price" step="2" maxlength="10">
+                <label for="price" aria-label="Price range">
+                    <input type="range" name="price" id="price" min="200" max="1000" step="200" value="200">
                 </label>
+                <output id="priceValue" aria-label="Price value"></output>
             </form>
         </aside>
         <div>1</div>
