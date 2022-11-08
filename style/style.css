@@ -111,7 +111,7 @@ nav ul li a:focus-within {
 main {
     background-color: white;
     text-align: center;
-    width: 90vw;
+    width: 94vw;
     min-height: 200px;
     margin: auto;
     margin-top: 20px;
@@ -137,7 +137,7 @@ main aside h2 {
     font-size: 14px;
     font-weight: normal;
     /* line-height: 50%; */
-    width: 9%;
+    width: 8%;
     /* left: 0px;
     top: 25px; */
 }
@@ -147,7 +147,7 @@ main aside form#navigator-filter {
     background-color: var(--bright-color);
     text-align: right;
     font-size: small;
-    width: 90%;
+    width: 91%;
     padding: 4px 6px;
     border-radius: 6px;
 }
@@ -157,10 +157,10 @@ main aside form#navigator-filter label {
 }
 
 main aside form#navigator-filter label select#branding {
-    width: 52px;
+    width: 45px;
 }
 
-main aside form#navigator-filter label input[type="range"], output {
+main aside form#navigator-filter #labelPrice, input[type="range"], output {
     display: none;
 }
 
