@@ -122,24 +122,24 @@ main {
 }
 
 main aside {
-    position: relative;
+    /* position: relative; */
     background-color: var(--color-theme);
     text-align: right;
-    line-height: 20px;
+    /* line-height: 20px; */
     width: 100%;
     margin-bottom: 20px;
     padding: 6px;
 }
 
 main aside h2 {
-    position: absolute;
+    /* position: absolute; */
     display: inline-block;
     font-size: 14px;
     font-weight: normal;
-    line-height: 50%;
+    /* line-height: 50%; */
     width: 9%;
-    left: 0px;
-    top: 25px;
+    /* left: 0px;
+    top: 25px; */
 }
 
 main aside form#navigator-filter {
@@ -154,6 +154,18 @@ main aside form#navigator-filter {
 
 main aside form#navigator-filter label {
     padding: 3px;
+}
+
+main aside form#navigator-filter label select#branding {
+    width: 52px;
+}
+
+main aside form#navigator-filter label input[type="range"], output {
+    display: none;
+}
+
+main aside form#navigator-filter label select#priceSelector option {
+    text-align: center;
 }
 
 main div {
