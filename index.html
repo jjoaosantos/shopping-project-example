@@ -11,7 +11,21 @@
 <body>
     <header>
         <h1><a href="#home"><img src="images/searchfor-logo.png" alt="SearchFor Home"></a></h1>
-        <form>
+    </header>
+    <nav id="navigator-list" aria-hidden="true">
+        <ul id="list"></ul>
+    </nav>
+    
+    <aside>
+        <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
+        <form id="navigator-filter">
+            <label for="branding">Bradings
+                <select name="branding" id="branding">
+                    <option value="">all</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="iphone">Iphone</option>
+                </select>
+            </label>
             <label for="searchInput" id="searchLabel">
                 <span role="img" id="searchIcon" class="material-symbols-outlined" aria-hidden="true">
                     search
@@ -19,49 +33,14 @@
                 <input type="search" name="searchInput" id="searchInput" placeholder="Search for">
             </label>
         </form>
-    </header>
-    <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
-    <nav id="navigator-list" aria-hidden="true">
-        <ul id="list"></ul>
-    </nav>
+    </aside>
     <main>
-        <aside>
-            <h2>Filter</h2>
-            <form id="navigator-filter">
-                <label for="branding">Bradings
-                    <select name="branding" id="branding">
-                        <option value="">all</option>
-                        <option value="samsung">Samsung</option>
-                        <option value="iphone">Iphone</option>
-                    </select>
-                </label>
-                <label for="statusN">New
-                    <input type="radio" name="status" id="statusN">
-                </label>
-                <label for="statusU">Used
-                    <input type="radio" name="status" id="statusU">
-                </label>
-                <label for="priceSelector">Price
-                    <select name="priceSelector" id="priceSelector">
-                        <option value="200">$200,00 - $1000,00</option>
-                        <option value="400">$400,00 - $1000,00</option>
-                        <option value="600">$600,00 - $1000,00</option>
-                        <option value="800">$800,00 - $1000,00</option>
-                        <option value="1000">$1000,00</option>
-                    </select>
-                </label>
-                <label for="price" aria-label="Price range" id="labelPrice">
-                    <input type="range" name="price" id="price" min="200" max="1000" step="200" value="200">
-                </label>
-                <output id="priceValue" aria-label="Price value"></output>
-            </form>
-        </aside>
         <div>1</div>
         <div>2</div>
         <div>3</div>
         <div>4</div>
     </main>
     <footer></footer>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>

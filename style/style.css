@@ -27,43 +27,16 @@ html, body {
 
 header {
     background-color: var(--color-theme);
-    padding: 0px 8px 20px 8px;
 }
 
-header form {
-    text-align: right;
-}
-
-header form label {
-    background-color: #f9e6e652;
-    padding: 5px;
-    border-radius: 14px;
-    transition: background-color .8s;
-}
-
-header form label input {
-    background-color: rgba(255, 255, 255, 0);
-    color: black;
-    padding-left: 4px;
-    border: none;
-    outline: none;
-}
-
-header form label input::placeholder {
-    color: rgba(0, 0, 0, 0.795);
-}
-
-header form label span#searchIcon {
-    font-size: 13px;
-    padding-left: 6px;
-}
 
 span#menuIcon {
-    display: block;
-    background-color: var(--complementary-color);
+    background-color: var(--color-theme);
     color: var(--contrast-color);
     text-align: center;
-    width: 100vw;
+    line-height: 2;
+    width: 36px;
+    height: 40px;
 }
 
 span#menuIcon:hover {
@@ -72,7 +45,44 @@ span#menuIcon:hover {
     transition: box-shadow .3s;
 }
 
-nav {
+aside {
+    position: relative;
+    background-color: var(--complementary-color);
+    width: 100vw;
+    height: 40px;
+}
+
+#navigator-filter {
+    position: absolute;
+    top: 7px;
+    left: 40px;
+}
+
+#navigator-filter #searchLabel {
+    background-color: #f9e6e652;
+    margin-left: 20px;
+    padding: 6px 0px 3px 3px;
+    /* transition: background-color .8s; */
+}
+
+#navigator-filter #searchLabel #searchIcon {
+    font-size: 20px;
+}
+
+#navigator-filter #searchLabel input {
+    background-color: transparent;
+    /* padding: 3px; */
+    width: 200px;
+    height: 21px;
+    border: none;
+    /* outline: none; */
+}
+
+#navigator-filter #searchLabel input::placeholder {
+    color: black;
+}
+
+/* nav {
     background-color: var(--bright-color);
     width: 100vw;
     padding: 4px;
@@ -122,24 +132,11 @@ main {
 }
 
 main aside {
-    /* position: relative; */
     background-color: var(--color-theme);
     text-align: right;
-    /* line-height: 20px; */
     width: 100%;
     margin-bottom: 20px;
     padding: 6px;
-}
-
-main aside h2 {
-    /* position: absolute; */
-    display: inline-block;
-    font-size: 14px;
-    font-weight: normal;
-    /* line-height: 50%; */
-    width: 8%;
-    /* left: 0px;
-    top: 25px; */
 }
 
 main aside form#navigator-filter {
@@ -181,4 +178,4 @@ footer {
     width: 100vw;
     height: 200px;
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
-}
+} */
