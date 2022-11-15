@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --color-theme: #ff7d66;
@@ -14,6 +14,7 @@
 
 * {
     font-family: var(--text-font);
+    font-weight: 400;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -29,57 +30,13 @@ header {
     background-color: var(--color-theme);
 }
 
+header h1 {
+    display: inline-block;
+}
 
-span#menuIcon {
-    background-color: var(--color-theme);
+#menuIcon {
+    font-size: 40px;
     color: var(--contrast-color);
-    text-align: center;
-    line-height: 2;
-    width: 36px;
-    height: 40px;
-}
-
-span#menuIcon:hover {
-    box-shadow: inset -2px 0px 5px 1px var(--shadow-color);
-    cursor: pointer;
-    transition: box-shadow .3s;
-}
-
-aside {
-    position: relative;
-    background-color: var(--complementary-color);
-    width: 100vw;
-    height: 40px;
-}
-
-#navigator-filter {
-    position: absolute;
-    top: 7px;
-    left: 40px;
-}
-
-#navigator-filter #searchLabel {
-    background-color: #f9e6e652;
-    margin-left: 20px;
-    padding: 6px 0px 3px 3px;
-    /* transition: background-color .8s; */
-}
-
-#navigator-filter #searchLabel #searchIcon {
-    font-size: 20px;
-}
-
-#navigator-filter #searchLabel input {
-    background-color: transparent;
-    /* padding: 3px; */
-    width: 200px;
-    height: 21px;
-    border: none;
-    /* outline: none; */
-}
-
-#navigator-filter #searchLabel input::placeholder {
-    color: black;
 }
 
 /* nav {
