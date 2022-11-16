@@ -14,7 +14,6 @@
 
 * {
     font-family: var(--text-font);
-    font-weight: 400;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -35,99 +34,83 @@ header h1 {
 }
 
 #menuIcon {
-    font-size: 40px;
+    font-size: 28px;
     color: var(--contrast-color);
 }
 
-/* nav {
-    background-color: var(--bright-color);
-    width: 100vw;
-    padding: 4px;
+#menuIcon:hover {
+    cursor: pointer;
 }
 
-nav ul {
+#navigator-list {
+    position: absolute;
+    display: none;
+    background-color: var(--bright-color);
+    font-size: larger;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20px;
+    z-index: 3;
+}
+
+#navigator-list ul {
     list-style-type: none;
 }
 
-nav ul li {
-    padding: 5px;
-    transition: background-color .3s;
+#navigator-list ul li {
+    background-color: var(--contrast-color);
+    width: 90vw;
+    margin: 5px auto;
+    padding: 4px;
 }
 
-nav ul li:hover {
-    background-color: #ffcdcd;
+form {
+    position: absolute;
+    background-color: rgb(224, 224, 224);
+    text-align: right;
+    width: 93.8vw;
+    top: 89px;
+    left: 51.6%;
+    transform: translate(-50%, -50%);
+    /* padding: 5px 5px; */
+    z-index: 2;
 }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-size: small;
-    transition: .4s;
+form span {
+    position: absolute;
 }
 
-nav ul li a:hover {
-    color: var(--complementary-color);
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-nav ul li a:focus-within {
-    outline-color: var(--complementary-color);
+form input {
+    border: none;
 }
 
 main {
+    position: relative;
     background-color: white;
     text-align: center;
     width: 94vw;
     min-height: 200px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 35px;
+    margin: 20px auto;
+    padding: 80px 0px 35px 0px;
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
+    z-index: 1;
 }
 
-main aside {
-    background-color: var(--color-theme);
-    text-align: right;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 6px;
-}
-
-main aside form#navigator-filter {
+main section {
     display: inline-block;
-    background-color: var(--bright-color);
-    text-align: right;
-    font-size: small;
-    width: 91%;
-    padding: 4px 6px;
-    border-radius: 6px;
-}
-
-main aside form#navigator-filter label {
-    padding: 3px;
-}
-
-main aside form#navigator-filter label select#branding {
-    width: 45px;
-}
-
-main aside form#navigator-filter #labelPrice, input[type="range"], output {
-    display: none;
-}
-
-main aside form#navigator-filter label select#priceSelector option {
-    text-align: center;
-}
-
-main div {
-    display: inline-block;
-    background-color: aquamarine;
-    width: 42%;
+    text-align: left;
+    width: 200px;
     height: 200px;
-    margin: 5px 3px;
+}
+
+main section img {
+    width: 100%;
+}
+
+main section p {
+    font-size: larger;
 }
 
 footer {
@@ -135,4 +118,4 @@ footer {
     width: 100vw;
     height: 200px;
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
-} */
+}
