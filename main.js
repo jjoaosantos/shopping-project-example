@@ -13,13 +13,13 @@ menuIcon.addEventListener("click", () => {
             const li = document.createElement("li");
             const a = document.createElement("a");
             if (item === "Products") {
-                a.href = "#products";
+                a.href = "products.html";
                 a.textContent = item;
             } else if (item === "Contact") {
-                a.href = "#products";
+                a.href = "contact.html";
                 a.textContent = item;
             } else if (item === "About Us") {
-                a.href = "#aboutus";
+                a.href = "aboutus.html";
                 a.textContent = item;
             } else {
                 const para = document.createElement("p");
