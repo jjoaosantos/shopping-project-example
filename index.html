@@ -12,14 +12,20 @@
     <header>
         <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
         <h1><a href="#home"><img src="images/searchfor-logo.png" alt="SearchFor Home"></a></h1>
-        <span class="material-symbols-outlined" style="font-size: 35px;">
-            account_circle
-            </span>
+        <div>
+            <p>Person</p>
+            <span class="material-symbols-outlined" id="enterAccount">account_circle</span>
+        </div>
     </header>
+    <form id="remember">
+        <label for="accountInput"><input type="text" id="accountInput"></label>
+        <button>Enter</button>
+    </form>
     <nav id="navigator-list" aria-hidden="true">
-        <ul id="list"></ul>
+        <ul id="list">
+        </ul>
     </nav>
-    <form>
+    <form id="navigator-filter">
         <label for="searchTerm" id="searchLabel"><span class="material-symbols-outlined" id="searchBtn">search</span><input type="text" id="searchTerm"></label>
         <label for="branding" id="brandingLabel">
             <select name="branding" id="branding">
@@ -32,7 +38,15 @@
     <main>
         
     </main>
-    <footer></footer>
+    <footer>
+        <p>LikeBtn</p>
+        <aside>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Whatsapp</p>
+        </aside>
+        <p>Copyright nobody. Use the code as you like.</p>
+    </footer>
     <script src="main.js"></script>
     <script src="data.js"></script>
 </body>
