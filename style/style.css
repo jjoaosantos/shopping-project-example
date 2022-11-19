@@ -46,11 +46,9 @@ header h1 {
     position: absolute;
     display: none;
     background-color: var(--bright-color);
-    font-size: larger;
-    text-align: center;
     width: 100vw;
-    height: 100vh;
-    padding-top: 20px;
+    box-shadow: inset 0px 1px 2px 0px var(--shadow-color);
+    ;
     z-index: 3;
 }
 
@@ -59,33 +57,25 @@ header h1 {
 }
 
 #navigator-list ul li {
-    background-color: var(--contrast-color);
-    width: 90vw;
+    /* background-color: var(--contrast-color); */
     margin: 5px auto;
     padding: 4px;
 }
 
 form {
-    position: absolute;
+    background-color: white;
     text-align: right;
     width: 94vw;
-    top: 80px;
-    left: 3px;
-    z-index: 2;
-}
-
-form #searchLabel {
-    background-color: #ffa899;
-    margin-right: 20px;
+    margin: 20px auto 0px auto;
+    padding: 8px 12px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 1px 2px 0px var(--shadow-color);
 }
 
 form span {
-    position: absolute;
-}
-
-form input {
-    height: 24px;
-    padding-left: 30px;
+    position: relative;
+    left: 0px;
+    top: 6px;
 }
 
 main {
@@ -94,7 +84,7 @@ main {
     text-align: center;
     width: 94vw;
     min-height: 200px;
-    margin: 20px auto;
+    margin: auto;
     padding: 80px 0px 35px 0px;
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
