@@ -12,19 +12,19 @@
     <header>
         <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
         <h1><a href="#home"><img src="images/searchfor-logo.png" alt="SearchFor Home"></a></h1>
-        <span class="material-symbols-outlined" style="font-size: 35px;">
-            account_circle
-            </span>
+        <div>
+            <p>Person</p>
+            <span class="material-symbols-outlined" id="enterAccount">account_circle</span>
+        </div>
     </header>
+    <form id="remember">
+        <label for="accountInput"><input type="text" id="accountInput"></label>
+        <button>Enter</button>
+    </form>
     <nav id="navigator-list" aria-hidden="true">
-        <ul id="list">
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
+        <ul id="list"></ul>
     </nav>
-    <form>
-        
+    <form id="navigator-filter">
         <label for="searchTerm" id="searchLabel"><span class="material-symbols-outlined">search</span><input type="text" id="searchTerm"></label>
         <label for="branding" id="brandingLabel">
             <select name="" id="branding">
@@ -34,25 +34,6 @@
             </select>
         </label>
     </form>
-    
-    <!-- <aside>
-        
-        <form id="navigator-filter">
-            <label for="branding" id="brandingLabel">Select a branding
-                <select name="branding" id="branding">
-                    <option value="">all</option>
-                    <option value="samsung">Samsung</option>
-                    <option value="iphone">Iphone</option>
-                </select>
-            </label>
-            <label for="searchInput" id="searchLabel">
-                <span role="img" id="searchIcon" class="material-symbols-outlined" aria-hidden="true">
-                    search
-                </span>
-                <input type="search" name="searchInput" id="searchInput" placeholder="Search for">
-            </label>
-        </form>
-    </aside> -->
     <main>
         <section>
             <img src="images/iphone-4.jpg" alt="samsung galaxy note 4">
@@ -75,7 +56,7 @@
             <p>$0</p>
         </section>
     </main>
-    <footer></footer>
+    <footer><p>Copyright nobody. Use the code as you like.</p></footer>
     <!-- <script src="main.js"></script> -->
 </body>
 </html>
