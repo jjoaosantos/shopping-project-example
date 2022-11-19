@@ -67,7 +67,7 @@ header span#enterAccount:hover {
     cursor: pointer;
 }
 
-form#remember {
+div.remember, div.forget {
     position: absolute;
     background-color: var(--bright-color);
     text-align: right;
@@ -78,20 +78,20 @@ form#remember {
     z-index: 2;
 }
 
-form#remember input {
+div.remember input#entername {
     border: none;
     box-shadow: inset 1px 1px 2px -1px var(--contrast-color);
     width: 60px;
 }
 
-form#remember button {
+div.remember #submitname, #forgetname {
     background-color: var(--color-theme);
     padding: 1px 6px;
     border: none;
     border-radius: 4px;
 }
 
-form#remember button:hover {
+div.remember #submitname:hover, #forgetname:hover {
     background-color: var(--complementary-color);
 }
 
