@@ -1,0 +1,74 @@
+[
+    {
+        "name" : "iphone 4",
+        "price" : "50.00",
+        "image" : "iphone-4.jpg",
+        "branding" : "iphone"
+    },
+    {
+        "name" : "iphone 5",
+        "price" : "50.00",
+        "image" : "iphone-5.jpg",
+        "branding" : "iphone"
+    },
+    {
+        "name" : "iphone 6",
+        "price" : "50.00",
+        "image" : "iphone-6.jpg",
+        "branding" : "iphone"
+    },
+    {
+        "name" : "iphone plus 6",
+        "price" : "50.00",
+        "image" : "iphone-plus-6.jpg",
+        "branding" : "iphone"
+    },
+    {
+        "name" : "iphone 7",
+        "price" : "50.00",
+        "image" : "iphone-7.jpg",
+        "branding" : "iphone"
+    },
+    {
+        "name" : "keyboard buddy iphone 6",
+        "price" : "50.00",
+        "image" : "keyboard-buddy-iphone-6.jpg",
+        "branding" : "iphone"
+    },
+    {
+        "name" : "samsung galaxy alpha",
+        "price" : "50.00",
+        "image" : "samsung-galaxy-alpha.jpg",
+        "branding" : "samsung"
+    },
+    {
+        "name" : "samsung galaxy s",
+        "price" : "50.00",
+        "image" : "samsung-galaxy-s.jpg",
+        "branding" : "samsung"
+    },
+    {
+        "name" : "samsung galaxy s4",
+        "price" : "50.00",
+        "image" : "samsung-galaxy-s4.jpg",
+        "branding" : "samsung"
+    },
+    {
+        "name" : "samsung galaxy note 4",
+        "price" : "50.00",
+        "image" : "samsung-galaxy-note-4.jpg",
+        "branding" : "samsung"
+    },
+    {
+        "name" : "samsung galaxy s5",
+        "price" : "50.00",
+        "image" : "samsung-galaxy-s5.jpg",
+        "branding" : "samsung"
+    },
+    {
+        "name" : "samsung galaxy s6",
+        "price" : "50.00",
+        "image" : "samsung-galaxy-s6.jpg",
+        "branding" : "samsung"
+    }
+]

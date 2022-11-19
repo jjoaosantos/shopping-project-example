@@ -22,49 +22,46 @@
         <button>Enter</button>
     </form>
     <nav id="navigator-list" aria-hidden="true">
-        <ul id="list"></ul>
+        <ul id="list">
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
     </nav>
-    <form id="navigator-filter">
-        <label for="searchTerm" id="searchLabel"><span class="material-symbols-outlined" id="searchBtn">search</span><input type="text" id="searchTerm"></label>
+    <form>
+        
+        <label for="searchTerm" id="searchLabel"><span class="material-symbols-outlined">search</span><input type="text" id="searchTerm"></label>
         <label for="branding" id="brandingLabel">
-            <select name="branding" id="branding">
-                <option>All</option>
-                <option>Samsung</option>
-                <option>Iphone</option>
+            <select name="" id="branding">
+                <option value="all">All</option>
+                <option value="samsung">Samsung</option>
+                <option value="iphone">Iphone</option>
             </select>
         </label>
     </form>
+    
+    <!-- <aside>
+        
+        <form id="navigator-filter">
+            <label for="branding" id="brandingLabel">Select a branding
+                <select name="branding" id="branding">
+                    <option value="">all</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="iphone">Iphone</option>
+                </select>
+            </label>
+            <label for="searchInput" id="searchLabel">
+                <span role="img" id="searchIcon" class="material-symbols-outlined" aria-hidden="true">
+                    search
+                </span>
+                <input type="search" name="searchInput" id="searchInput" placeholder="Search for">
+            </label>
+        </form>
+    </aside> -->
     <main>
-        <section>
-            <img src="images/iphone-4.jpg" alt="samsung galaxy note 4">
-            <h2>Object</h2>
-            <p>$0</p>
-        </section>
-        <section>
-            <img src="images/iphone-4.jpg" alt="samsung galaxy note 4">
-            <h2>Object</h2>
-            <p>$0</p>
-        </section>
-        <section>
-            <img src="images/iphone-4.jpg" alt="samsung galaxy note 4">
-            <h2>Object</h2>
-            <p>$0</p>
-        </section>
-        <section>
-            <img src="images/iphone-4.jpg" alt="samsung galaxy note 4">
-            <h2>Object</h2>
-            <p>$0</p>
-        </section>
+        
     </main>
-    <footer>
-        <p>likeBtn</p>
-        <aside>
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Whatsapp</p>
-        </aside>
-        <p>Copyright nobody. Use the code as you like.</p>
-    </footer>
-    <script src="main.js"></script>
+    <footer></footer>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>
