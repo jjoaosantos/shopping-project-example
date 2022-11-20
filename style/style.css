@@ -27,6 +27,7 @@ html, body {
 
 header {
     background-color: var(--color-theme);
+    margin-bottom: 20px;
 }
 
 header h1 {
@@ -74,6 +75,7 @@ form#remember {
     width: 68px;
     padding: 6px 4px;
     border-radius: 0px 0px 3px 3px;
+    top: calc(0px + 51px);
     left: calc(100vw - 68px);
     z-index: 2;
 }
@@ -100,6 +102,7 @@ form#remember button:hover {
     background-color: var(--bright-color);
     width: 100vw;
     box-shadow: inset 0px 1px 2px 0px var(--shadow-color);
+    top: calc(0px + 51px);
     z-index: 3;
 }
 
@@ -127,7 +130,7 @@ form#navigator-filter {
     background-color: white;
     text-align: right;
     width: 94vw;
-    margin: 20px auto 0px auto;
+    margin: auto;
     padding: 8px 12px;
     border-radius: 20px 20px 0px 0px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
@@ -146,7 +149,7 @@ main {
     width: 94vw;
     min-height: 200px;
     margin: auto;
-    padding: 80px 0px 35px 0px;
+    padding: 35px 8px;
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
     z-index: 1;
@@ -184,6 +187,7 @@ footer {
     background-color: var(--footer-color);
     color: white;
     width: 100vw;
+    margin-top: 20px;
     padding: 9px;
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
 }
