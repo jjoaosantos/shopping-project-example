@@ -27,7 +27,6 @@ html, body {
 
 header {
     background-color: var(--color-theme);
-    margin-bottom: 20px;
 }
 
 header h1 {
@@ -68,32 +67,31 @@ header span#enterAccount:hover {
     cursor: pointer;
 }
 
-form#remember {
+div.remember, div.forget {
     position: absolute;
     background-color: var(--bright-color);
     text-align: right;
     width: 68px;
     padding: 6px 4px;
     border-radius: 0px 0px 3px 3px;
-    top: calc(0px + 51px);
     left: calc(100vw - 68px);
     z-index: 2;
 }
 
-form#remember input {
+div.remember input#entername {
     border: none;
     box-shadow: inset 1px 1px 2px -1px var(--contrast-color);
     width: 60px;
 }
 
-form#remember button {
+div.remember #submitname, #forgetname {
     background-color: var(--color-theme);
     padding: 1px 6px;
     border: none;
     border-radius: 4px;
 }
 
-form#remember button:hover {
+div.remember #submitname:hover, #forgetname:hover {
     background-color: var(--complementary-color);
 }
 
@@ -102,7 +100,6 @@ form#remember button:hover {
     background-color: var(--bright-color);
     width: 100vw;
     box-shadow: inset 0px 1px 2px 0px var(--shadow-color);
-    top: calc(0px + 51px);
     z-index: 3;
 }
 
@@ -130,7 +127,7 @@ form#navigator-filter {
     background-color: white;
     text-align: right;
     width: 94vw;
-    margin: auto;
+    margin: 20px auto 0px auto;
     padding: 8px 12px;
     border-radius: 20px 20px 0px 0px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
@@ -149,7 +146,7 @@ main {
     width: 94vw;
     min-height: 200px;
     margin: auto;
-    padding: 35px 8px;
+    padding: 80px 0px 35px 0px;
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
     z-index: 1;
@@ -170,18 +167,6 @@ main section p {
     font-size: larger;
 }
 
-#special-thanks {
-    background-color: white;
-    width: 94vw;
-    margin: 20px auto;
-    padding: 6px;
-}
-
-#special-thanks ul {
-    list-style-position: inside;
-    padding: 9px;
-}
-
 footer {
     display: block;
     background-color: var(--footer-color);
@@ -192,18 +177,10 @@ footer {
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
 }
 
-footer section img, p {
-    display: inline-block;
-}
-
 footer aside {
     text-align: right;
 }
 
 footer aside p {
     display: inline-block;
-}
-
-footer aside img {
-    padding: 4px;
 }
