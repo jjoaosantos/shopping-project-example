@@ -9,19 +9,26 @@
     " media="screen and (max-width:600px)">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header>
         <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
         <h1><a href="index.html"><img src="images/searchfor-logo.png" alt="SearchFor Home"></a></h1>
         <div>
-            <p>Person</p>
+            <p class="personal-greeting"></p>
             <span class="material-symbols-outlined" id="enterAccount">account_circle</span>
         </div>
     </header>
-    <form id="remember">
-        <label for="accountInput"><input type="text" id="accountInput"></label>
-        <button>Enter</button>
+    <form id="user-log" aria-hidden="true">
+        <div class="remember">
+            <label for="accountInput"><input type="text" id="entername" required></label>
+            <input id="submitname" type="submit" value="Log In">
+        </div>
+        <div class="forget">
+            <label for="forgetname"></label>
+            <input id="forgetname" type="reset" value="Log Out">
+        </div>
     </form>
     <nav id="navigator-list" aria-hidden="true">
         <ul id="list">

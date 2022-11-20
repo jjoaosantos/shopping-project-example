@@ -156,13 +156,13 @@ main section {
     display: inline-block;
     text-align: left;
     width: 200px;
-    height: 200px;
+    min-height: 200px;
+    margin-bottom: 30px;
 }
 
 main section img {
     width: 100%;
-    max-height: 348px;
-    margin-bottom: 30px;
+    max-height: 310px;
 }
 
 main section p {

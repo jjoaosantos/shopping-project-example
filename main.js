@@ -16,7 +16,7 @@ menuIcon.addEventListener("click", () => {
                 a.href = "products.html";
                 a.textContent = item;
             } else if (item === "Contact") {
-                a.href = "products.html";
+                a.href = "contact.html";
                 a.textContent = item;
             } else if (item === "About Us") {
                 a.href = "aboutus.html";
