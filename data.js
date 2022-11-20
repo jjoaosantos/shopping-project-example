@@ -105,8 +105,8 @@ function initialize(products) {
     image.alt = product.name;
 
     main.appendChild(section);
+    section.appendChild(image);
     section.appendChild(heading);
     section.appendChild(para);
-    section.appendChild(image);
   }
 }
