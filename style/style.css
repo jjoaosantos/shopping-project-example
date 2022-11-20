@@ -167,6 +167,18 @@ main section p {
     font-size: larger;
 }
 
+#special-thanks {
+    background-color: white;
+    width: 94vw;
+    margin: 20px auto;
+    padding: 6px;
+}
+
+#special-thanks ul {
+    list-style-position: inside;
+    padding: 9px;
+}
+
 footer {
     display: block;
     background-color: var(--footer-color);
@@ -177,10 +189,14 @@ footer {
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
 }
 
+footer section img, p {
+    display: inline-block;
+}
+
 footer aside {
     text-align: right;
 }
 
-footer aside p {
-    display: inline-block;
+footer aside img {
+    padding: 4px;
 }
