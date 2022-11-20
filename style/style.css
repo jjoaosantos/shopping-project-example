@@ -161,6 +161,8 @@ main section {
 
 main section img {
     width: 100%;
+    max-height: 348px;
+    margin-bottom: 30px;
 }
 
 main section p {
