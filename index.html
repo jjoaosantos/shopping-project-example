@@ -12,32 +12,33 @@
 </head>
 <body>
     <header>
-        <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
+        <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar" aria-expanded="false">menu</span>
         <h1><a href="index.html"><img src="images/searchfor-logo.png" alt="SearchFor Home"></a></h1>
         <div>
             <p class="personal-greeting"></p>
-            <span class="material-symbols-outlined" id="enterAccount">account_circle</span>
+            <span class="material-symbols-outlined" id="enterAccount" role="button" aria-expanded="false">account_circle</span>
         </div>
     </header>
-    <form id="user-log" aria-hidden="true">
+    <form id="user-log">
         <div class="remember">
-            <label for="accountInput"><input type="text" id="entername" required></label>
+            <input type="text" id="entername" aria-label="Enter your name" aria-required="true" required>
             <input id="submitname" type="submit" value="Log In">
         </div>
         <div class="forget">
-            <label for="forgetname"></label>
             <input id="forgetname" type="reset" value="Log Out">
         </div>
     </form>
-    <nav id="navigator-list" aria-hidden="true">
+    <nav id="navigator-list">
         <ul id="list">
         </ul>
     </nav>
     <form id="navigator-filter">
-        <label for="searchTerm" id="searchLabel"><span class="material-symbols-outlined">search</span><input type="text" id="searchTerm"></label>
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" name="searchTerm" id="searchTerm" aria-label="Enter search term" placeholder="Enter a search term">
         <label for="branding" id="brandingLabel">
-            <select name="branding" id="branding">
-                <option>All</option>
+            <strong>Brand</strong> <br>
+            <select aria-label="Select a brand" name="branding" id="branding">
+                <option aria-selected="true" selected>All</option>
                 <option>Iphone</option>
                 <option>Motorola</option>
                 <option>Nokia</option>
@@ -46,9 +47,9 @@
         </label>
     </form>
     <main>
-        <section><img src="images/iphone-4.png" alt="Iphone 4"><h2>Object Object Object</h2><p>$100</p></section>
+        <section><img src="images/motorola-moto-c-plus.png" alt="Iphone 4"><h2>Object Object Object</h2><p>$100</p></section>
         <section><img src="images/iphone-5.png" alt="Iphone 5"><h2>Object Object Object</h2><p>$100</p></section>
-        <section><img src="images/iphone-6.png" alt="Iphone 6"><h2>Object Object Object</h2><p>$100</p></section>
+        <section><img src="images/motorola-moto-g5-s-plus.png" alt="Iphone 6"><h2>Object Object Object</h2><p>$100</p></section>
         <section><img src="images/iphone-7-plus.png" alt="Iphone 7"><h2>Object Object Object</h2><p>$100</p></section>
     </main>
     <section id="special-thanks">

@@ -3,11 +3,10 @@ const navBar = document.getElementById("navigator-list");
 const ul = document.getElementById("list");
 
 const listItems = ["Products", "Contact", "About Us"];
-navBar.style.display = "none";
 
 menuIcon.addEventListener("click", () => {
-    if (navBar.getAttribute("aria-hidden") === "true") {
-        navBar.setAttribute("aria-hidden", "false");
+    if (menuIcon.getAttribute("aria-expanded") === "false") {
+        menuIcon.setAttribute("aria-expanded", "true");
         navBar.style.display = "block";
         for (const item of listItems) {
             const li = document.createElement("li");
@@ -29,8 +28,8 @@ menuIcon.addEventListener("click", () => {
             li.appendChild(a);
             ul.appendChild(li);
         }
-    } else if (navBar.getAttribute("aria-hidden") === "false") {
-        navBar.setAttribute("aria-hidden", "true");
+    } else if (menuIcon.getAttribute("aria-expanded") === "true") {
+        navBar.setAttribute("aria-expanded", "false");
         navBar.style.display = "none";
         while (ul.firstChild) {
             ul.removeChild(ul.firstChild);

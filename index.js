@@ -22,11 +22,11 @@ forgetBtn.addEventListener("click", () => {
 });
 
 accountIcon.addEventListener("click", () => {
-    if (form.getAttribute("aria-hidden") === "true") {
-        form.setAttribute("aria-hidden", "false");
+    if (accountIcon.getAttribute("aria-expanded") === "false") {
+        accountIcon.setAttribute("aria-expanded", "true");
         form.style.display = "block";
-    } else if (form.getAttribute("aria-hidden") === "false") {
-        form.setAttribute("aria-hidden", "true");
+    } else if (accountIcon.getAttribute("aria-expanded") === "true") {
+        accountIcon.setAttribute("aria-expanded", "false")
         form.style.display = "none";
     }
 });
