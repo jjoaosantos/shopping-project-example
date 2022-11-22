@@ -5,7 +5,7 @@ const nameInput = document.querySelector("#entername");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
 
-const accountIcon = document.querySelector("#enterAccount");
+const profileIcon = document.querySelector("#profileIcon");
 
 const personalGreeting = document.querySelector(".personal-greeting");
 
@@ -21,12 +21,12 @@ forgetBtn.addEventListener("click", () => {
     nameDisplayCheck();
 });
 
-accountIcon.addEventListener("click", () => {
-    if (accountIcon.getAttribute("aria-expanded") === "false") {
-        accountIcon.setAttribute("aria-expanded", "true");
+profileIcon.addEventListener("click", () => {
+    if (profileIcon.getAttribute("aria-expanded") === "false") {
+        profileIcon.setAttribute("aria-expanded", "true");
         form.style.display = "block";
-    } else if (accountIcon.getAttribute("aria-expanded") === "true") {
-        accountIcon.setAttribute("aria-expanded", "false")
+    } else if (profileIcon.getAttribute("aria-expanded") === "true") {
+        profileIcon.setAttribute("aria-expanded", "false")
         form.style.display = "none";
     }
 });

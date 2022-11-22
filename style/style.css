@@ -58,13 +58,13 @@ header div p {
     cursor: pointer;
 }
 
-header span#enterAccount {
+header span#profileIcon {
     color: var(--contrast-color);
     font-size: 35px;
     padding: 5px;
 }
 
-header span#enterAccount:hover {
+header span#profileIcon:hover {
     cursor: pointer;
 }
 

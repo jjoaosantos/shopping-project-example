@@ -29,7 +29,7 @@ menuIcon.addEventListener("click", () => {
             ul.appendChild(li);
         }
     } else if (menuIcon.getAttribute("aria-expanded") === "true") {
-        navBar.setAttribute("aria-expanded", "false");
+        menuIcon.setAttribute("aria-expanded", "false");
         navBar.style.display = "none";
         while (ul.firstChild) {
             ul.removeChild(ul.firstChild);
