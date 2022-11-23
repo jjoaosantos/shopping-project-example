@@ -1,13 +1,13 @@
-const menuIcon = document.getElementById("menuIcon");
+const menuBtn = document.getElementById("menuBtn");
 const navBar = document.getElementById("navigator-list");
 const ul = document.getElementById("list");
 
 const listItems = ["Products", "Contact", "About Us"];
 navBar.style.display = "none";
 
-menuIcon.addEventListener("click", () => {
-    if (navBar.getAttribute("aria-hidden") === "true") {
-        navBar.setAttribute("aria-hidden", "false");
+menuBtn.addEventListener("click", () => {
+    if (menuBtn.getAttribute("aria-expanded") === "true") {
+        menuBtn.setAttribute("aria-expanded", "false");
         navBar.style.display = "block";
         for (const item of listItems) {
             const li = document.createElement("li");
@@ -29,8 +29,8 @@ menuIcon.addEventListener("click", () => {
             li.appendChild(a);
             ul.appendChild(li);
         }
-    } else if (navBar.getAttribute("aria-hidden") === "false") {
-        navBar.setAttribute("aria-hidden", "true");
+    } else if (menuBtn.getAttribute("aria-expanded") === "false") {
+        menuBtn.setAttribute("aria-expanded", "true");
         navBar.style.display = "none";
         while (ul.firstChild) {
             ul.removeChild(ul.firstChild);
