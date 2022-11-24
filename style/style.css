@@ -32,15 +32,38 @@ header {
     height: 51px;
 }
 
-header button {
+header button#menuBtn {
     position: absolute;
-    background-color: var(--color-theme);
+    background-color: transparent;
     background-image: url("../images/menu-bar.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
     border: none;
+    cursor: pointer;
     top: 50%;
+    transform: translate(0%, -50%);
+}
+
+header h1 {
+    margin-left: 40px;
+    width: fit-content;
+}
+
+header button#profileIcon {
+    position: absolute;
+    background-color: var(--bright-color);
+    background-image: url("../images/profile-icon.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: calc(100% - 46px);
     transform: translate(0%, -50%);
 }
