@@ -58,11 +58,12 @@ header ul {
 
 header ul li.enter-account {
     background-color: var(--contrast-color);
-    padding: 4px;
+    padding: 6px;
 }
 
 header ul li.enter-account a {
     color: white;
+    margin-left: 35px;
 }
 
 header ul li {
@@ -93,13 +94,47 @@ header button#profileIcon {
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 50%;
     box-shadow: inset 0px 0px 2px 0px var(--shadow-color);
     cursor: pointer;
-    top: 50%;
+    top: 2px;
+    left: 6px;
+    /* top: 50%;
     left: calc(100% - 46px);
-    transform: translate(0%, -50%);
+    transform: translate(0%, -50%); */
+}
+
+div.callout {
+    position: absolute;
+    background-color: var(--color-theme);
+    width: 80vw;
+    height: 200px;
+    border-radius: 9px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.callout > div.heading-log-group {
+    background-color: var(--complementary-color);
+    padding: 9px;
+    border-radius: 9px 9px 0px 0px;
+}
+
+button#closeBtn {
+    position: absolute;
+    background-color: transparent;
+    color: var(--contrast-color);
+    font-size: larger;
+    font-weight: bold;
+    border: none;
+    top: 0px;
+    left: calc(100% - 21px);
+}
+
+div.callout > div.log-group {
+    padding: 9px;
 }

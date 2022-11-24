@@ -13,6 +13,7 @@
     <header>
         <button id="menuBtn" aria-label="Menu Bar" aria-expanded="true"></button>
         <ul>
+            <button id="profileIcon" aria-label="Profile account"></button>
             <li class="enter-account"><a href="profile.html">Sign In</a></li>
             <li><a href="#">Teste</a></li>
             <li><a href="#">About Us</a></li>
@@ -23,8 +24,20 @@
         </a>
         <a href="nav-cart.html" class="cart-icon">
         </a>
-        <!-- <button id="profileIcon" aria-label="Profile account"></button> -->
+        
     </header>
+    <div class="callout">
+        <div class="heading-log-group">
+            <h2>Want to join us?</h2>
+            <button id="closeBtn">x</button>
+        </div>
+        <div class="log-group">
+            <label for="accountName">Enter your account name:</label>
+            <input type="text" name="accountName" id="accountName" aria-required="true" required>
+            <button>Remember me</button>
+            <button>Forget me</button>
+        </div>
+    </div>
     <nav id="navigator-list">
         <ul id="list">
             
