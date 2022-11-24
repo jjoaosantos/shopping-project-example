@@ -46,9 +46,43 @@ header button#menuBtn {
     transform: translate(0%, -50%);
 }
 
+header ul {
+    position: absolute;
+    background-color: var(--bright-color);
+    width: 100vw;
+    padding-bottom: 4px;
+    top: 51px;
+    /* z-index: 1; */
+}
+
+header ul li.enter-account {
+    background-color: var(--contrast-color);
+    padding: 4px;
+}
+
+header ul li.enter-account a {
+    color: white;
+}
+
+header ul li {
+    padding: 4px;
+}
+
 header h1 {
     margin-left: 40px;
     width: fit-content;
+}
+
+header a.cart-icon {
+    position: absolute;
+    background-image: url("../images/cart-icon.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: calc(100% - 46px);
+    transform: translate(0%, -50%);
 }
 
 header button#profileIcon {
@@ -62,6 +96,7 @@ header button#profileIcon {
     height: 40px;
     border: none;
     border-radius: 50%;
+    box-shadow: inset 0px 0px 2px 0px var(--shadow-color);
     cursor: pointer;
     top: 50%;
     left: calc(100% - 46px);
