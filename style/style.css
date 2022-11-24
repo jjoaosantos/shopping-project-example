@@ -37,7 +37,8 @@ header button#menuBtn {
     background-color: transparent;
     background-image: url("../images/menu-bar.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: bottom;
+    background-size: 87%;
     width: 40px;
     height: 40px;
     border: none;
