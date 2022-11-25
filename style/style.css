@@ -61,9 +61,12 @@ header ul li.enter-account {
     padding: 6px;
 }
 
-header ul li.enter-account a {
+header ul li.enter-account button {
+    background-color: transparent;
     color: white;
-    margin-left: 35px;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
 }
 
 header ul li {
@@ -107,21 +110,20 @@ header button#profileIcon {
     transform: translate(0%, -50%); */
 }
 
-div.callout {
+form.callout {
     position: absolute;
     background-color: var(--color-theme);
     width: 80vw;
-    height: 200px;
-    border-radius: 9px;
+    border-radius: 4px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-div.callout > div.heading-log-group {
+form.callout > div.heading-log-group {
     background-color: var(--complementary-color);
     padding: 9px;
-    border-radius: 9px 9px 0px 0px;
+    border-radius: 4px 4px 0px 0px;
 }
 
 button#closeBtn {
@@ -131,10 +133,29 @@ button#closeBtn {
     font-size: larger;
     font-weight: bold;
     border: none;
+    cursor: pointer;
     top: 0px;
     left: calc(100% - 21px);
 }
 
-div.callout > div.log-group {
+form.callout > div.log-group {
     padding: 9px;
+}
+
+form.callout > div.log-group > input {
+    width: 100%;
+    margin: 2px 0px;
+}
+
+form.callout > div.log-group > button {
+    background-color: var(--bright-color);
+    margin-top: 9px;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+div.callout > div.log-group > button:hover {
+    outline: auto;
 }

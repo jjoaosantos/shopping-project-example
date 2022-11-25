@@ -13,8 +13,8 @@
     <header>
         <button id="menuBtn" aria-label="Menu Bar" aria-expanded="true"></button>
         <ul>
-            <button id="profileIcon" aria-label="Profile account"></button>
-            <li class="enter-account"><a href="profile.html">Sign In</a></li>
+            <!-- <button id="profileIcon" aria-label="Profile account"></button> -->
+            <li class="enter-account"><button id="userInfo">Sign In</button></li>
             <li><a href="#">Teste</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
@@ -26,7 +26,7 @@
         </a>
         
     </header>
-    <div class="callout">
+    <form class="callout" aria-hidden="true">
         <div class="heading-log-group">
             <h2>Want to join us?</h2>
             <button id="closeBtn">x</button>
@@ -34,17 +34,17 @@
         <div class="log-group">
             <label for="accountName">Enter your account name:</label>
             <input type="text" name="accountName" id="accountName" aria-required="true" required>
-            <button>Remember me</button>
-            <button>Forget me</button>
+            <input id="submitname" type="submit" value="Say hello">
+            <input id="forgetname" type="reset" value="Forget">
         </div>
-    </div>
+    </form>
     <nav id="navigator-list">
         <ul id="list">
             
         </ul>
     </nav>
     <a href="#">Click me!</a>
-    <script src="main.js"></script>
-    <script src="data.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <!-- <script src="data.js"></script> -->
 </body>
 </html>

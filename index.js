@@ -1,15 +1,17 @@
-const rememberDiv = document.querySelector(".remember");
-const forgetDiv = document.querySelector(".forget");
-const form = document.querySelector("#user-log");
-const nameInput = document.querySelector("#entername");
+const form = document.querySelector(".callout");
+const nameInput = document.querySelector("#accountName");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
 
-const accountIcon = document.querySelector("#enterAccount");
 
-const personalGreeting = document.querySelector(".personal-greeting");
+const enterAccount = document.querySelector("#userInfo");
 
 form.addEventListener("submit", (e) => e.preventDefault());
+
+document.querySelector("#closeBtn").addEventListener("click", () => {
+    form.setAttribute("aria-hidden", "true");
+    form.style.display = "none";
+})
 
 submitBtn.addEventListener("click", () => {
     localStorage.setItem("name", nameInput.value);
@@ -21,7 +23,7 @@ forgetBtn.addEventListener("click", () => {
     nameDisplayCheck();
 });
 
-accountIcon.addEventListener("click", () => {
+enterAccount.addEventListener("click", () => {
     if (form.getAttribute("aria-hidden") === "true") {
         form.setAttribute("aria-hidden", "false");
         form.style.display = "block";
@@ -34,14 +36,13 @@ accountIcon.addEventListener("click", () => {
 function nameDisplayCheck() {
     if (localStorage.getItem("name")) {
         const name = localStorage.getItem("name");
-        personalGreeting.textContent = name;
-        forgetDiv.style.display = "block";
-        rememberDiv.style.display = "none";
+        enterAccount.textContent = `Hello, ${name}`;
+        submitBtn.style.display = "block";
+        forgetBtn.style.display = "none";
         form.style.display = "none";
     } else {
-        personalGreeting.textContent = "";
-        forgetDiv.style.display = "none";
-        rememberDiv.style.display = "block";
+        submitBtn.style.display = "block";
+        forgetBtn.style.display = "none";
         form.style.display = "none";
     }
 }
