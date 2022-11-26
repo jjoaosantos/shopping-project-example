@@ -37,8 +37,9 @@ function nameDisplayCheck() {
     if (localStorage.getItem("name")) {
         const name = localStorage.getItem("name");
         enterAccount.textContent = `Hello, ${name}`;
-        submitBtn.style.display = "block";
-        forgetBtn.style.display = "none";
+        submitBtn.style.display = "none";
+        forgetBtn.style.display = "block";
+        nameInput.style.display = "none";
         form.style.display = "none";
     } else {
         submitBtn.style.display = "block";
