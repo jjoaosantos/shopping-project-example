@@ -15,7 +15,7 @@
         <nav id="menuNavigator">
             <ul>
                 <!-- <button id="profileIcon" aria-label="Profile account"></button> -->
-                <li class="enter-account"><button id="userInfo">Sign In</button></li>
+                <li class="enter-account"><button id="userInfo"></button></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
@@ -30,18 +30,23 @@
     </header>
     <form class="callout" aria-hidden="true">
         <div class="heading-log-group">
-            <h2>Want to join us?</h2>
+            <h2 id="calloutHeading"></h2>
             <button id="closeBtn">x</button>
         </div>
         <div class="log-group">
-            <label for="accountName">Enter your account name:</label>
-            <input type="text" name="accountName" id="accountName" aria-required="true" required>
-            <input id="submitname" type="submit" value="Say hello">
-            <input id="forgetname" type="reset" value="Forget">
+            <div class="remember">
+                <label for="accountName">Enter your account name:</label>
+                <input type="text" name="accountName" id="accountName" aria-required="true" required>
+                <input id="submitname" type="submit" value="Say hello">
+            </div>
+            <div class="forget">
+                <label for="forgetname">Want me to forget you?</label>
+                <input id="forgetname" type="reset" value="Forget">
+            </div>
         </div>
     </form>
     <a href="#">Click me!</a>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
     <!-- <script src="data.js"></script> -->
 </body>
 </html>

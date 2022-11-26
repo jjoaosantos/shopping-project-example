@@ -142,13 +142,14 @@ form.callout > div.log-group {
     padding: 9px;
 }
 
-form.callout > div.log-group > input {
+input#accountName {
     width: 100%;
     margin: 2px 0px;
 }
 
-form.callout > div.log-group > button {
+input[type="submit"], input[type="reset"] {
     background-color: var(--bright-color);
+    width: 100%;
     margin-top: 9px;
     padding: 10px;
     border: none;
