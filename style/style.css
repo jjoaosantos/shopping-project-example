@@ -152,9 +152,9 @@ main {
     background-color: white;
     text-align: center;
     width: 94vw;
-    min-height: 200px;
+    min-height: 220px;
     margin: auto;
-    padding: 80px 0px 35px 0px;
+    padding: 20px 0px 35px 0px;
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
     z-index: 1;
@@ -163,10 +163,8 @@ main {
 main section {
     display: inline-block;
     text-align: left;
-    width: 200px;
-    min-height: 200px;
-    margin: 0px 10px;
-    margin-bottom: 30px;
+    width: 220px;
+    margin: 30px 0px;
 }
 
 main section img {
