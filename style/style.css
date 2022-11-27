@@ -90,26 +90,6 @@ header a.cart-icon {
     transform: translate(0%, -50%);
 }
 
-header button#profileIcon {
-    position: absolute;
-    background-color: var(--bright-color);
-    background-image: url("../images/profile-icon.png");
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 2px 0px var(--shadow-color);
-    cursor: pointer;
-    top: 2px;
-    left: 6px;
-    /* top: 50%;
-    left: calc(100% - 46px);
-    transform: translate(0%, -50%); */
-}
-
 form.callout {
     position: absolute;
     background-color: var(--color-theme);
@@ -159,4 +139,17 @@ input[type="submit"], input[type="reset"] {
 
 div.callout > div.log-group > button:hover {
     outline: auto;
+}
+
+#filterNavigator {
+    background-color: white;
+    width: 94vw;
+    margin: 20px auto 0px;
+}
+
+main {
+    background-color: white;
+    width: 94vw;
+    min-height: 220px;
+    margin: auto;
 }
