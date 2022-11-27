@@ -42,12 +42,28 @@
             </div>
         </div>
     </form>
-    <nav id="filterNavigator">
-        <input type="text">
+    <nav id="navFilter">
+        
+        <form id="formFilter">
+            <button id="searchBtn"></button>
+            <input type="text" name="searchTerm" id="searchTerm" aria-label="Enter search term" placeholder="Enter a search term">
+            <label for="brand" id="brandingLabel">Brand
+                <select aria-label="Select a brand" name="brand" id="brand">
+                <option aria-selected="true" selected>All</option>
+                <option>Iphone</option>
+                <option>Motorola</option>
+                <option>Nokia</option>
+                <option>Samsung</option>
+            </select>
+            </label>
+            
+        </form>
     </nav>
     <main>
 
     </main>
+
+    <!-- <a href="https://iconscout.com/icons/search" target="_blank">Search Icon</a> by <a href="https://iconscout.com/contributors/lucia-gonzalez" target="_blank">Lucía González</a> -->
     <script src="main.js"></script>
     <!-- <script src="data.js"></script> -->
 </body>

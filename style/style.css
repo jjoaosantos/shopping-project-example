@@ -53,7 +53,6 @@ header ul {
     width: 100vw;
     padding-bottom: 4px;
     top: 51px;
-    /* z-index: 1; */
 }
 
 header ul li.enter-account {
@@ -71,6 +70,19 @@ header ul li.enter-account button {
 
 header ul li {
     padding: 4px;
+}
+
+header ul li:hover {
+    background-color: var(--paper-color);
+}
+
+header ul li a {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+header ul li a:focus-within {
+    outline-color: var(--color-theme);
 }
 
 header h1 {
@@ -127,7 +139,7 @@ input#accountName {
     margin: 2px 0px;
 }
 
-input[type="submit"], input[type="reset"] {
+header input[type="submit"], input[type="reset"] {
     background-color: var(--bright-color);
     width: 100%;
     margin-top: 9px;
@@ -141,10 +153,27 @@ div.callout > div.log-group > button:hover {
     outline: auto;
 }
 
-#filterNavigator {
+#navFilter {
     background-color: white;
+    text-align: right;
     width: 94vw;
-    margin: 20px auto 0px;
+    margin: 20px auto;
+    padding: 6px;
+}
+
+#navFilter input#searchTerm {
+    width: calc(100% - 30px);
+}
+
+#searchBtn {
+    display: inline-block;
+    background-color: transparent;
+    background-image: url("../images/search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    border: none;
 }
 
 main {
