@@ -26,95 +26,109 @@ html, body {
 }
 
 header {
+    position: relative;
     background-color: var(--color-theme);
-    margin-bottom: 20px;
+    width: 100vw;
+    height: 51px;
 }
 
-header h1 {
-    display: inline-block;
-}
-
-header div {
-    float: right;
-    text-align: right;
-}
-
-header div p {
-    position: relative;
-    display: inline-block;
-    font-size: larger;
-    font-weight: bold;
-    top: -7px;
-}
-
-#menuIcon {
-    position: relative;
-    color: var(--contrast-color);
-    font-size: 28px;
-    top: 8px;
-}
-
-#menuIcon:hover {
-    cursor: pointer;
-}
-
-header span#profileIcon {
-    color: var(--contrast-color);
-    font-size: 35px;
-    padding: 5px;
-}
-
-header span#profileIcon:hover {
-    cursor: pointer;
-}
-
-div.remember, div.forget {
+header button#menuBtn {
     position: absolute;
-    background-color: var(--bright-color);
-    text-align: right;
-    width: 68px;
-    padding: 6px 4px;
-    border-radius: 0px 0px 3px 3px;
-    left: calc(100vw - 68px);
-    top: calc(0px + 51px);
-    z-index: 2;
-}
-
-div.remember input#entername {
+    background-color: transparent;
+    background-image: url("../images/menu-bar.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 87%;
+    width: 40px;
+    height: 40px;
     border: none;
-    box-shadow: inset 1px 1px 2px -1px var(--contrast-color);
-    width: 60px;
+    cursor: pointer;
+    top: 50%;
+    transform: translate(0%, -50%);
 }
 
-div.remember #submitname, #forgetname {
-    background-color: var(--color-theme);
-    padding: 1px 6px;
-    border: none;
-    border-radius: 4px;
-}
-
-div.remember #submitname:hover, #forgetname:hover {
-    background-color: var(--complementary-color);
-}
-
-#navigator-list {
+header ul {
     position: absolute;
     background-color: var(--bright-color);
     width: 100vw;
-    box-shadow: inset 0px 1px 2px 0px var(--shadow-color);
-    top: calc(0px + 51px);
-    z-index: 3;
+    padding-bottom: 4px;
+    top: 51px;
+    /* z-index: 1; */
 }
 
-#navigator-list ul {
-    list-style-type: none;
+header ul li.enter-account {
+    background-color: var(--contrast-color);
+    padding: 6px;
 }
 
-#navigator-list ul li {
+header ul li.enter-account button {
+    background-color: transparent;
+    color: white;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+}
+
+header ul li {
+    padding: 4px;
+}
+
+header h1 {
+    margin-left: 40px;
+    width: fit-content;
+}
+
+header a.cart-icon {
+    position: absolute;
+    background-image: url("../images/cart-icon.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: calc(100% - 46px);
+    transform: translate(0%, -50%);
+}
+
+header button#profileIcon {
+    position: absolute;
+    background-color: var(--bright-color);
+    background-image: url("../images/profile-icon.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 2px 0px var(--shadow-color);
+    cursor: pointer;
+    top: 2px;
+    left: 6px;
+    /* top: 50%;
+    left: calc(100% - 46px);
+    transform: translate(0%, -50%); */
+}
+
+form.callout {
+    position: absolute;
+    background-color: var(--color-theme);
+    width: 80vw;
+    border-radius: 4px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form.callout > div.heading-log-group {
+    background-color: var(--complementary-color);
     padding: 9px;
+    border-radius: 4px 4px 0px 0px;
 }
 
-#navigator-list ul li a {
+button#closeBtn {
+    position: absolute;
+    background-color: transparent;
     color: var(--contrast-color);
     outline-color: var(--color-theme);
     text-decoration: none;
@@ -130,15 +144,10 @@ form#navigator-filter {
     background-color: white;
     text-align: right;
     width: 94vw;
-    margin: auto;
+    margin: 20px auto 0px auto;
     padding: 8px 12px;
     border-radius: 20px 20px 0px 0px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
-}
-
-#brandingLabel {
-    display: inline-block;
-    font-size: small;
 }
 
 form span {
@@ -152,9 +161,9 @@ main {
     background-color: white;
     text-align: center;
     width: 94vw;
-    min-height: 220px;
+    min-height: 200px;
     margin: auto;
-    padding: 20px 0px 35px 0px;
+    padding: 80px 0px 35px 0px;
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
     z-index: 1;
@@ -163,8 +172,8 @@ main {
 main section {
     display: inline-block;
     text-align: left;
-    width: 220px;
-    margin: 30px 0px;
+    width: 200px;
+    height: 200px;
 }
 
 main section img {
@@ -173,19 +182,11 @@ main section img {
 
 main section p {
     font-size: larger;
-}
-
-#special-thanks {
-    background-color: white;
-    width: 94vw;
-    margin: 20px auto;
-    padding: 6px;
-    box-shadow: 0px 1px 2px 0px var(--shadow-color);
-}
-
-#special-thanks ul {
-    list-style-position: inside;
-    padding: 9px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    top: 0px;
+    left: calc(100% - 21px);
 }
 
 footer {
@@ -195,17 +196,17 @@ footer {
     width: 100vw;
     margin-top: 20px;
     padding: 9px;
-    box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
 }
 
-footer section img, p {
-    display: inline-block;
+input#accountName {
+    width: 100%;
+    margin: 2px 0px;
 }
 
 footer aside {
     text-align: right;
 }
 
-footer aside img {
-    padding: 4px;
+footer aside p {
+    display: inline-block;
 }

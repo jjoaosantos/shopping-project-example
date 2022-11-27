@@ -1,24 +1,23 @@
-const menuIcon = document.getElementById("menuIcon");
-const navBar = document.getElementById("navigator-list");
-const ul = document.getElementById("list");
+const menuBtn = document.getElementById("menuBtn");
+const navBar = document.getElementById("menuNavigator");
 
-const listItems = ["Products", "Contact", "About Us"];
+navBar.style.display = "none";
 
 menuIcon.addEventListener("click", () => {
-    if (menuIcon.getAttribute("aria-expanded") === "false") {
-        menuIcon.setAttribute("aria-expanded", "true");
+    if (navBar.getAttribute("aria-hidden") === "true") {
+        navBar.setAttribute("aria-hidden", "false");
         navBar.style.display = "block";
         for (const item of listItems) {
             const li = document.createElement("li");
             const a = document.createElement("a");
             if (item === "Products") {
-                a.href = "products.html";
+                a.href = "#products";
                 a.textContent = item;
             } else if (item === "Contact") {
-                a.href = "contact.html";
+                a.href = "#products";
                 a.textContent = item;
             } else if (item === "About Us") {
-                a.href = "aboutus.html";
+                a.href = "#aboutus";
                 a.textContent = item;
             } else {
                 const para = document.createElement("p");
@@ -28,11 +27,8 @@ menuIcon.addEventListener("click", () => {
             li.appendChild(a);
             ul.appendChild(li);
         }
-    } else if (menuIcon.getAttribute("aria-expanded") === "true") {
-        menuIcon.setAttribute("aria-expanded", "false");
+    } else if (navBar.getAttribute("aria-hidden") === "false") {
+        navBar.setAttribute("aria-hidden", "true");
         navBar.style.display = "none";
-        while (ul.firstChild) {
-            ul.removeChild(ul.firstChild);
-        }
     }
 });
