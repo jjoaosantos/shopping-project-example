@@ -13,7 +13,8 @@ form.addEventListener("submit", (e) => e.preventDefault());
 document.querySelector("#closeBtn").addEventListener("click", () => {
     form.setAttribute("aria-hidden", "true");
     form.style.display = "none";
-})
+    enterAccount.focus();
+});
 
 submitBtn.addEventListener("click", () => {
     localStorage.setItem("name", nameInput.value);
@@ -33,6 +34,9 @@ enterAccount.addEventListener("click", () => {
         form.setAttribute("aria-hidden", "true");
         form.style.display = "none";
     }
+
+    forgetBtn.focus();
+    nameInput.focus();
 });
 
 function nameDisplayCheck() {
@@ -48,8 +52,9 @@ function nameDisplayCheck() {
         h2.textContent = "Want to join us?";
         forgetDiv.style.display = "none";
         rememberDiv.style.display = "block";
-        form.style.display = "none";
     }
+    enterAccount.focus();
+    nameInput.focus();
 }
 
 nameDisplayCheck();
