@@ -7,7 +7,7 @@
     --paper-color: #ffa899;
     --bright-color: #f9e6e6;
     --footer-color: rgb(15, 15, 15);
-    --shadow-color: #2400119e;
+    --shadow-color: #24001157;
 
     --text-font: "Noto Sans", sans-serif;
 }
@@ -168,33 +168,46 @@ input#searchTerm {
     position: relative;
 }
 
-#formFilter input, select {
-    padding: 3px;
-    border: 1px solid var(--contrast-color);
+#formFilter input {
+    padding: 6px;
+    border: none;
     border-radius: 4px;
+    box-shadow: 0px 0px 2px var(--shadow-color);
+}
+
+input#searchTerm:hover, select#brand:hover {
+    box-shadow: 0px 0px 4px var(--shadow-color);
+}
+
+#formFilter select {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 0px 2px var(--shadow-color);
 }
 
 #searchBtn {
     position: absolute;
-    background-color: var(--complementary-color);
+    background-color: #ff684de7;
     background-image: url("../images/search-icon.svg");
     background-repeat: no-repeat;
-    background-size: 91%;
+    background-size: 71%;
     background-position: center;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px var(--shadow-color);
+    box-shadow: 0px 0px 2px var(--shadow-color);
     cursor: pointer;
     top: 50%;
     left: 18px;
-    transition: box-shadow .3s;
+    transition: box-shadow .2s;
     transform: translate(-50%, -50%);
 }
 
 #searchBtn:hover {
-    box-shadow: 0px 0px 5px var(--shadow-color);
+    background-color: var(--complementary-color);
+    box-shadow: 0px 0px 4px var(--shadow-color);
 }
 
 main {
