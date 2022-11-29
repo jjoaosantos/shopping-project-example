@@ -30,6 +30,8 @@ header {
     background-color: var(--color-theme);
     width: 100vw;
     height: 51px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px var(--shadow-color);
 }
 
 header button#menuBtn {
@@ -38,6 +40,7 @@ header button#menuBtn {
     background-image: url("../images/menu-bar.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 28px;
     height: 28px;
     border: none;
@@ -55,36 +58,32 @@ header ul {
     position: absolute;
     background-color: var(--bright-color);
     width: 100vw;
-    padding: 40px 6px 6px;
     top: 51px;
 }
 
 header ul li {
     padding: 6px;
 }
-
-header ul li:hover {
-    background-color: #ffa899c0;
-}
-
 header ul li a {
     color: var(--contrast-color);
     text-decoration: none;
 }
 
+header ul li:hover a {
+    color: var(--color-theme);
+}
+
 header ul li.enter-account {
-    position: absolute;
     background-color: var(--contrast-color);
-    width: 100%;
     padding: 6px;
-    top: 0px;
-    left: 0px;
 }
 
 header ul li.enter-account button {
     background-color: transparent;
     color: white;
     font-size: medium;
+    text-align: left;
+    width: 100%;
     border: none;
     cursor: pointer;
 }
@@ -153,26 +152,49 @@ div.callout > div.log-group > button:hover {
 }
 
 #navFilter {
-    background-color: white;
-    text-align: right;
+    /* background-color: white; */
+    text-align: center;
     width: 94vw;
-    margin: 20px auto;
-    padding: 6px;
+    margin: 0px auto 20px;
+    /* padding: 6px; */
 }
 
-#navFilter input#searchTerm {
-    width: calc(100% - 30px);
+input#searchTerm {
+    margin-left: 32px;
+    width: calc(100% - 135px);
+}
+
+#formFilter {
+    position: relative;
+}
+
+#formFilter input, select {
+    padding: 3px;
+    border: 1px solid var(--contrast-color);
+    border-radius: 4px;
 }
 
 #searchBtn {
-    display: inline-block;
-    background-color: transparent;
+    position: absolute;
+    background-color: var(--complementary-color);
     background-image: url("../images/search-icon.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 91%;
+    background-position: center;
     width: 24px;
     height: 24px;
     border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px var(--shadow-color);
+    cursor: pointer;
+    top: 50%;
+    left: 18px;
+    transition: box-shadow .3s;
+    transform: translate(-50%, -50%);
+}
+
+#searchBtn:hover {
+    box-shadow: 0px 0px 5px var(--shadow-color);
 }
 
 main {
@@ -182,9 +204,8 @@ main {
     min-height: 200px;
     margin: auto;
     padding: 80px 0px 35px 0px;
-    border-radius: 0px 0px 6px 6px;
-    box-shadow: 0px 1px 2px 0px var(--shadow-color);
-    z-index: 1;
+    /* border-radius: 0px 0px 6px 6px; */
+    /* box-shadow: 0px 1px 2px 0px var(--shadow-color); */
 }
 
 main section {
