@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchFor</title>
+    <link rel="stylesheet" href="style/style.css
+    " media="screen and (max-width:600px)">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <span role="button" class="material-symbols-outlined" id="menuIcon" aria-label="Menu bar">menu</span>
+        <h1><a href="index.html"><img src="images/searchfor-logo.png" alt="SearchFor Home"></a></h1>
+        <div>
+            <p class="personal-greeting"></p>
+            <span class="material-symbols-outlined" id="enterAccount">account_circle</span>
+        </div>
+    </header>
+    <form id="user-log" aria-hidden="true">
+        <div class="remember">
+            <label for="accountInput"><input type="text" id="entername" required></label>
+            <input id="submitname" type="submit" value="Log In">
+        </div>
+        <div class="forget">
+            <label for="forgetname"></label>
+            <input id="forgetname" type="reset" value="Log Out">
+        </div>
+    </form>
+    <nav id="navigator-list" aria-hidden="true">
+        <ul id="list">
+        </ul>
+    </nav>
+    <main>
+        <h1>About Us</h1>
+        <p>We`re selling products since 2002 bringing more technology for the people.</p>
+        <p>We hope you enjoy staying here.</p>
+    </main>
+    <footer>
+        <section><img src="images/heart-icon.png" alt="Heart Button"><p>1</p></section>
+        <aside><img src="images/instagram-logo.png" alt="Instagram"><img src="images/facebook-logo.png" alt="Facebook"><img src="images/whatsapp-logo.png" alt="Whatsapp"></aside>
+        <p>Copyright nobody. Use the code as you like.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

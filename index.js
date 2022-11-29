@@ -30,8 +30,8 @@ enterAccount.addEventListener("click", () => {
     if (form.getAttribute("aria-hidden") === "true") {
         form.setAttribute("aria-hidden", "false");
         form.style.display = "block";
-    } else if (form.getAttribute("aria-hidden") === "false") {
-        form.setAttribute("aria-hidden", "true");
+    } else if (profileIcon.getAttribute("aria-expanded") === "true") {
+        profileIcon.setAttribute("aria-expanded", "false")
         form.style.display = "none";
     }
 

@@ -68,15 +68,7 @@ header ul li.enter-account button {
     cursor: pointer;
 }
 
-header ul li {
-    padding: 4px;
-}
-
-header ul li:hover {
-    background-color: var(--paper-color);
-}
-
-header ul li a {
+header span#enterAccount {
     color: var(--contrast-color);
     text-decoration: none;
 }
@@ -85,9 +77,8 @@ header ul li a:focus-within {
     outline-color: var(--color-theme);
 }
 
-header h1 {
-    margin-left: 40px;
-    width: fit-content;
+header span#enterAccount:hover {
+    cursor: pointer;
 }
 
 header a.cart-icon {
@@ -179,6 +170,43 @@ div.callout > div.log-group > button:hover {
 main {
     background-color: white;
     width: 94vw;
-    min-height: 220px;
+    min-height: 200px;
     margin: auto;
+    padding: 80px 0px 35px 0px;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0px 1px 2px 0px var(--shadow-color);
+    z-index: 1;
+}
+
+main section {
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+    height: 200px;
+}
+
+main section img {
+    width: 100%;
+}
+
+main section p {
+    font-size: larger;
+}
+
+footer {
+    display: block;
+    background-color: var(--footer-color);
+    color: white;
+    width: 100vw;
+    margin-top: 20px;
+    padding: 9px;
+    box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
+}
+
+footer aside {
+    text-align: right;
+}
+
+footer aside p {
+    display: inline-block;
 }
