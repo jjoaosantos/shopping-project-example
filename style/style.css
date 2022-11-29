@@ -37,27 +37,48 @@ header button#menuBtn {
     background-color: transparent;
     background-image: url("../images/menu-bar.svg");
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 87%;
-    width: 40px;
-    height: 40px;
+    background-size: contain;
+    width: 28px;
+    height: 28px;
     border: none;
     cursor: pointer;
     top: 50%;
-    transform: translate(0%, -50%);
+    transform: translate(6%, -50%);
+}
+
+header h1 {
+    width: fit-content;
+    margin-left: 40px;
 }
 
 header ul {
     position: absolute;
     background-color: var(--bright-color);
     width: 100vw;
-    padding-bottom: 4px;
+    padding: 40px 6px 6px;
     top: 51px;
 }
 
-header ul li.enter-account {
-    background-color: var(--contrast-color);
+header ul li {
     padding: 6px;
+}
+
+header ul li:hover {
+    background-color: #ffa899c0;
+}
+
+header ul li a {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+header ul li.enter-account {
+    position: absolute;
+    background-color: var(--contrast-color);
+    width: 100%;
+    padding: 6px;
+    top: 0px;
+    left: 0px;
 }
 
 header ul li.enter-account button {
@@ -65,19 +86,6 @@ header ul li.enter-account button {
     color: white;
     font-size: medium;
     border: none;
-    cursor: pointer;
-}
-
-header span#enterAccount {
-    color: var(--contrast-color);
-    text-decoration: none;
-}
-
-header ul li a:focus-within {
-    outline-color: var(--color-theme);
-}
-
-header span#enterAccount:hover {
     cursor: pointer;
 }
 
@@ -169,6 +177,7 @@ div.callout > div.log-group > button:hover {
 
 main {
     background-color: white;
+    text-align: center;
     width: 94vw;
     min-height: 200px;
     margin: auto;
