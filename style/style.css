@@ -216,16 +216,17 @@ main {
     width: 94vw;
     min-height: 200px;
     margin: auto;
-    padding: 80px 0px 35px 0px;
-    /* border-radius: 0px 0px 6px 6px; */
+    padding: 80px 0px 0px;
+    border-radius: 4px;
     /* box-shadow: 0px 1px 2px 0px var(--shadow-color); */
 }
 
 main section {
     display: inline-block;
-    text-align: left;
-    width: 200px;
-    height: 200px;
+    font-style: italic;
+    width: 220px;
+    height: 284px;
+    margin-bottom: 35px;
 }
 
 main section img {
@@ -233,7 +234,13 @@ main section img {
 }
 
 main section p {
+    background-color: var(--color-theme);
+    font-style: normal;
     font-size: larger;
+    width: fit-content;
+    margin: auto;
+    padding: 2px 8px;
+    transform: skew(-20deg);
 }
 
 footer {
