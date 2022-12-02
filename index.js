@@ -22,6 +22,7 @@ function nameDisplayCheck() {
     if (localStorage.getItem("name")) {
         const name = localStorage.getItem("name");
         personalGreeting.textContent = `Hello, ${name}!`;
+        personalGreeting.style.display = "block";
         forgetDiv.style.display = "block";
         rememberDiv.style.display = "none";
     } else {

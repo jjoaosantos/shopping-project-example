@@ -21,6 +21,7 @@
 
 html, body {
     background-color: var(--paper-color);
+    font-size: 100%;
     width: 100vw;
     height: 100vh;
 }
@@ -50,24 +51,35 @@ header button#menuBtn {
 }
 
 header h1 {
-    width: fit-content;
+    width: 144px;
     margin-left: 40px;
 }
 
-header ul {
+header #menuNavigator {
     position: absolute;
     background-color: var(--bright-color);
-    font-size: large;
+    color: var(--contrast-color);
+    font-size: 1.2em;
     width: 100vw;
     height: 100vh;
-    padding: 0px 4px;
     box-shadow: inset 0px 1px 2px var(--shadow-color);
     top: 51px;
     z-index: 1;
+    transition: left .5s ease;
+}
+
+header #menuNavigator .main {
+    /* display: block; */
+    /* background-color: antiquewhite; */
+    height: calc(100vh - 240px);
+}
+
+header #menuNavigator .footer img {
+    padding: 8px 4px 0px;
 }
 
 header ul li {
-    padding: 0px 6px 6px;
+    padding: 0px 10px 6px;
 }
 
 header ul li a {
@@ -75,13 +87,14 @@ header ul li a {
     text-decoration: none;
 }
 
-header ul li:hover a {
+header ul li a:hover {
     color: var(--color-theme);
 }
 
 header ul li.enter-name {
-    /* background-color: var(--contrast-color); */
-    padding: 6px 4px 9px;
+    /* background-color: var(--shadow-color); */
+    /* height: 10vh; */
+    padding: .625em;
 }
 
 header ul .remember label {
@@ -89,8 +102,12 @@ header ul .remember label {
     /* padding: 4px 0px; */
 }
 
-header ul .forget label {
-    padding: 4px 0px;
+header ul .forget input[type="reset"] {
+    background-image: url("../images/logout-icon.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1.4em;
+    padding-right: 20px;
 }
 
 header ul input[type="submit"], input[type="reset"] {
@@ -268,7 +285,7 @@ main section img {
 
 main section .middle {
     transition: opacity .5s ease;
-    opacity: 0;
+    /* opacity: 0; */
     position: absolute;
     top: 50%;
     left: 50%;

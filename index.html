@@ -14,7 +14,7 @@
     <header>
         <button id="menuBtn" aria-label="Menu Bar" aria-expanded="false"></button>
         <nav id="menuNavigator">
-            <ul>
+            <ul id="list">
                 <li class="enter-name">
                     <form class="callout">
                         <div class="remember">
@@ -24,15 +24,23 @@
                         </div>
                         <div class="forget">
                             <p class="personal-greeting"></p>
-                            <label for="forgetname">Want me to forget you?</label>
-                            <input id="forgetname" type="reset" value="Forget">
+                            <input id="forgetname" type="reset" aria-label="Want me to forget you?" title="Want me to forget you?" value="Forget">
                         </div>
                     </form>
                 </li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Settings</a></li>
+                <div class="main">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Issues</a></li>
+                    <li><a href="#"><input type="button" value="Dark mode"></a></li>
+                    <li><a href="#"><input type="button" value="English (US)"></a></li>
+                </div>
+                <div class="footer">
+                    <li><a href="#"><img src="images/heart-icon.png" alt="Like Button"></a>1</li>
+                    <li>
+                        <a href="#"><img src="images/facebook-logo.png" alt="Facebook"></a><a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a><a href="#"><img src="images/whatsapp-logo.png" alt="Whatsapp"></a>
+                    </li>
+                </div>
             </ul>
         </nav>
         <a href="index.html">
