@@ -61,12 +61,13 @@ header ul {
     width: 100vw;
     height: 100vh;
     padding: 0px 4px;
+    box-shadow: inset 0px 1px 2px var(--shadow-color);
     top: 51px;
     z-index: 1;
 }
 
 header ul li {
-    padding: 6px;
+    padding: 0px 6px 6px;
 }
 
 header ul li a {
@@ -80,11 +81,7 @@ header ul li:hover a {
 
 header ul li.enter-name {
     /* background-color: var(--contrast-color); */
-    padding: 4px 4px;
-}
-
-header ul li.enter-name:hover {
-    background-color: #ffefebb6;
+    padding: 6px 4px 9px;
 }
 
 header ul .remember label {
@@ -94,6 +91,16 @@ header ul .remember label {
 
 header ul .forget label {
     padding: 4px 0px;
+}
+
+header ul input[type="submit"], input[type="reset"] {
+    background-color: transparent;
+    color: var(--complementary-color);
+    padding: 0px 3px;
+    /* border: 1px solid black; */
+    border: none;
+    /* border-radius: 2px; */
+    cursor: pointer;
 }
 
 /* header ul li.enter-account button {
@@ -248,8 +255,42 @@ main section {
     margin-bottom: 35px;
 }
 
+main section .container {
+    position: relative;
+}
+
 main section img {
+    /* opacity: 1; */
     width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+main section .middle {
+    transition: opacity .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* main .container:hover img {
+    opacity: 0.3;
+}
+  
+main .container:hover .middle {
+    opacity: 1;
+} */
+
+main section .cart {
+    background-image: url("../images/cart-icon.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 
 main section p {

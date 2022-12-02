@@ -21,7 +21,7 @@ forgetBtn.addEventListener("click", () => {
 function nameDisplayCheck() {
     if (localStorage.getItem("name")) {
         const name = localStorage.getItem("name");
-        personalGreeting.textContent = `Hello, ${name}`;
+        personalGreeting.textContent = `Hello, ${name}!`;
         forgetDiv.style.display = "block";
         rememberDiv.style.display = "none";
     } else {
