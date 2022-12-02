@@ -68,10 +68,37 @@ header #menuNavigator {
     transition: left .5s ease;
 }
 
+header #menuNavigator ul#list {
+    list-style-type: none;
+    text-align: center;
+}
+
 header #menuNavigator .main {
     /* display: block; */
     /* background-color: antiquewhite; */
     height: calc(100vh - 240px);
+}
+
+header #menuNavigator .main input[type="button"] {
+    background-color: var(--contrast-color);
+    /* background-image: url("../images/moon-dark-mode-icon.png");
+    background-repeat: no-repeat;
+    background-position: contain; */
+    color: white;
+    /* width: 24px;
+    height: 24px; */
+    padding: 6px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+header #menuNavigator .footer li.social-media {
+    background-color: #ffb3a4;
+    text-align: center;
+    width: 94vw;
+    margin: auto;
+    border-radius: 6px 6px 0px 0px;
 }
 
 header #menuNavigator .footer img {
@@ -93,8 +120,13 @@ header ul li a:hover {
 
 header ul li.enter-name {
     /* background-color: var(--shadow-color); */
+    /* font-weight: bold; */
     /* height: 10vh; */
     padding: .625em;
+}
+
+header ul li.enter-name h2 {
+    font-size: 1.2em;
 }
 
 header ul .remember label {
@@ -110,7 +142,12 @@ header ul .forget input[type="reset"] {
     padding-right: 20px;
 }
 
-header ul input[type="submit"], input[type="reset"] {
+header ul .main select {
+    width: 81.55px;
+    padding: 2px;
+}
+
+header ul li.enter-account input[type="submit"], input[type="reset"] {
     background-color: transparent;
     color: var(--complementary-color);
     padding: 0px 3px;
@@ -119,16 +156,6 @@ header ul input[type="submit"], input[type="reset"] {
     /* border-radius: 2px; */
     cursor: pointer;
 }
-
-/* header ul li.enter-account button {
-    background-color: transparent;
-    color: white;
-    font-size: medium;
-    text-align: left;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-} */
 
 header a.cart-icon {
     position: absolute;
@@ -141,57 +168,6 @@ header a.cart-icon {
     left: calc(100% - 46px);
     transform: translate(0%, -50%);
 }
-
-/* form.callout {
-    position: absolute;
-    background-color: var(--color-theme);
-    width: 80vw;
-    border-radius: 4px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-form.callout > div.heading-log-group {
-    background-color: var(--complementary-color);
-    padding: 9px;
-    border-radius: 4px 4px 0px 0px;
-}
-
-button#closeBtn {
-    position: absolute;
-    background-color: transparent;
-    color: var(--contrast-color);
-    font-size: larger;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    top: 0px;
-    left: calc(100% - 21px);
-}
-
-form.callout > div.log-group {
-    padding: 9px;
-}
-
-input#accountName {
-    width: 100%;
-    margin: 2px 0px;
-}
-
-header input[type="submit"], input[type="reset"] {
-    background-color: var(--bright-color);
-    width: 100%;
-    margin-top: 9px;
-    padding: 10px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-}
-
-div.callout > div.log-group > button:hover {
-    outline: auto;
-} */
 
 #navFilter {
     /* background-color: white; */
