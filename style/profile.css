@@ -69,9 +69,9 @@ form {
 }
 
 form > img {
-    background-image: url("../images/edit-switch-icon.png");
+    /* background-image: url("../images/edit-switch-icon.png");
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right; */
     cursor: pointer;
 }
 
