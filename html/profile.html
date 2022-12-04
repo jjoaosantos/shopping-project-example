@@ -54,21 +54,19 @@
         <form>
             <!-- <input type="submit" name="profileImg" id="profileImg" value="image">
              -->
-             <img src="../images/john-profile-icon.png" alt="Man avatar with glasses">
-             <img src="../images/edit-switch-icon.png" alt="">
-             <aside class="profile-gallery">
-                <section><img src="../images/david-profile-icon.png" alt=""></section>
-                <section><img src="../images/josh-profile-icon.png" alt=""></section>
-                <section><img src="../images/john-profile-icon.png" alt=""></section>
-                <section><img src="../images/steve-profile-icon.png" alt=""></section>
-                <section><img src="../images/rebeca-profile-icon.png" alt=""></section>
-                <section><img src="../images/miranda-profile-icon.png" alt=""></section>
-                <section><img src="../images/jennifer-profile-icon.png" alt=""></section>
-                <section><img src="../images/julia-profile-icon.png" alt=""></section>
-             </aside>
+             <div class="full-img">
+                <img class="displayed-img" src="../images/profile-icon.png" alt="Man avatar with glasses">
+                
+            </div>
+            <h2 class="personal-greeting">João</h2>
+            <aside class="thumb-bar">
+                
+            </aside>
             <div class="forget">
-                <h2 class="personal-greeting">João</h2>
-                <p>Hello, world! I'm really good coding and I like coffee.</p>
+                
+                <!-- <p>Hello, world! I'm really good coding and I like coffee.</p> -->
+                <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="188" placeholder="Write down something about yourself." aria-disabled="true" disabled></textarea>
+                <input type="button" id="editingTool" value="">
             </div>
         </form>
         <!-- <section>
@@ -76,7 +74,8 @@
         </section> -->
     </main>
     <section>
-        <button class="shop">Go shopping</button>
+        <a href="index.html" class="shop">Go shopping</a>
+        
         <button class="forgetBtn">Forget</button>
     </section>
     <script src="../scripts/main.js"></script>

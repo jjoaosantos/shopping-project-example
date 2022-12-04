@@ -3,6 +3,16 @@ main {
     min-height: 120px;
 }
 
+main .full-img {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+/* main .full-img, h2 {
+    display: inline-block;
+} */
+
 main aside section {
     background-color: aquamarine;
     font-style: normal;
@@ -10,6 +20,7 @@ main aside section {
     height: 37.5px;
     margin: 0px;
     padding: 0px;
+    
     /* border-radius: 10px; */
 }
 
@@ -21,15 +32,19 @@ section {
     /* background-color: white; */
     width: 94vw;
     /* min-height: 100px; */
-    margin: auto;
+    /* margin: auto; */
     margin-top: 20px;
     padding: 12px;
 
 }
 
-section button {
+section .shop, .forgetBtn {
     display: block;
     background-color: #f9e6e6;
+    color: black;
+    font-size: small;
+    text-decoration: none;
+    text-align: center;
     width: 50%;
     margin: 12px auto;
     padding: 8px;
@@ -38,26 +53,14 @@ section button {
     cursor: pointer;
 }
 
-/* .profile-select {
-    position: absolute;
-    display: inline-block;
-    background-image: url("../images/edit-switch-icon.png");
-    background-size: 90%;
-    width: 20px;
-    height: 20px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-} */
-
-.profile-gallery {
+.thumb-bar {
     /* position: absolute; */
     display: block;
     /* background-color: rgb(66, 145, 118); */
     max-width: 163px;
     max-height: 80px;
     margin: auto;
+    margin-top: 10px;
     /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
@@ -68,20 +71,22 @@ form {
     padding: 10px;
 }
 
-form > img {
-    /* background-image: url("../images/edit-switch-icon.png");
-    background-repeat: no-repeat;
-    background-position: bottom right; */
+form textarea {
+    /* height: 30px; */
+    max-width: 301px;
+    font-size: medium;
+    padding: 6px;
+    resize: none;
+    margin-top: 10px;
+}
+
+form #editingTool {
+    background-image: url("../images/editor-icon.png");
+    width: 24px;
+    height: 24px;
+    border: none;
     cursor: pointer;
 }
-
-form p {
-    background-image: url("../images/edit-icon.png");
-    background-repeat: no-repeat;
-    background-position: 98%;
-    background-size: 1em;
-}
-
 /* form .user-description, input[type="submit"] {
     display: inline-block;
 } */
