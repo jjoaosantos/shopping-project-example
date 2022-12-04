@@ -72,8 +72,21 @@ const info = {
     "julia-profile-icon.png" : "Girl with pink ponytail hair smiling."
 }
 
+// function imageDisplayCheck() {
+//     if (!localStorage.getItem("image")) {
+//         populateStorage();
+//     } else {
+//         setStyles();
+//     }
+// }
+
+// function populateStorage() {
+//     localStorage.setItem("image", displayedImage.value);
+// }
+
 for (const image of images) {
     const newImage = document.createElement("img");
+    // newImage.localStorage.getItem("image");
     const section = document.createElement("section");
     newImage.setAttribute("src", `../images/${image}`);
     newImage.setAttribute("alt", alts[image]);
@@ -81,9 +94,15 @@ for (const image of images) {
     newImage.setAttribute("tabindex", "0");
     thumbBar.appendChild(section);
     section.appendChild(newImage);
+
+    // localStorage.getItem("image", `../images/${newImage}`);
     
+    const currentImage = localStorage.getItem("image");
+    displayedImage.setAttribute("src", `../images/${currentImage}`);
+
     newImage.addEventListener("click", () => {
-        displayedImage.setAttribute("src", `../images/${image}`);
+        localStorage.setItem("image", `../images/${image}`);
+        // displayedImage.setAttribute("src", `../images/${currentImage}`);
         displayedImage.setAttribute("alt", `${alts[image]}`);
         textArea.textContent = info[image];
     })
