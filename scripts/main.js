@@ -43,11 +43,6 @@ const displayedImage = document.querySelector(".displayed-img");
 const thumbBar = document.querySelector(".thumb-bar");
 const textArea = document.querySelector("#textarea");
 
-document.querySelector("#editingTool").addEventListener("click", () => {
-    textArea.disabled = "false";
-    textArea.ariaDisabled = "false";
-})
-
 const images = ["david-profile-icon.png", "josh-profile-icon.png", "john-profile-icon.png", "steve-profile-icon.png", "rebeca-profile-icon.png", "miranda-profile-icon.png", "jennifer-profile-icon.png", "julia-profile-icon.png"];
 
 const alts = {
@@ -72,21 +67,9 @@ const info = {
     "julia-profile-icon.png" : "Girl with pink ponytail hair smiling."
 }
 
-// function imageDisplayCheck() {
-//     if (!localStorage.getItem("image")) {
-//         populateStorage();
-//     } else {
-//         setStyles();
-//     }
-// }
-
-// function populateStorage() {
-//     localStorage.setItem("image", displayedImage.value);
-// }
 
 for (const image of images) {
     const newImage = document.createElement("img");
-    // newImage.localStorage.getItem("image");
     const section = document.createElement("section");
     newImage.setAttribute("src", `../images/${image}`);
     newImage.setAttribute("alt", alts[image]);
@@ -95,20 +78,25 @@ for (const image of images) {
     thumbBar.appendChild(section);
     section.appendChild(newImage);
 
-    // localStorage.getItem("image", `../images/${newImage}`);
-    
-    const currentImage = localStorage.getItem("image");
-    displayedImage.setAttribute("src", `../images/${currentImage}`);
+    if (!localStorage.getItem("image")) {
+        displayedImage.setAttribute("src", "../images/profile-icon.png")
+        displayedImage.setAttribute("alt", "Profile Icon");
+    } else {
+        const currentImage = localStorage.getItem("image");
+        displayedImage.setAttribute("src", currentImage);
 
-    newImage.addEventListener("click", () => {
-        localStorage.setItem("image", `../images/${image}`);
-        // displayedImage.setAttribute("src", `../images/${currentImage}`);
-        displayedImage.setAttribute("alt", `${alts[image]}`);
-        textArea.textContent = info[image];
-    })
+        newImage.addEventListener("click", () => {
+            localStorage.setItem("image", `../images/${image}`);
+            displayedImage.setAttribute("src", `../images/${image}`);
+            displayedImage.setAttribute("alt", `${alts[image]}`);
+            textArea.textContent = info[image]
+        });
 
-    newImage.addEventListener("keypress", () => {
-        displayedImage.setAttribute("src", `../images/${image}`);
-        displayedImage.setAttribute("alt", `${alts[image]}`);
-    })
+        newImage.addEventListener("keypress", () => {
+            localStorage.setItem("image", `../images/${image}`);
+            displayedImage.setAttribute("src", `../images/${image}`);
+            displayedImage.setAttribute("alt", `${alts[image]}`);
+            textArea.textContent = info[image];
+        })
+    }
 }
