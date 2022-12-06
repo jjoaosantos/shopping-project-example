@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../style/profile.css" media="screen and (max-width:600px)">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <script src="../scripts/index.js" defer></script>
+    <script src="../scripts/index-main-profile.js" defer></script>
 </head>
 <body>
     <header>
@@ -51,7 +51,7 @@
         <a href="nav-cart.html" class="cart-icon"></a>
     </header>
     <main>
-        <form>
+        <form id="profilePage">
              <div class="full-img">
                 <img class="displayed-img">
             </div>
@@ -62,12 +62,10 @@
             <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Write down something about yourself." aria-disabled="true" disabled></textarea>
             <input type="button" id="editingTool" value="">
         </form>
-        <!-- <section>
-            No results to display!
-        </section> -->
     </main>
-    <section>
+    <section id="profile-section">
         <a href="index.html" class="shop">Go shopping</a>
+        <!-- <button class="forgetBtn">Forget</button> -->
     </section>
     <script src="../scripts/main.js"></script>
 </body>
