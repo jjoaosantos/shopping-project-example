@@ -30,7 +30,7 @@
                     </form>
                 </li>
                 <div class="main">
-                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="profile.html" class="profile-disabled">Profile</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="#">Issues</a></li>
                     <li><a href="#"><input type="button" aria-label="Dark mode" title="Dark mode" value="Dark mode"></a></li>
@@ -52,21 +52,15 @@
     </header>
     <main>
         <form>
-            <!-- <input type="submit" name="profileImg" id="profileImg" value="image">
-             -->
              <div class="full-img">
                 <img class="displayed-img">
             </div>
-            <h2 class="personal-greeting">João</h2>
+            <h2 class="user-name"></h2>
             <aside class="thumb-bar">
 
             </aside>
-            <div class="forget">
-                
-                <!-- <p>Hello, world! I'm really good coding and I like coffee.</p> -->
-                <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Write down something about yourself." aria-disabled="true" disabled></textarea>
-                <input type="button" id="editingTool" value="">
-            </div>
+            <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Write down something about yourself." aria-disabled="true" disabled></textarea>
+            <input type="button" id="editingTool" value="">
         </form>
         <!-- <section>
             No results to display!
@@ -74,8 +68,6 @@
     </main>
     <section>
         <a href="index.html" class="shop">Go shopping</a>
-        
-        <button class="forgetBtn">Forget</button>
     </section>
     <script src="../scripts/main.js"></script>
 </body>

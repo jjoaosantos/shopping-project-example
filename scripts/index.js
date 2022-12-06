@@ -2,6 +2,7 @@ const rememberDiv = document.querySelector(".remember");
 const forgetDiv = document.querySelector(".forget");
 const form = document.querySelector(".callout");
 const personalGreeting = document.querySelector(".personal-greeting");
+const userName = document.querySelector(".user-name");
 const nameInput = document.querySelector("#entername");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
@@ -21,14 +22,36 @@ forgetBtn.addEventListener("click", () => {
 function nameDisplayCheck() {
     if (localStorage.getItem("name")) {
         const name = localStorage.getItem("name");
+        userName.textContent = name;
         personalGreeting.textContent = `Hello, ${name}!`;
         personalGreeting.style.display = "block";
         forgetDiv.style.display = "block";
         rememberDiv.style.display = "none";
+
+        // if (document.querySelector("a").getAttribute("class") === "profile-disabled") {
+        //     document.querySelector("a").setAttribute("class", "profile-active");
+        //     document.querySelector("a").setAttribute("href", "profile.html");
+        // }
     } else {
         personalGreeting.style.display = "none";
         forgetDiv.style.display = "none";
         rememberDiv.style.display = "block";
+
+        // if (document.querySelector("a").getAttribute("class") === "profile-disabled") {
+        //     document.querySelector("a").setAttribute("href", "#");
+            
+        //     document.querySelector("a").addEventListener("click", () => {
+        //         nameInput.focus();
+        //     })
+        // } else {
+        //     document.querySelector("a").setAttribute("class", "profile-disabled");
+
+        //     document.querySelector("a").setAttribute("href", "#");
+            
+        //     document.querySelector("a").addEventListener("click", () => {
+        //         nameInput.focus();
+        //     })
+        // }
     }
 }
 
