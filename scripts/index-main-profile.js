@@ -69,14 +69,14 @@ nameDisplayCheck();
 
 const displayedImage = document.querySelector(".displayed-img");
 const thumbBar = document.querySelector(".thumb-bar");
+const formProfile = document.querySelector("#profilePage");
 const textArea = document.querySelector("#textarea");
-// textArea.disabled = true;
+const editingTool = document.querySelector("#editingTool");
+const rememberCheck = document.querySelector("#rememberCheck");
+const editDiv = document.querySelector(".edit");
+const rememberinfo = document.querySelector(".rememberInfo");
 
-// if (textArea.disabled === true) {
-//     document.querySelector("#editingTool").addEventListener("click", () => {
-//         textArea.disabled = false;
-//     });
-// }
+formProfile.addEventListener("submit", (e) => e.preventDefault());
 
 const images = ["david-profile-icon.png", "josh-profile-icon.png", "john-profile-icon.png", "steve-profile-icon.png", "rebeca-profile-icon.png", "miranda-profile-icon.png", "jennifer-profile-icon.png", "julia-profile-icon.png"];
 
@@ -143,5 +143,44 @@ for (const image of images) {
     } else {
         displayedImage.setAttribute("src", "../images/profile-icon.png")
         displayedImage.setAttribute("alt", "Profile Icon");
+    }
+
+    if (localStorage.getItem("info")) {
+        editingTool.style.display = "none"
+        rememberCheck.style.display = "block";
+    } else {
+        editingTool.style.display = "block"
+        rememberCheck.style.display = "none";
+        textArea.disabled = true;
+
+        editingTool.addEventListener("click", () => {
+            if (localStorage.getItem("userInfo")) {
+                localStorage.removeItem("userInfo");
+                userInfoDisplayCheck();
+            } else {
+                editingTool.style.display = "none"
+                rememberCheck.style.display = "block";
+                textArea.disabled = false;
+            }
+        });
+
+        rememberCheck.addEventListener("click", () => {
+            localStorage.setItem("userInfo", textArea.value);
+            userInfoDisplayCheck();
+        })
+
+        function userInfoDisplayCheck() {
+            if (localStorage.getItem("userInfo")) {
+                const userInfo = localStorage.getItem("userInfo");
+                textArea.textContent = userInfo;
+                editingTool.style.display = "block"
+                rememberCheck.style.display = "none";
+                textArea.disabled = true;
+            } else {
+                editingTool.style.display = "none"
+                rememberCheck.style.display = "block";
+                textArea.disabled = false;
+            }
+        }
     }
 }

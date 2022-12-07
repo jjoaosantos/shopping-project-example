@@ -80,8 +80,25 @@ form textarea {
     margin-top: 10px;
 }
 
+form .edit, .rememberInfo {
+    display: inline-block;
+}
+
 form #editingTool {
     background-image: url("../images/editor-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+form #rememberCheck {
+    background-color: transparent;
+    background-image: url("../images/check-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 24px;
     height: 24px;
     border: none;

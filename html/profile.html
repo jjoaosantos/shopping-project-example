@@ -52,15 +52,20 @@
     </header>
     <main>
         <form id="profilePage">
-             <div class="full-img">
+            <div class="full-img">
                 <img class="displayed-img">
             </div>
             <h2 class="user-name"></h2>
             <aside class="thumb-bar">
 
             </aside>
-            <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Write down something about yourself." aria-disabled="true" disabled></textarea>
-            <input type="button" id="editingTool" value="">
+            <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Write down something about yourself." aria-disabled="true"></textarea>
+            <div class="edit">
+                <input type="reset" id="editingTool" aria-label="Set a new profile message about yourself" value="">
+            </div>
+            <div class="rememberInfo">
+            <input type="submit" id="rememberCheck" aria-label="submit this message to be remembered" value="">
+            </div>
         </form>
     </main>
     <section id="profile-section">
