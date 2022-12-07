@@ -70,6 +70,13 @@ nameDisplayCheck();
 const displayedImage = document.querySelector(".displayed-img");
 const thumbBar = document.querySelector(".thumb-bar");
 const textArea = document.querySelector("#textarea");
+// textArea.disabled = true;
+
+// if (textArea.disabled === true) {
+//     document.querySelector("#editingTool").addEventListener("click", () => {
+//         textArea.disabled = false;
+//     });
+// }
 
 const images = ["david-profile-icon.png", "josh-profile-icon.png", "john-profile-icon.png", "steve-profile-icon.png", "rebeca-profile-icon.png", "miranda-profile-icon.png", "jennifer-profile-icon.png", "julia-profile-icon.png"];
 
