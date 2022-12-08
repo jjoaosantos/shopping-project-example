@@ -140,47 +140,98 @@ for (const image of images) {
         displayedImage.setAttribute("src", currentImage);
         displayedImage.setAttribute("alt", currentAlt);
         textArea.textContent = currentInfo;
-    } else {
-        displayedImage.setAttribute("src", "../images/profile-icon.png")
-        displayedImage.setAttribute("alt", "Profile Icon");
-    }
 
-    if (localStorage.getItem("info")) {
-        editingTool.style.display = "none"
-        rememberCheck.style.display = "block";
-    } else {
-        editingTool.style.display = "block"
-        rememberCheck.style.display = "none";
+        editingTool.disabled = false;
         textArea.disabled = true;
+        editingTool.style.opacity = "1";
+        editingTool.style.cursor = "pointer";
+        rememberCheck.style.display = "none";
 
         editingTool.addEventListener("click", () => {
-            if (localStorage.getItem("userInfo")) {
-                localStorage.removeItem("userInfo");
-                userInfoDisplayCheck();
-            } else {
-                editingTool.style.display = "none"
-                rememberCheck.style.display = "block";
-                textArea.disabled = false;
-            }
+            editingTool.style.display = "none";
+            rememberCheck.style.display = "block";
+            textArea.disabled = false;
         });
 
         rememberCheck.addEventListener("click", () => {
-            localStorage.setItem("userInfo", textArea.value);
-            userInfoDisplayCheck();
-        })
-
-        function userInfoDisplayCheck() {
-            if (localStorage.getItem("userInfo")) {
-                const userInfo = localStorage.getItem("userInfo");
-                textArea.textContent = userInfo;
-                editingTool.style.display = "block"
+            if (localStorage.getItem("info") !== textArea.textContent) {
+                localStorage.setItem("info", textArea.value)
+                editingTool.style.display = "block";
                 rememberCheck.style.display = "none";
                 textArea.disabled = true;
             } else {
-                editingTool.style.display = "none"
-                rememberCheck.style.display = "block";
-                textArea.disabled = false;
+                editingTool.style.display = "block";
+                rememberCheck.style.display = "none";
+                textArea.disabled = true;
             }
-        }
+        });
+
+    } else {
+        displayedImage.setAttribute("src", "../images/profile-icon.png")
+        displayedImage.setAttribute("alt", "Profile Icon");
+
+        textArea.disabled = true;
+        editingTool.disabled = true;
+        editingTool.style.opacity = "0.6";
+        editingTool.style.cursor = "auto";
+        editingTool.style.display = "block";
+        rememberCheck.style.display = "none";
     }
+
+    // function userInfoDisplayCheck() {
+        
+
+        // if (localStorage.getItem("info") === info[image]) {
+        //     const userInfo = localStorage.getItem("info");
+        //     textArea.textContent = userInfo;
+        //     editingTool.style.display = "block";
+        //     rememberCheck.style.display = "none";
+        //     textArea.disabled = true;
+        // } else if (localStorage.getItem("info") !== info[image]) {
+        //     const userInfo = localStorage.setItem("info", textArea.value);
+        //     textArea.textContent = userInfo;
+        //     editingTool.style.display = "block";
+        //     rememberCheck.style.display = "none";
+        //     textArea.disabled = true;
+        // }
+    // }
+
+    // if (localStorage.getItem("info")) {
+    //     editingTool.style.display = "none"
+    //     rememberCheck.style.display = "block";
+    // } else {
+    //     editingTool.style.display = "block"
+    //     rememberCheck.style.display = "none";
+    //     textArea.disabled = true;
+
+    //     editingTool.addEventListener("click", () => {
+    //         if (localStorage.getItem("userInfo")) {
+    //             localStorage.removeItem("userInfo");
+    //             userInfoDisplayCheck();
+    //         } else {
+    //             editingTool.style.display = "none"
+    //             rememberCheck.style.display = "block";
+    //             textArea.disabled = false;
+    //         }
+    //     });
+
+    //     rememberCheck.addEventListener("click", () => {
+    //         localStorage.setItem("userInfo", textArea.value);
+    //         userInfoDisplayCheck();
+    //     })
+
+    //     function userInfoDisplayCheck() {
+    //         if (localStorage.getItem("userInfo")) {
+    //             const userInfo = localStorage.getItem("userInfo");
+    //             textArea.textContent = userInfo;
+    //             editingTool.style.display = "block"
+    //             rememberCheck.style.display = "none";
+    //             textArea.disabled = true;
+    //         } else {
+    //             editingTool.style.display = "none"
+    //             rememberCheck.style.display = "block";
+    //             textArea.disabled = false;
+    //         }
+    //     }
+    // }
 }

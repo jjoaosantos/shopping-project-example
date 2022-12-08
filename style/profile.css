@@ -82,6 +82,7 @@ form textarea {
 
 form .edit, .rememberInfo {
     display: inline-block;
+    /* cursor: ; */
 }
 
 form #editingTool {
