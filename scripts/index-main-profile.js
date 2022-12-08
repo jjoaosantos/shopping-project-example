@@ -73,8 +73,27 @@ const formProfile = document.querySelector("#profilePage");
 const textArea = document.querySelector("#textarea");
 const editingTool = document.querySelector("#editingTool");
 const rememberCheck = document.querySelector("#rememberCheck");
+const resetBtn = document.querySelector("#resetinfo");
 const editDiv = document.querySelector(".edit");
 const rememberinfo = document.querySelector(".rememberInfo");
+const reset = document.querySelector(".reset");
+
+resetBtn.disabled = true;
+reset.style.display = "none";
+
+resetBtn.addEventListener("click", () => {
+    displayedImage.setAttribute("src", "../images/profile-icon.png")
+    displayedImage.setAttribute("alt", "Profile Icon");
+    localStorage.removeItem("image");
+    localStorage.removeItem("info");
+    textArea.textContent = "";
+    editingTool.disabled = true;
+    textArea.disabled = true;
+    resetBtn.disabled = true;
+    editingTool.style.opacity = "0.6";
+    editingTool.style.cursor = "auto";
+    resetBtn.style.display = "none";
+});
 
 formProfile.addEventListener("submit", (e) => e.preventDefault());
 
@@ -115,22 +134,66 @@ for (const image of images) {
     newImage.addEventListener("click", () => {
         localStorage.setItem("image", `../images/${image}`);
         localStorage.setItem("alt", alts[image]);
-        localStorage.setItem("info", info[image]);
+        // localStorage.setItem("info", info[image]);
+        if (resetBtn.disabled) {
+            localStorage.setItem("info", info[image]);
+            textArea.textContent = info[image];
+            editingTool.disabled = false;
+            editingTool.style.opacity = "1";
+            editingTool.style.cursor = "pointer";
+            rememberCheck.style.display = "none";
+
+            editingTool.addEventListener("click", () => {
+                editingTool.style.display = "none";
+                rememberCheck.style.display = "block";
+                textArea.disabled = false;
+            });
+
+            rememberCheck.addEventListener("click", () => {
+            if (localStorage.getItem("info") !== textArea.value) {
+                localStorage.setItem("info", textArea.value);
+                textArea.textContent = localStorage.getItem("info");
+                editingTool.style.display = "block";
+                rememberCheck.style.display = "none";
+                reset.style.display = "block";
+                textArea.disabled = true;
+                resetBtn.disabled = false;
+            } else {
+                editingTool.style.display = "block";
+                rememberCheck.style.display = "none";
+                textArea.disabled = true;
+            }
+        })
+
+            
+        } else {
+            localStorage.setItem("info", textArea.value);
+            textArea.textContent = textArea.value;
+        }
 
         displayedImage.setAttribute("src", `../images/${image}`);
         displayedImage.setAttribute("alt", `${alts[image]}`);
-        textArea.textContent = info[image];
+        // textArea.textContent = info[image];
     });
 
-    newImage.addEventListener("keypress", () => {
-        localStorage.setItem("image", `../images/${image}`);
-        localStorage.setItem("alt", alts[image]);
-        localStorage.setItem("info", info[image]);
+    // newImage.addEventListener("keypress", () => {
+    //     localStorage.setItem("image", `../images/${image}`);
+    //     localStorage.setItem("alt", alts[image]);
+        
 
-        displayedImage.setAttribute("src", `../images/${image}`);
-        displayedImage.setAttribute("alt", `${alts[image]}`);
-        textArea.textContent = info[image];
-    });
+        // if (resetBtn.disabled) {
+        //     localStorage.setItem("info", info[image]);
+        //     textArea.textContent = info[image];
+
+        //     // editingTool.
+        // } else {
+        //     localStorage.setItem("info", textArea.value);
+        //     textArea.textContent = textArea.value;
+        // }
+
+    //     displayedImage.setAttribute("src", `../images/${image}`);
+    //     displayedImage.setAttribute("alt", `${alts[image]}`);
+    // });
 
     if (localStorage.getItem("image")) {
         const currentImage = localStorage.getItem("image");
@@ -141,97 +204,24 @@ for (const image of images) {
         displayedImage.setAttribute("alt", currentAlt);
         textArea.textContent = currentInfo;
 
+        resetBtn.disabled = true;
+        resetBtn.style.display = "none";
         editingTool.disabled = false;
-        textArea.disabled = true;
         editingTool.style.opacity = "1";
         editingTool.style.cursor = "pointer";
         rememberCheck.style.display = "none";
-
-        editingTool.addEventListener("click", () => {
-            editingTool.style.display = "none";
-            rememberCheck.style.display = "block";
-            textArea.disabled = false;
-        });
-
-        rememberCheck.addEventListener("click", () => {
-            if (localStorage.getItem("info") !== textArea.textContent) {
-                localStorage.setItem("info", textArea.value)
-                editingTool.style.display = "block";
-                rememberCheck.style.display = "none";
-                textArea.disabled = true;
-            } else {
-                editingTool.style.display = "block";
-                rememberCheck.style.display = "none";
-                textArea.disabled = true;
-            }
-        });
-
     } else {
         displayedImage.setAttribute("src", "../images/profile-icon.png")
         displayedImage.setAttribute("alt", "Profile Icon");
 
+
         textArea.disabled = true;
+        // resetBtn.disabled = true;
         editingTool.disabled = true;
         editingTool.style.opacity = "0.6";
         editingTool.style.cursor = "auto";
         editingTool.style.display = "block";
         rememberCheck.style.display = "none";
+        // reset.style.display = "none";
     }
-
-    // function userInfoDisplayCheck() {
-        
-
-        // if (localStorage.getItem("info") === info[image]) {
-        //     const userInfo = localStorage.getItem("info");
-        //     textArea.textContent = userInfo;
-        //     editingTool.style.display = "block";
-        //     rememberCheck.style.display = "none";
-        //     textArea.disabled = true;
-        // } else if (localStorage.getItem("info") !== info[image]) {
-        //     const userInfo = localStorage.setItem("info", textArea.value);
-        //     textArea.textContent = userInfo;
-        //     editingTool.style.display = "block";
-        //     rememberCheck.style.display = "none";
-        //     textArea.disabled = true;
-        // }
-    // }
-
-    // if (localStorage.getItem("info")) {
-    //     editingTool.style.display = "none"
-    //     rememberCheck.style.display = "block";
-    // } else {
-    //     editingTool.style.display = "block"
-    //     rememberCheck.style.display = "none";
-    //     textArea.disabled = true;
-
-    //     editingTool.addEventListener("click", () => {
-    //         if (localStorage.getItem("userInfo")) {
-    //             localStorage.removeItem("userInfo");
-    //             userInfoDisplayCheck();
-    //         } else {
-    //             editingTool.style.display = "none"
-    //             rememberCheck.style.display = "block";
-    //             textArea.disabled = false;
-    //         }
-    //     });
-
-    //     rememberCheck.addEventListener("click", () => {
-    //         localStorage.setItem("userInfo", textArea.value);
-    //         userInfoDisplayCheck();
-    //     })
-
-    //     function userInfoDisplayCheck() {
-    //         if (localStorage.getItem("userInfo")) {
-    //             const userInfo = localStorage.getItem("userInfo");
-    //             textArea.textContent = userInfo;
-    //             editingTool.style.display = "block"
-    //             rememberCheck.style.display = "none";
-    //             textArea.disabled = true;
-    //         } else {
-    //             editingTool.style.display = "none"
-    //             rememberCheck.style.display = "block";
-    //             textArea.disabled = false;
-    //         }
-    //     }
-    // }
 }

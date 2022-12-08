@@ -80,7 +80,7 @@ form textarea {
     margin-top: 10px;
 }
 
-form .edit, .rememberInfo {
+form .edit, .rememberInfo, .reset {
     display: inline-block;
     /* cursor: ; */
 }
