@@ -73,11 +73,12 @@ const formProfile = document.querySelector("#profilePage");
 const textArea = document.querySelector("#textarea");
 const editingTool = document.querySelector("#editingTool");
 const rememberCheck = document.querySelector("#rememberCheck");
-// const resetBtn = document.querySelector("#resetinfo");
+const resetBtn = document.querySelector("#resetinfo");
 const editDiv = document.querySelector(".edit");
 const rememberinfo = document.querySelector(".rememberInfo");
-// const reset = document.querySelector(".reset");
-
+const reset = document.querySelector(".reset");
+reset.style.display = "none";
+resetBtn.disabled = true;
 
 formProfile.addEventListener("submit", (e) => e.preventDefault());
 
@@ -118,38 +119,81 @@ for (const image of images) {
     newImage.addEventListener("click", () => {
         localStorage.setItem("image", `../images/${image}`);
         localStorage.setItem("alt", alts[image]);
-        localStorage.setItem("info", info[image]);
         
-        textArea.textContent = info[image];
+        if (resetBtn.disabled === false) {
+            localStorage.setItem("info", textArea.value);
+        } else {
+            localStorage.setItem("info", info[image]);
+        }
 
-        displayedImage.setAttribute("src", `../images/${image}`);
-        displayedImage.setAttribute("alt", `${alts[image]}`);
+        imgDisplayCheck();
     });
 
     newImage.addEventListener("keypress", () => {
         localStorage.setItem("image", `../images/${image}`);
         localStorage.setItem("alt", alts[image]);
         localStorage.setItem("info", info[image]);
-        textArea.textContent = info[image];
-
-        displayedImage.setAttribute("src", `../images/${image}`);
-        displayedImage.setAttribute("alt", `${alts[image]}`);
+        imgDisplayCheck();
     });
 
-    if (localStorage.getItem("image")) {
-        const currentImage = localStorage.getItem("image");
-        const currentAlt = localStorage.getItem("alt");
-        const currentInfo = localStorage.getItem("info");
+    resetBtn.addEventListener("click", () => {
+        localStorage.removeItem("image");
+        localStorage.removeItem("alt");
+        localStorage("info");
 
-        displayedImage.setAttribute("src", currentImage);
-        displayedImage.setAttribute("alt", currentAlt);
-        textArea.textContent = currentInfo;
-        textArea.disabled = true;
+        imgDisplayCheck();
+    })
 
-    } else {
-        displayedImage.setAttribute("src", "../images/profile-icon.png")
-        displayedImage.setAttribute("alt", "Profile Icon");
+    editingTool.addEventListener("click", () => {
+        editingTool.style.display = "none";
+        rememberCheck.style.display = "block";
 
-        textArea.disabled = true;
+        textArea.disabled = false;
+        
+    });
+
+    rememberCheck.addEventListener("click", () => {
+        localStorage.setItem("info", textArea.value);
+    });
+
+    function imgDisplayCheck() {
+        if (localStorage.getItem("image")) {
+            const currentImage = localStorage.getItem("image");
+            const currentAlt = localStorage.getItem("alt");
+            const currentInfo = localStorage.getItem("info");
+    
+            displayedImage.setAttribute("src", currentImage);
+            displayedImage.setAttribute("alt", currentAlt);
+            textArea.textContent = currentInfo;
+    
+            editingTool.style.opacity = "1";
+            editingTool.style.cursor = "cursor";
+            editingTool.style.display = "block";
+            rememberCheck.style.display = "none";
+    
+            textArea.disabled = true;
+            editingTool.disabled = false;
+
+            if (resetBtn.disabled === false) {
+                const userInfo = localStorage.getItem("info");
+                textArea.textContent = userInfo;
+            }
+    
+        } else {
+            displayedImage.setAttribute("src", "../images/profile-icon.png")
+            displayedImage.setAttribute("alt", "Profile Icon");
+    
+            editingTool.style.opacity = "0.6";
+            editingTool.style.cursor = "auto";
+            editingTool.style.display = "block";
+            rememberCheck.style.display = "none";
+            // reset.style.display = "none";
+    
+            textArea.disabled = true;
+            editingTool.disabled = true;
+            // resetBtn.disabled = true;
+        }
     }
+
+    imgDisplayCheck();
 }
