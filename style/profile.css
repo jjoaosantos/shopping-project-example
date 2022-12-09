@@ -9,19 +9,13 @@ main .full-img {
     margin: auto;
 }
 
-/* main .full-img, h2 {
-    display: inline-block;
-} */
-
 main aside section {
-    background-color: aquamarine;
     font-style: normal;
     width: 37.5px;
     height: 37.5px;
-    margin: 0px;
+    margin: 2px;
     padding: 0px;
-    
-    /* border-radius: 10px; */
+    border-radius: 6px;
 }
 
 main aside section img {
@@ -29,13 +23,9 @@ main aside section img {
 }
 
 section {
-    /* background-color: white; */
     width: 94vw;
-    /* min-height: 100px; */
-    /* margin: auto; */
     margin-top: 20px;
     padding: 12px;
-
 }
 
 section .shop, .forgetBtn {
@@ -55,9 +45,7 @@ section .shop, .forgetBtn {
 
 .thumb-bar {
     display: block;
-    /* background-color: rgb(66, 145, 118); */
-    max-width: 163px;
-    max-height: 80px;
+    max-width: 166px;
     margin: auto;
     margin-top: 10px;
 }
@@ -79,6 +67,7 @@ form .edit, .rememberInfo, .reset {
 }
 
 form #editingTool {
+    background-color: transparent;
     background-image: url("../images/editor-icon.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -98,13 +87,3 @@ form #rememberCheck {
     border: none;
     cursor: pointer;
 }
-/* form .user-description, input[type="submit"] {
-    display: inline-block;
-} */
-
-/* form input[type="submit"] {
-    height: 120px;
-    padding: 0px 45px;
-    border-radius: 50%;
-    border: none;
-} */

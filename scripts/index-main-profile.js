@@ -192,7 +192,7 @@ for (const image of images) {
             textArea.disabled = true;
             editingTool.disabled = false;
 
-            if (resetBtn.disabled === false && localStorage.getItem("info") !== info[image]) {
+            if (resetBtn.disabled === false && localStorage.getItem("info") !== info[currentImage]) {
                 reset.style.display = "block";
             } else {
                 resetBtn.disabled = true;
