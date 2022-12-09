@@ -8,11 +8,28 @@ const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
 const main = document.querySelector("main");
 const section = document.querySelector("#profile-section");
+const forgetProfile = document.querySelector(".forgetBtn");
 
 form.addEventListener("submit", (e) => e.preventDefault());
 
 submitBtn.addEventListener("click", () => {
     localStorage.setItem("name", nameInput.value);
+    nameDisplayCheck();
+});
+
+forgetProfile.addEventListener("click", () => {
+    if (localStorage.getItem("image")) {
+        localStorage.removeItem("name");
+        localStorage.removeItem("image");
+        localStorage.removeItem("alt");
+        localStorage.removeItem("info");
+    } else {
+        localStorage.removeItem("name");
+    }
+
+    forgetProfile.disabled = true;
+    forgetProfile.style.display = "none";
+
     nameDisplayCheck();
 });
 
@@ -33,6 +50,9 @@ function nameDisplayCheck() {
         forgetDiv.style.display = "block";
         rememberDiv.style.display = "none";
 
+        forgetProfile.disabled = false;
+        forgetProfile.style.display = "block";
+
         if (document.querySelector("a").getAttribute("class") === "profile-disabled") {
             document.querySelector("a").setAttribute("class", "profile-active");
             document.querySelector("a").setAttribute("href", "profile.html");
@@ -41,27 +61,19 @@ function nameDisplayCheck() {
         personalGreeting.style.display = "none";
         forgetDiv.style.display = "none";
         rememberDiv.style.display = "block";
+        forgetProfile.style.display = "none";
 
-        if (document.querySelector("a").getAttribute("class") === "profile-disabled") {
-            document.querySelector("a").setAttribute("href", "#");
-            
-            document.querySelector("a").addEventListener("click", () => {
-                nameInput.focus();
-            })
-        } else {
-            document.querySelector("a").setAttribute("class", "profile-disabled");
+        document.querySelector("#profilePage").style.display = "none";
+        const p = document.createElement("p");
+        p.textContent = "No results to display!";
+        main.appendChild(p);
 
-            document.querySelector("a").setAttribute("href", "#");
-            
-            document.querySelector("a").addEventListener("click", () => {
-                nameInput.focus();
-            })
+        document.querySelector("a").setAttribute("class", "profile-disabled");
+        document.querySelector("a").setAttribute("href", "#");
 
-            document.querySelector("#profilePage").style.display = "none";
-            const p = document.createElement("p");
-            p.textContent = "No results to display!";
-            main.appendChild(p);
-        }
+        document.querySelector("a").addEventListener("click", () => {
+            nameInput.focus();
+        });
     }
 }
 
@@ -130,7 +142,13 @@ for (const image of images) {
     newImage.addEventListener("keypress", () => {
         localStorage.setItem("image", `../images/${image}`);
         localStorage.setItem("alt", alts[image]);
-        localStorage.setItem("info", info[image]);
+        
+        if (resetBtn.disabled === false) {
+            localStorage.setItem("info", textArea.value);
+        } else {
+            localStorage.setItem("info", info[image]);
+        }
+
         imgDisplayCheck();
     });
 
@@ -167,20 +185,19 @@ for (const image of images) {
             textArea.textContent = currentInfo;
     
             editingTool.style.opacity = "1";
-            editingTool.style.cursor = "cursor";
+            editingTool.style.cursor = "pointer";
             editingTool.style.display = "block";
             rememberCheck.style.display = "none";
     
             textArea.disabled = true;
             editingTool.disabled = false;
 
-            if(resetBtn.disabled === false && localStorage.getItem("info") !== info[image]) {
+            if (resetBtn.disabled === false && localStorage.getItem("info") !== info[image]) {
                 reset.style.display = "block";
             } else {
                 resetBtn.disabled = true;
                 reset.style.display = "none";
             }
-    
         } else {
             displayedImage.setAttribute("src", "../images/profile-icon.png")
             displayedImage.setAttribute("alt", "Profile Icon");
@@ -196,6 +213,6 @@ for (const image of images) {
             resetBtn.disabled = true;
         }
     }
-
-    imgDisplayCheck();
 }
+
+imgDisplayCheck();
