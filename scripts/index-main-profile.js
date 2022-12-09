@@ -77,8 +77,6 @@ const resetBtn = document.querySelector("#resetinfo");
 const editDiv = document.querySelector(".edit");
 const rememberinfo = document.querySelector(".rememberInfo");
 const reset = document.querySelector(".reset");
-reset.style.display = "none";
-resetBtn.disabled = true;
 
 formProfile.addEventListener("submit", (e) => e.preventDefault());
 
@@ -139,7 +137,8 @@ for (const image of images) {
     resetBtn.addEventListener("click", () => {
         localStorage.removeItem("image");
         localStorage.removeItem("alt");
-        localStorage("info");
+        localStorage.removeItem("info");
+        textArea.value = "";
 
         imgDisplayCheck();
     })
@@ -149,11 +148,12 @@ for (const image of images) {
         rememberCheck.style.display = "block";
 
         textArea.disabled = false;
-        
     });
 
     rememberCheck.addEventListener("click", () => {
         localStorage.setItem("info", textArea.value);
+        resetBtn.disabled = false;
+        imgDisplayCheck();
     });
 
     function imgDisplayCheck() {
@@ -174,24 +174,26 @@ for (const image of images) {
             textArea.disabled = true;
             editingTool.disabled = false;
 
-            if (resetBtn.disabled === false) {
-                const userInfo = localStorage.getItem("info");
-                textArea.textContent = userInfo;
+            if(resetBtn.disabled === false && localStorage.getItem("info") !== info[image]) {
+                reset.style.display = "block";
+            } else {
+                resetBtn.disabled = true;
+                reset.style.display = "none";
             }
     
         } else {
             displayedImage.setAttribute("src", "../images/profile-icon.png")
             displayedImage.setAttribute("alt", "Profile Icon");
-    
+
             editingTool.style.opacity = "0.6";
             editingTool.style.cursor = "auto";
             editingTool.style.display = "block";
             rememberCheck.style.display = "none";
-            // reset.style.display = "none";
+            reset.style.display = "none";
     
             textArea.disabled = true;
             editingTool.disabled = true;
-            // resetBtn.disabled = true;
+            resetBtn.disabled = true;
         }
     }
 
