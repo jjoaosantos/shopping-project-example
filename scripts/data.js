@@ -1,4 +1,4 @@
-fetch('products.json')
+fetch('../scripts/products.json')
   .then( response => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -9,7 +9,7 @@ fetch('products.json')
   .catch( err => console.error(`Fetch problem: ${err.message}`) );
 
 function initialize(products) {
-  const branding = document.querySelector('#branding');
+  const branding = document.querySelector('#brand');
   const searchTerm = document.querySelector('#searchTerm');
   const searchBtn = document.querySelector('#searchBtn');
   const main = document.querySelector('main');
@@ -77,7 +77,7 @@ function initialize(products) {
   }
 
   function fetchBlob(product) {
-    const url = `images/${product.image}`;
+    const url = `../images/${product.image}`;
     fetch(url)
       .then( response => {
         if (!response.ok) {
@@ -103,6 +103,17 @@ function initialize(products) {
 
     image.src = objectURL;
     image.alt = product.name;
+
+    image.addEventListener("click", () => {
+      localStorage.setItem(`${product.name}`, image.src);
+      productsDisplayCheck();
+    })
+
+    function productsDisplayCheck() {
+      localStorage.getItem(`${product.name}`);
+      const cart = document.querySelector(".cart-icon");
+      cart.textContent = "3";
+    }
 
     main.appendChild(section);
     section.appendChild(image);

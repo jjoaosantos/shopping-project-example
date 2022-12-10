@@ -153,11 +153,16 @@ header a.cart-icon {
     position: absolute;
     background-image: url("../images/cart-icon.png");
     background-repeat: no-repeat;
-    background-size: 90%;
-    width: 40px;
+    background-size: contain;
+    color: white;
+    font-size: large;
+    text-align: right;
+    text-decoration: none;
+
+    width: 51px;
     height: 40px;
     top: 50%;
-    left: calc(100% - 46px);
+    left: calc(100% - 56px);
     transform: translate(0%, -50%);
 }
 
