@@ -94,6 +94,7 @@ function initialize(products) {
     const heading = document.createElement('h2');
     const para = document.createElement('p');
     const image = document.createElement('img');
+    const cart = document.querySelector(".cart-icon");
 
     section.setAttribute('class', product.branding);
 
@@ -103,21 +104,27 @@ function initialize(products) {
 
     image.src = objectURL;
     image.alt = product.name;
+    // let count = 0;
+    // cart.textContent = count;
 
-    image.addEventListener("click", () => {
-      localStorage.setItem(`${product.name}`, image.src);
-      productsDisplayCheck();
-    })
-
-    function productsDisplayCheck() {
-      localStorage.getItem(`${product.name}`);
-      const cart = document.querySelector(".cart-icon");
-      cart.textContent = "3";
-    }
+    // image.addEventListener("click", () => {
+    //   localStorage.setItem(`${product.name}`, image.src);
+    //   productsDisplayCheck();
+    // })
 
     main.appendChild(section);
     section.appendChild(image);
     section.appendChild(heading);
     section.appendChild(para);
   }
+
+  // function productsDisplayCheck() {
+  //   if (localStorage.getItem(`${product.name}`)) {
+  //     localStorage.getItem(`${product.name}`);
+
+  //     count++;
+  //     cart.textContent = count;
+  //     console.log(count);
+  //   }
+  // }
 }
