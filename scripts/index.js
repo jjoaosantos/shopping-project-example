@@ -35,21 +35,12 @@ function nameDisplayCheck() {
         forgetDiv.style.display = "none";
         rememberDiv.style.display = "block";
 
-        if (document.querySelector("a").getAttribute("class") === "profile-disabled") {
-            document.querySelector("a").setAttribute("href", "#");
-            
-            document.querySelector("a").addEventListener("click", () => {
-                nameInput.focus();
-            })
-        } else {
-            document.querySelector("a").setAttribute("class", "profile-disabled");
+        document.querySelector("a").setAttribute("class", "profile-disabled");
+        document.querySelector("a").setAttribute("href", "#");
 
-            document.querySelector("a").setAttribute("href", "#");
-            
-            document.querySelector("a").addEventListener("click", () => {
-                nameInput.focus();
-            })
-        }
+        document.querySelector("a").addEventListener("click", () => {
+            nameInput.focus();
+        });
     }
 }
 

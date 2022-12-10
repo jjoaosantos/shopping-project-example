@@ -27,9 +27,6 @@ forgetProfile.addEventListener("click", () => {
         localStorage.removeItem("name");
     }
 
-    forgetProfile.disabled = true;
-    forgetProfile.style.display = "none";
-
     nameDisplayCheck();
 });
 
@@ -62,6 +59,7 @@ function nameDisplayCheck() {
         forgetDiv.style.display = "none";
         rememberDiv.style.display = "block";
         forgetProfile.style.display = "none";
+        forgetProfile.disabled = true;
 
         document.querySelector("#profilePage").style.display = "none";
         const p = document.createElement("p");
@@ -192,7 +190,7 @@ for (const image of images) {
             textArea.disabled = true;
             editingTool.disabled = false;
 
-            if (resetBtn.disabled === false && localStorage.getItem("info") !== info[currentImage]) {
+            if (resetBtn.disabled === false && localStorage.getItem("info") !== info[currentImage.slice(10)]) {
                 reset.style.display = "block";
             } else {
                 resetBtn.disabled = true;
