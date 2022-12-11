@@ -88,6 +88,7 @@ function initialize(products) {
       .then( blob => showProduct(blob, product) )
       .catch( err => console.error(`Fetch problem: ${err.message}`) );
   }
+
   function showProduct(blob, product) {
     const objectURL = URL.createObjectURL(blob);
     const section = document.createElement('section');
@@ -104,27 +105,32 @@ function initialize(products) {
 
     image.src = objectURL;
     image.alt = product.name;
-    // let count = 0;
-    // cart.textContent = count;
-
-    // image.addEventListener("click", () => {
-    //   localStorage.setItem(`${product.name}`, image.src);
-    //   productsDisplayCheck();
-    // })
+    
 
     main.appendChild(section);
     section.appendChild(image);
     section.appendChild(heading);
     section.appendChild(para);
+
+    let count = 0;
+    // cart.textContent = count;
+
+    image.addEventListener("click", () => {
+      localStorage.setItem(`${product.name}`, image.src);
+      productsDisplayCheck();
+    })
+
+    function productsDisplayCheck() {
+      if (localStorage.getItem(`${product.name}`)) {
+        localStorage.getItem(`${product.name}`);
+        
+        count++;
+        cart.textContent = count;
+      } else {
+        cart.textContent = count;
+      }
+    }
+
+    productsDisplayCheck();
   }
-
-  // function productsDisplayCheck() {
-  //   if (localStorage.getItem(`${product.name}`)) {
-  //     localStorage.getItem(`${product.name}`);
-
-  //     count++;
-  //     cart.textContent = count;
-  //     console.log(count);
-  //   }
-  // }
 }
