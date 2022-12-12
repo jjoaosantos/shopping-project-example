@@ -1,11 +1,19 @@
-fetch('../scripts/products.json')
+fetch("../scripts/products.json")
   .then( response => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => initialize(json) )
+  .then( 
+         data => {
+          localStorage.setItem("products", JSON.stringify(data));
+          if (!localStorage.getItem("cart")) {
+            localStorage.setItem("cart", "[]");
+          }
+          initialize(data);
+         } )
+  
   .catch( err => console.error(`Fetch problem: ${err.message}`) );
 
 function initialize(products) {
@@ -95,7 +103,6 @@ function initialize(products) {
     const heading = document.createElement('h2');
     const para = document.createElement('p');
     const image = document.createElement('img');
-    const cart = document.querySelector(".cart-icon");
 
     section.setAttribute('class', product.branding);
 
@@ -105,28 +112,35 @@ function initialize(products) {
 
     image.src = objectURL;
     image.alt = product.name;
-    
 
     main.appendChild(section);
     section.appendChild(image);
     section.appendChild(heading);
     section.appendChild(para);
-
-    let count = 0;
-    let result;
-    // cart.textContent = result;
-    // cart.textContent = count;
-
-    image.addEventListener("click", () => {
-      localStorage.setItem("cartNumber", count);
-      productsDisplayCheck();
-    })
-
-    function productsDisplayCheck() {
-      result = localStorage.getItem("cartNumber");
-      count++;
-      cart.textContent = result;
   }
-  productsDisplayCheck();
+
+  const items = JSON.parse(localStorage.getItem("products"));
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  const cartIcon = document.querySelector(".cart-icon");
+
+  function addItemToCart(productId) {
+    const item = products.find( product => {
+      return product.id == productId;
+    });
+
+    if (cart.length === 0) {
+      cart.push(item);
+      cartIcon.textContent = 0;
+    } else {
+      const res = cart.find(element => element.id == productId);
+        if (res === undefined) {
+          cart.push(item);
+        }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  addItemToCart(2);
 }
-}
+

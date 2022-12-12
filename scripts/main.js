@@ -4,7 +4,7 @@ const navBar = document.getElementById("menuNavigator");
 const ul = document.getElementById("list");
 const container = document.querySelector(".container");
 const img = document.querySelector(".image");
-const cart = document.querySelector(".cart");
+// const cart = document.querySelector(".cart");
 
 navBar.style.left = "-100vw";
 
