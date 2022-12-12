@@ -113,24 +113,20 @@ function initialize(products) {
     section.appendChild(para);
 
     let count = 0;
+    let result;
+    // cart.textContent = result;
     // cart.textContent = count;
 
     image.addEventListener("click", () => {
-      localStorage.setItem(`${product.name}`, image.src);
+      localStorage.setItem("cartNumber", count);
       productsDisplayCheck();
     })
 
     function productsDisplayCheck() {
-      if (localStorage.getItem(`${product.name}`)) {
-        localStorage.getItem(`${product.name}`);
-        
-        count++;
-        cart.textContent = count;
-      } else {
-        cart.textContent = count;
-      }
-    }
-
-    productsDisplayCheck();
+      result = localStorage.getItem("cartNumber");
+      count++;
+      cart.textContent = result;
   }
+  productsDisplayCheck();
+}
 }
