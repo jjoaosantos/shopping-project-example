@@ -112,6 +112,7 @@ function initialize(products) {
 
     image.src = objectURL;
     image.alt = product.name;
+    image.addEventListener("click", addItemToCart);
 
     main.appendChild(section);
     section.appendChild(image);
@@ -123,24 +124,67 @@ function initialize(products) {
   const cart = JSON.parse(localStorage.getItem("cart"));
   const cartIcon = document.querySelector(".cart-icon");
 
-  function addItemToCart(productId) {
+  function addItemToCart() {
     const item = products.find( product => {
-      return product.id == productId;
+      return product.id === product.id;
     });
 
     if (cart.length === 0) {
       cart.push(item);
-      cartIcon.textContent = 0;
     } else {
-      const res = cart.find(element => element.id == productId);
+      const res = cart.find(element => element.id === element.id);
         if (res === undefined) {
           cart.push(item);
         }
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
+    // getTotal();
   }
 
-  addItemToCart(2);
+  // addItemToCart(3);
+  // addItemToCart(2);
+  // addItemToCart(3);
+
+  function removeItemFromCart(productId) {
+    const temp = cart.filter(item => item.id !== productId);
+    localStorage.setItem("cart", JSON.stringify(temp));
+  }
+
+  // removeItemFromCart(1);
+
+  function updateQuantity(productId, quantity) {
+    for (const item of cart) {
+      if (item.id === productId) {
+        item.quantity = quantity;
+        cartIcon.textContent = product.quantity;
+      }
+    }
+    
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  // updateQuantity(1, 1);
+  // updateQuantity(2, 1);
+
+  // removeItemFromCart(1);
+  // removeItemFromCart(2);
+  // removeItemFromCart(3);
+
+  function getTotal() {
+    const temp = cart.map( item => {
+      return parseInt(item.quantity);
+      // return parseInt(item.price);
+    });
+
+    const sum = temp.reduce( function(prev, next) {
+      return prev + next;
+    }, 0);
+
+    console.log(sum);
+    cartIcon.textContent = sum;
+  }
+
+  getTotal();
 }
 
