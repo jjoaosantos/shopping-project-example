@@ -102,20 +102,58 @@ function initialize(products) {
     const section = document.createElement('section');
     const heading = document.createElement('h2');
     const para = document.createElement('p');
+    const container = document.createElement('div');
+    const middle = document.createElement('div');
+    const cartBtn = document.createElement('button');
     const image = document.createElement('img');
 
     section.setAttribute('class', product.branding);
+    container.setAttribute('class', 'container');
+    middle.setAttribute('class', 'middle');
+    middle.setAttribute('role', 'button');
+    middle.setAttribute('aria-expanded', 'false');
+    cartBtn.setAttribute('type', 'button');
+    cartBtn.setAttribute('class', 'add-cart');
+    cartBtn.setAttribute('aria-label', 'Click to add this item to cart');
+    cartBtn.setAttribute('title', 'Click to add this item to cart');
+
+    middle.style.display = "none";
+    cartBtn.addEventListener("click", () => {
+      middle.setAttribute("aria-expanded", "false");
+      middle.style.display = "none";
+      image.style.opacity = "1";
+      cartBtn.setAttribute('class', 'add-cart');
+      cartBtn.setAttribute('aria-label', 'Click to add this item to cart');
+      cartBtn.setAttribute('aria-label', `Click to add ${product.id} to cart`);
+      cartBtn.setAttribute('title', `Click to add ${product.id} to cart`);
+
+      // let productId = localStorage.getItem("cart");
+    });
+
+    image.src = objectURL;
+    image.alt = product.name;
+    image.setAttribute('aria-label', `Click to add ${product.name} to cart`);
+    image.setAttribute('title', `Click to add ${product.name} to cart`);
+    image.addEventListener("click", () => {
+      middle.setAttribute("aria-expanded", "true");
+      middle.style.display = "block";
+      image.style.opacity = "0.3";
+      cartBtn.setAttribute('class', 'remove-cart');
+      cartBtn.setAttribute('aria-label', 'Click to remove this item from cart');
+      cartBtn.setAttribute('title', 'Click to remove this item from cart');
+      let productId = product.id;
+      addItemToCart(productId);
+    });
 
     heading.textContent = product.name.replace(product.name.charAt(0), product.name.charAt(0).toUpperCase());
 
     para.textContent = `$${product.price}`;
-
-    image.src = objectURL;
-    image.alt = product.name;
-    image.addEventListener("click", addItemToCart);
-
+ 
     main.appendChild(section);
-    section.appendChild(image);
+    section.appendChild(container);
+    container.appendChild(image);
+    container.appendChild(middle);
+    middle.appendChild(cartBtn);
     section.appendChild(heading);
     section.appendChild(para);
   }
@@ -123,53 +161,31 @@ function initialize(products) {
   const items = JSON.parse(localStorage.getItem("products"));
   const cart = JSON.parse(localStorage.getItem("cart"));
   const cartIcon = document.querySelector(".cart-icon");
+  getTotal();
 
-  function addItemToCart() {
-    const item = products.find( product => {
-      return product.id === product.id;
+  function addItemToCart(productId) {
+    const item = items.find( product => {
+      return product.id === productId;
     });
 
     if (cart.length === 0) {
       cart.push(item);
     } else {
-      const res = cart.find(element => element.id === element.id);
+      const res = cart.find(element => element.id === productId);
         if (res === undefined) {
           cart.push(item);
         }
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    // getTotal();
+    
+    getTotal();
   }
-
-  // addItemToCart(3);
-  // addItemToCart(2);
-  // addItemToCart(3);
 
   function removeItemFromCart(productId) {
     const temp = cart.filter(item => item.id !== productId);
     localStorage.setItem("cart", JSON.stringify(temp));
   }
-
-  // removeItemFromCart(1);
-
-  function updateQuantity(productId, quantity) {
-    for (const item of cart) {
-      if (item.id === productId) {
-        item.quantity = quantity;
-        cartIcon.textContent = product.quantity;
-      }
-    }
-    
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
-
-  // updateQuantity(1, 1);
-  // updateQuantity(2, 1);
-
-  // removeItemFromCart(1);
-  // removeItemFromCart(2);
-  // removeItemFromCart(3);
 
   function getTotal() {
     const temp = cart.map( item => {
@@ -180,11 +196,7 @@ function initialize(products) {
     const sum = temp.reduce( function(prev, next) {
       return prev + next;
     }, 0);
-
-    console.log(sum);
     cartIcon.textContent = sum;
   }
-
-  getTotal();
 }
 

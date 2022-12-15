@@ -1,20 +1,20 @@
-// fetch("../scripts/products.json")
-//  .then( response => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP error: ${response.status}`);
-//     }
-//     return response.json();
-//  } )
-//  .then( data => {
-//     localStorage.setItem("products", JSON.stringify(data));
-//     if (!localStorage.getItem("cart")) {
-//       localStorage.setItem("cart", "[]");
-//     }
-//  } )
-//  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+fetch("../scripts/products.json")
+ .then( response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.json();
+ } )
+ .then( data => {
+    localStorage.setItem("products", JSON.stringify(data));
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", "[]");
+    }
+ } )
+ .catch( err => console.error(`Fetch problem: ${err.message}`) );
 
-// const products = JSON.parse(localStorage.getItem("products"));
-// const cart = JSON.parse(localStorage.getItem("cart"));
+const products = JSON.parse(localStorage.getItem("products"));
+const cart = JSON.parse(localStorage.getItem("cart"));
 
 function addItemToCart(productId) {
     const product = products.find( product => {
