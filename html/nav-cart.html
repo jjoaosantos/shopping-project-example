@@ -11,17 +11,29 @@
     <script src="../scripts/index.js" defer></script>
     <!-- <script src="../scripts/cart.js" defer></script> -->
     <style>
-        /* main section {
-            display: block;
-        } */
+        main section div {
+            text-align: right;
+        }
 
         main section button {
-            background-color: transparent;
+            background-color: rgb(255, 218, 218);
             background-image: url("../images/remove-icon.svg");
             background-repeat: no-repeat;
-            background-size: contain;
-            width: 28px;
-            height: 28px;
+            background-position: center;
+            background-size: 84%;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 50%;
+        }
+
+        main section form input[type="button"] {
+            background-color: aquamarine;
+            /* text-align: center; */
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
             border: none;
         }
     </style>
@@ -68,16 +80,27 @@
 
     <main>
         <section>
+            <div><button></button></div>
             <img src="../images/iphone-5.png" alt="Iphone 4">
             <h2>Iphone 5</h2>
-            <p>$100</p><span>+ quantity -</span>
-            <button></button>
+            <p>$100</p>
+            <form>
+                <input type="button" value="+">
+                <input type="text" name="" id="">
+                <input type="button" value="-">
+            </form>
         </section>
         <section>
+            <div><button></button></div>
             <img src="../images/iphone-6.png" alt="Iphone 4">
             <h2>Iphone 6</h2>
-            <p>$100</p><span>+ quantity -</span>
-            <button></button>
+            <p>$100</p>
+            <form>
+                <input type="button" value="+">
+                <input type="text" name="" id="">
+                <input type="button" value="-">
+            </form>
+            
         </section>
         <aside>
             <h2>Subtotal $###,##</h2>
