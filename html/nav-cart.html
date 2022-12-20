@@ -9,26 +9,23 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="../scripts/index.js" defer></script>
-    <!-- <script src="../scripts/cart.js" defer></script> -->
+    <script src="../scripts/cart.js" defer></script>
     <style>
 
         main {
             padding: 12px;
         }
 
-        main h1 {
-            margin-bottom: 68px;
-        }
-
         main section {
             height: 430px;
+            margin: 45px 0px;
         }
 
-        main section div {
+        main section div.product-header {
             text-align: right;
         }
 
-        main section button.removeC {
+        main section button.remove-btn {
             background-color: rgb(255, 218, 218);
             background-image: url("../images/remove-icon.svg");
             background-repeat: no-repeat;
@@ -47,13 +44,44 @@
             transform: none;
         }
 
-        main div.div {
+        main section form input[type="text"] {
+            display: inline-block;
+            text-align: center;
+            width: 30px;
+            margin-left: 9px;
+        }
+
+        main div.product-main {
             display: block;
             text-align: center;
             padding: 10px 0px;
         }
 
-        main div.div2 {
+        main div.product-main button.plus-btn {
+            background-image: url("/images/plus-icon.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            margin-right: 4px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        main div.product-main button.minus-btn {
+            background-image: url("/images/minus-icon.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            margin-left: 4px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        main div.product-footer {
             background-color: var(--color-theme);
             text-align: center;
             width: 80%;
@@ -61,11 +89,13 @@
             transform: skew(-20deg);
         }
 
-        main section form input[type="text"] {
-            display: inline-block;
+        aside {
+            background-color: white;
             text-align: center;
-            width: 30px;
+            width: 96vw;
+            margin: auto;
         }
+        
     </style>
 </head>
 <body>
@@ -105,51 +135,13 @@
         <a href="index.html">
             <h1><img src="../images/searchfor-logo.png" alt="Home page"></h1>
         </a>
-        <a href="nav-cart.html" class="cart-icon">2</a>
+        <a href="nav-cart.html" class="cart-icon"></a>
     </header>
 
     <main>
-        <h1>Shopping Cart</h1>
-        <section>
-            <div><button class="removeC"></button></div>
-            <img src="../images/iphone-5.png" alt="Iphone 4">
-            <h2>Iphone 5</h2>
-            <form><label for="">Quantity</label>
-                <input type="text" value="1">
-            </form>
-            <div class="div">
-                <button style="background-image: url('/images/plus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
-                <button style="background-image: url('/images/minus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
-            </div>
-            <div class="div2">
-                <p>Price</p>
-                <p>$100</p>
-                <p>Total</p>
-                <p>$100</p>
-            </div>
-        </section>
-        <section>
-            <div><button class="removeC"></button></div>
-            <img src="../images/iphone-6.png" alt="Iphone 4">
-            <h2>Iphone 6</h2>
-            <form><label for="">Quantity</label>
-                <input type="text" value="1">
-            </form>
-            <div class="div">
-                <button style="background-image: url('/images/plus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
-                <button style="background-image: url('/images/minus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
-            </div>
-            <div class="div2">
-                <p>Price</p>
-                <p>$100</p>
-                <p>Total</p>
-                <p>$100</p>
-            </div>
-        </section>
-        <aside>
-            <h2>Total Cost $200</h2>
-        </aside>
+
     </main>
+    <aside></aside>
 
     <script src="../scripts/main.js"></script>
 </body>
