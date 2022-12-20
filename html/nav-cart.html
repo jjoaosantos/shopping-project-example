@@ -12,6 +12,18 @@
     <!-- <script src="../scripts/cart.js" defer></script> -->
     <style>
 
+        main {
+            padding: 12px;
+        }
+
+        main h1 {
+            margin-bottom: 68px;
+        }
+
+        main section {
+            height: 430px;
+        }
+
         main section div {
             text-align: right;
         }
@@ -29,8 +41,10 @@
             border-radius: 50%;
         }
 
-        main p {
+        main section p {
             display: inline-block;
+            margin: 4px 8px;
+            transform: none;
         }
 
         main div.div {
@@ -39,8 +53,25 @@
             padding: 10px 0px;
         }
 
+        main div.div2 {
+            background-color: var(--color-theme);
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            transform: skew(-20deg);
+        }
+
+        main section input {
+            display: block;
+        }
+
+        main section form input[type="button"] {
+            display: inline-block;
+        }
+
         main section form input[type="text"] {
             display: inline-block;
+            text-align: center;
             width: 30px;
         }
     </style>
@@ -91,34 +122,43 @@
             <div><button class="removeC"></button></div>
             <img src="../images/iphone-5.png" alt="Iphone 4">
             <h2>Iphone 5</h2>
-            <p>quantity</p>
-            <p>1</p>
+            <form><label for="">Quantity</label>
+                <input type="text" value="1">
+                <input type="button" value=""><input type="button" value="">
+            </form>
             <div class="div">
                 <button style="background-image: url('/images/plus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
                 <button style="background-image: url('/images/minus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
             </div>
-            <p>Price</p>
-            <p>$100</p><br>
-            <p>total</p>
-            <p>$100</p>
+            <div class="div2">
+                <p>Price</p>
+                <p>$100</p>
+                <p>Total</p>
+                <p>$100</p>
+            </div>
         </section>
         <section>
             <div><button class="removeC"></button></div>
             <img src="../images/iphone-6.png" alt="Iphone 4">
             <h2>Iphone 6</h2>
-            <p>quantity</p>
-            <p>1</p>
+            <form><label for="">Quantity</label>
+                <input type="text" value="1"><br>
+                <input type="button" value="" style="background-image: url('/images/plus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;">
+                <input type="button" value="" style="background-image: url('/images/minus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;">
+            </form>
             <div class="div">
-                <button style="background-image: url('/images/plus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
-                <button style="background-image: url('/images/minus-icon.svg'); background-repeat: no-repeat; background-size: contain; width: 30px; height: 30px; border: none; border-radius: 50%;"></button>
+                <button ></button>
+                <button ></button>
             </div>
-            <p>Price</p>
-            <p>$100</p><br>
-            <p>total</p>
-            <p>$100</p>   
+            <div class="div2">
+                <p>Price</p>
+                <p>$100</p>
+                <p>Total</p>
+                <p>$100</p>
+            </div>
         </section>
         <aside>
-            <h2>Subtotal $200</h2>
+            <h2>Total Cost $200</h2>
         </aside>
     </main>
 
