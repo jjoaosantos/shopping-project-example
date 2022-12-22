@@ -23,8 +23,9 @@ function initialize(products) {
     const aside = document.querySelector("aside");
 
     let finalGroup = [];
-    finalGroup = cart.filter( product => product.image.includes(product.image));
+    finalGroup = cart.filter( product => product.name.includes(product.name));
     updateDisplay();
+    getTotal();
 
     function updateDisplay() {
       while (main.firstChild) {
@@ -36,15 +37,9 @@ function initialize(products) {
         para.textContent = 'No results to display!';
         main.appendChild(para);
       } else {
-        const h2 = document.createElement("h2");
-        h2.textContent = "Shopping Cart";
-        main.appendChild(h2);
-
         for (const product of finalGroup) {
           fetchBlob(product);
         }
-
-        getTotal();
       }
     }
 
@@ -85,10 +80,10 @@ function initialize(products) {
       headerDiv.setAttribute('class', 'product-header');
       removeBtn.setAttribute('class', 'remove-btn');
       removeBtn.addEventListener("click", () => {
-        let productId = product.id;
-        removeItemFromCart(productId);
-        // updateDisplay();
-      })
+        const index = cart.indexOf(product);
+        const splicedCart = cart.splice(index, 1);
+        removeItemFromCart(splicedCart);
+      });
 
       image.src = objectURL;
       image.alt = product.name;
@@ -159,11 +154,28 @@ function initialize(products) {
       footerDiv.appendChild(paraTValue);
     }
 
-    function removeItemFromCart(productId) {
-      const temp = cart.filter(item => item.id !== productId);
+    function removeItemFromCart(product) {
+      const temp = cart.filter(item => item !== product);
       localStorage.setItem("cart", JSON.stringify(temp));
-      getTotal();
-  
+
+      while (main.firstChild) {
+        main.removeChild(main.firstChild);
+      }
+
+      if (cart.length === 0) {
+        const para = document.createElement('p');
+        para.textContent = 'No results to display!';
+        main.appendChild(para);
+
+        while (aside.firstChild) {
+          aside.removeChild(aside.firstChild);
+        }
+      } else {
+        for (const product of temp) {
+          fetchBlob(product);
+        }
+      }
+
       const sum = temp.reduce( function(prev, next) {
         return prev - next;
       }, 0);
@@ -189,14 +201,12 @@ function initialize(products) {
       }, 0);
 
       const temp = cart.map( item => {
-        return parseInt(item.price);
+        return parseInt(item.price * item.quantity);
       });
 
       const total = temp.reduce( function(prev, next) {
         return prev + next;
       }, 0);
-
-      
 
       cartIcon.textContent = sum;
       

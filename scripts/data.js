@@ -206,7 +206,6 @@ function initialize(products) {
   function getTotal() {
     const temp = cart.map( item => {
       return parseInt(item.quantity);
-      // return parseInt(item.price);
     });
 
     const sum = temp.reduce( function(prev, next) {
