@@ -16,11 +16,13 @@ fetch("../scripts/products.json")
   
   .catch( err => console.error(`Fetch problem: ${err.message}`) );
 
-function initialize(products) {
+function initialize() {
     const cart = JSON.parse(localStorage.getItem("cart"));
     const cartIcon = document.querySelector(".cart-icon");
     const main = document.querySelector("main");
     const aside = document.querySelector("aside");
+    const h2 = document.createElement('h2');
+    aside.appendChild(h2);
 
     let finalGroup = [];
     finalGroup = cart.filter( product => product.name.includes(product.name));
@@ -189,6 +191,7 @@ function initialize(products) {
         }
       }
       localStorage.setItem("cart", JSON.stringify(cart));
+      getTotal();
     }
 
     function getTotal() {
@@ -209,10 +212,7 @@ function initialize(products) {
       }, 0);
 
       cartIcon.textContent = sum;
-      
-      const h2 = document.createElement('h2');
       h2.textContent = `Total cost $${total}`;
-      aside.appendChild(h2);
+      
     }
-
 }

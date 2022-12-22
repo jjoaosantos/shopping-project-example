@@ -195,7 +195,6 @@ function initialize(products) {
   function removeItemFromCart(productId) {
     const temp = cart.filter(item => item.id !== productId);
     localStorage.setItem("cart", JSON.stringify(temp));
-    getTotal();
 
     const sum = temp.reduce( function(prev, next) {
       return prev - next;

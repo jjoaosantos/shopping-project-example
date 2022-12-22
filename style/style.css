@@ -225,14 +225,22 @@ aside#filterField #formFilter input#searchTerm:hover, select#brand:hover {
 }
 
 main {
+    position: relative;
     background-color: white;
     text-align: center;
     width: 94vw;
     min-height: 200px;
     margin: auto;
-    padding: 80px 0px;
+    padding: 35px 0px;
     border-radius: 4px;
     /* box-shadow: 0px 1px 2px 0px var(--shadow-color); */
+}
+
+main > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 main section {
@@ -240,7 +248,7 @@ main section {
     font-style: italic;
     width: 220px;
     height: 284px;
-    margin-bottom: 35px;
+    margin: 20px 0px;
 }
 
 main section .container {
@@ -267,14 +275,6 @@ main section .middle {
     transition: opacity .5s ease;
 }
 
-/* main .container:hover img {
-    opacity: 0.3;
-}
-  
-main .container:hover .middle {
-    opacity: 1;
-} */
-
 main section .add-cart, .remove-cart {
     position: absolute;
     background-color: transparent;
@@ -290,7 +290,7 @@ main section .add-cart, .remove-cart {
     cursor: pointer;
 }
 
-main section p {
+main > section > p {
     background-color: var(--color-theme);
     font-style: normal;
     font-size: larger;
