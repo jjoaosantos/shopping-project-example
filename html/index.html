@@ -53,16 +53,19 @@
     <aside id="filterField">
         <form id="formFilter">
             <button id="searchBtn"></button>
-            <input type="text" name="searchTerm" id="searchTerm" aria-label="Enter search term" placeholder="Enter a search term">
-            <label for="brand" id="brandingLabel"> 
-                <select aria-label="Select a brand" name="brand" id="brand">
+            <div class="wrapper">
+                <input type="text" name="searchTerm" id="searchTerm" aria-label="Enter search term" placeholder="Enter a search term">
+                <div class="results">
+                    
+                </div>
+            </div>
+            <select aria-label="Select a brand" name="brand" id="brand">
                 <option aria-selected="true" selected>All</option>
                 <option>Iphone</option>
                 <option>Motorola</option>
                 <option>Nokia</option>
                 <option>Samsung</option>
             </select>
-            </label>
         </form>
     </aside>
     <main>

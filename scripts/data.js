@@ -19,8 +19,11 @@ fetch("../scripts/products.json")
 function initialize(products) {
   const branding = document.querySelector('#brand');
   const searchTerm = document.querySelector('#searchTerm');
+  // const searchWrapper = document.querySelector(".wrapper");
+  const resultsWrapper = document.querySelector(".results");
   const searchBtn = document.querySelector('#searchBtn');
   const main = document.querySelector('main');
+  resultsWrapper.style.display = "none";
 
   let lastBranding = branding.value;
   let lastSearch = '';
@@ -33,6 +36,8 @@ function initialize(products) {
 
   brandingGroup = [];
   finalGroup = [];
+
+  searchTerm.addEventListener("keyup", selectBranding);
 
   searchBtn.addEventListener('click', selectBranding);
 
@@ -61,10 +66,20 @@ function initialize(products) {
   function selectProducts() {
     if (searchTerm.value.trim() === '') {
       finalGroup = brandingGroup;
+      resultsWrapper.innerHTML = "";
+      resultsWrapper.style.display = "none";
     } else {
+      resultsWrapper.style.display = "block";
       const lowerCaseSearchTerm = searchTerm.value.trim().toLowerCase();
       finalGroup = brandingGroup.filter( product => product.name.includes(lowerCaseSearchTerm));
+
+      let content = finalGroup.map( item => {
+        return `<li>${item.name}</li>`;
+      }).join('');
+
+      resultsWrapper.innerHTML = `<ul>${content}</ul>`;
     }
+
     updateDisplay();
   }
 
