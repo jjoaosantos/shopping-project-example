@@ -21,6 +21,7 @@ function initialize(products) {
   const searchTerm = document.querySelector('#searchTerm');
   // const searchWrapper = document.querySelector(".wrapper");
   const resultsWrapper = document.querySelector(".results");
+  const ul = document.querySelector(".results ul");
   const searchBtn = document.querySelector('#searchBtn');
   const main = document.querySelector('main');
   resultsWrapper.style.display = "none";
@@ -30,6 +31,7 @@ function initialize(products) {
 
   let brandingGroup;
   let finalGroup;
+  
 
   finalGroup = products;
   updateDisplay();
@@ -37,7 +39,55 @@ function initialize(products) {
   brandingGroup = [];
   finalGroup = [];
 
-  searchTerm.addEventListener("keyup", selectBranding);
+  searchTerm.addEventListener("keyup", getSuggestion);
+
+  function getSuggestion() {
+
+    if (searchTerm.value.trim() === '') {
+      while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+      }
+      resultsWrapper.style.display = "none";
+    } else {
+      const mySuggestion = [];
+      mySuggestion.unshift(searchTerm.value.trim().toLowerCase());
+  
+      finalGroup = products.filter( product => product.name.includes(mySuggestion));
+  
+      if (ul.childElementCount >= 2) {
+        return
+      } else {
+
+        if (finalGroup.length === 0) {
+          return
+        } else {
+          let content = finalGroup.map( item => {
+          return item.name;
+        });
+  
+        for (const item of content) {
+          selectItem(item);
+        }
+        resultsWrapper.style.display = "block";
+        }
+        
+      }
+    }
+  }
+
+  function selectItem(item) {
+    const li = document.createElement("li");
+    const text = document.createTextNode(item);
+    text.textContent = item.replace(item.charAt(0), item.charAt(0).toUpperCase());
+
+    li.addEventListener("click", (e) => {
+      searchTerm.value = e.target.textContent;
+      resultsWrapper.style.display = "none";
+    });
+
+    ul.appendChild(li);
+    li.appendChild(text);
+  }
 
   searchBtn.addEventListener('click', selectBranding);
 
@@ -66,18 +116,9 @@ function initialize(products) {
   function selectProducts() {
     if (searchTerm.value.trim() === '') {
       finalGroup = brandingGroup;
-      resultsWrapper.innerHTML = "";
-      resultsWrapper.style.display = "none";
     } else {
-      resultsWrapper.style.display = "block";
       const lowerCaseSearchTerm = searchTerm.value.trim().toLowerCase();
       finalGroup = brandingGroup.filter( product => product.name.includes(lowerCaseSearchTerm));
-
-      let content = finalGroup.map( item => {
-        return `<li>${item.name}</li>`;
-      }).join('');
-
-      resultsWrapper.innerHTML = `<ul>${content}</ul>`;
     }
 
     updateDisplay();
