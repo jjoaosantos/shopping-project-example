@@ -109,9 +109,9 @@ header #menuNavigator ul#list .forget input[type="reset"] {
     padding-right: 20px;
 }
 
-header #menuNavigator ul#list .main {
+/* header #menuNavigator ul#list .main {
     height: calc(100vh - 240px);
-}
+} */
 
 header #menuNavigator ul#list .main input[type="button"] {
     background-color: var(--contrast-color);

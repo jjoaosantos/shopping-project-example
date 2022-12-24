@@ -22,5 +22,21 @@
         "image" : "iphone-6.png",
         "branding" : "iphone",
         "quantity" : 1
+    },
+    {   
+        "id" : 4,
+        "name" : "motorola moto e6 plus",
+        "price" : "50",
+        "image" : "motorola-moto-e6-plus.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 5,
+        "name" : "nokia 7 plus",
+        "price" : "50",
+        "image" : "nokia-7-plus.png",
+        "branding" : "iphone",
+        "quantity" : 1
     }
 ]
