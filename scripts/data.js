@@ -19,7 +19,6 @@ fetch("../scripts/products.json")
 function initialize(products) {
   const branding = document.querySelector('#brand');
   const searchTerm = document.querySelector('#searchTerm');
-  // const searchWrapper = document.querySelector(".wrapper");
   const resultsWrapper = document.querySelector(".results");
   const ul = document.querySelector(".results ul");
   const searchBtn = document.querySelector('#searchBtn');
@@ -51,10 +50,10 @@ function initialize(products) {
     } else {
       const mySuggestion = [];
       mySuggestion.unshift(searchTerm.value.trim().toLowerCase());
-  
+
       finalGroup = products.filter( product => product.name.includes(mySuggestion));
   
-      if (ul.childElementCount >= 2) {
+      if (ul.childElementCount >= 1) {
         return
       } else {
 
