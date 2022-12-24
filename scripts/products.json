@@ -22,13 +22,5 @@
         "image" : "iphone-6.png",
         "branding" : "iphone",
         "quantity" : 1
-    },
-    {   
-        "id" : 4,
-        "name" : "iphone 6s",
-        "price" : "50",
-        "image" : "iphone-6s.png",
-        "branding" : "iphone",
-        "quantity" : 1
     }
 ]
