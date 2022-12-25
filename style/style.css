@@ -299,7 +299,7 @@ main section .middle {
 main section .add-cart, .remove-cart {
     position: absolute;
     background-color: transparent;
-    background-image: url("../images/cart-icon.png");
+    background-image: url("../images/add-cart.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 50px;
