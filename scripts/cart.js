@@ -20,7 +20,7 @@ function initialize() {
     const cart = JSON.parse(localStorage.getItem("cart"));
     const cartIcon = document.querySelector(".cart-icon");
     const main = document.querySelector("main");
-    const aside = document.querySelector("aside");
+    const aside = document.querySelector("#totalCost");
     const h2 = document.createElement('h2');
     aside.appendChild(h2);
 

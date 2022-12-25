@@ -109,7 +109,7 @@ header #menuNavigator ul#list .forget input[type="reset"] {
     padding-right: 20px;
 }
 
-header #menuNavigator ul#list .main input[type="button"] {
+header #menuNavigator ul#list .main-menu-list input[type="button"] {
     background-color: var(--contrast-color);
     /* background-image: url("../images/moon-dark-mode-icon.png");
     background-repeat: no-repeat;
@@ -123,29 +123,10 @@ header #menuNavigator ul#list .main input[type="button"] {
     cursor: pointer;
 }
 
-header #menuNavigator ul#list .main select {
+header #menuNavigator ul#list .main-menu-list select {
     width: 81.55px;
     padding: 2px;
 }
-
-header #menuNavigator ul#list .footer li.social-media {
-    /* background-color: #ffb3a4; */
-    text-align: center;
-    width: 94vw;
-    border-radius: 6px 6px 0px 0px;
-}
-
-header #menuNavigator ul#list .footer {
-    position: absolute;
-    left: 50%;
-    bottom: 56px;
-    transform: translate(-50%, -50%);
-}
-
-header #menuNavigator ul#list .footer img {
-    padding: 8px 4px 0px;
-}
-
 header h1 {
     width: 144px;
     margin-left: 45px;
@@ -268,7 +249,7 @@ main {
     background-color: white;
     text-align: center;
     width: 94vw;
-    min-height: 200px;
+    min-height: 345px;
     margin: auto;
     padding: 35px 0px;
     border-radius: 4px;
@@ -363,7 +344,7 @@ footer section p {
     transform: translate(-50%, -50%);
 }
 
-footer section, nav, aside {
+footer section, footer nav, footer aside {
     display: inline-block;
 }
 
