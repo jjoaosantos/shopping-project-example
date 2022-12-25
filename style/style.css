@@ -349,10 +349,52 @@ footer {
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
 }
 
-footer aside {
-    text-align: right;
+footer section {
+    position: relative;
+    width: fit-content;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
-footer aside p {
+footer section p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer section, nav, aside {
     display: inline-block;
+}
+
+footer nav {
+    font-size: small;
+    margin-right: 20px;
+}
+
+footer nav ul {
+    list-style-type: none;
+}
+
+footer nav ul li {
+    padding: 3px 0px;
+}
+
+footer nav ul li a {
+    color: white;
+}
+
+footer aside ul {
+    /* color: white; */
+    text-align: center;
+    list-style-type: none;
+}
+
+footer aside ul li {
+    display: inline-block;
+}
+
+footer > p {
+    text-align: center;
+    margin-top: 20px;
 }
