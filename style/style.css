@@ -232,7 +232,6 @@ aside#filterField #formFilter input { /**/
 }
 
 aside#filterField #formFilter select {
-    /* position: absolute; */
     padding: 5px;
     border-radius: 4px;
     margin-left: calc(94vw - 94px);
@@ -248,7 +247,7 @@ main {
     position: relative;
     background-color: white;
     text-align: center;
-    width: 94vw;
+    max-width: 94vw;
     min-height: 220px;
     margin: auto;
     padding: 35px 0px;
@@ -329,6 +328,11 @@ footer {
     margin-top: 20px;
     padding: 9px;
     box-shadow: inset 0px 2px 7px 1px var(--shadow-color);
+}
+
+footer > div {
+    width: fit-content;
+    margin: auto;
 }
 
 footer section {

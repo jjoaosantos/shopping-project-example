@@ -12,3 +12,20 @@ header #menuNavigator {
     z-index: 2;
     /* transition: 1s ease; */
 }
+
+#formFilter {
+    max-width: 940px;
+    margin: auto;
+}
+
+aside#filterField #formFilter select {
+    margin-left: calc(846px);
+}
+
+main {
+    max-width: 940px;
+}
+
+footer {
+    text-align: left;
+}
