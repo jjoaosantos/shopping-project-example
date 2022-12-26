@@ -51,15 +51,13 @@ function initialize(products) {
       mySuggestion.unshift(searchTerm.value.trim().toLowerCase());
 
       finalGroup = products.filter( product => product.name.includes(mySuggestion));
+      console.log(finalGroup)
   
       if (ul.childElementCount >= 1) {
         return
       } else {
 
-        if (finalGroup.length === 0) {
-          return
-        } else {
-          let content = finalGroup.map( item => {
+        let content = finalGroup.map( item => {
           return item.name;
         });
   
@@ -67,7 +65,6 @@ function initialize(products) {
           selectItem(item);
         }
         resultsWrapper.style.display = "block";
-        }
         
       }
     }
@@ -172,6 +169,7 @@ function initialize(products) {
     cartBtn.setAttribute('title', 'Click to add this item to cart');
 
     middle.style.display = "none";
+
     cartBtn.addEventListener("click", () => {
       const index = cart.indexOf(product);
       const splicedCart = cart.splice(index, 1);
@@ -181,6 +179,7 @@ function initialize(products) {
       middle.style.display = "none";
       image.style.opacity = "1";
       cartBtn.setAttribute('class', 'add-cart');
+      cartBtn.style.backgroundImage = "url('../images/add-cart.svg')";
       cartBtn.setAttribute('aria-label', `Click to add ${product.name} to cart`);
       cartBtn.setAttribute('title', `Click to add ${product.name} to cart`);
     });
@@ -204,6 +203,7 @@ function initialize(products) {
         middle.style.display = "block";
         image.style.opacity = "0.3";
         cartBtn.setAttribute('class', 'remove-cart');
+        cartBtn.style.backgroundImage = "url('../images/remove-from-basket.svg')";
         cartBtn.setAttribute('aria-label', `Click to remove ${product.name} to cart`);
         cartBtn.setAttribute('title', `Click to remove ${product.name} to cart`);
       }

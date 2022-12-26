@@ -9,6 +9,7 @@ const forgetBtn = document.querySelector("#forgetname");
 const main = document.querySelector("main");
 const section = document.querySelector("#profile-section");
 const forgetProfile = document.querySelector(".forgetBtn");
+const profileImgLink = document.querySelector("#profile-img-link");
 
 form.addEventListener("submit", (e) => e.preventDefault());
 
@@ -181,6 +182,11 @@ for (const image of images) {
             displayedImage.setAttribute("src", currentImage);
             displayedImage.setAttribute("alt", currentAlt);
             textArea.textContent = currentInfo;
+
+           
+            profileImgLink.setAttribute("alt", `${currentAlt}`);
+            profileImgLink.setAttribute("href", "profile.html");
+            profileImgLink.style.backgroundImage = `url('${currentImage}')`;
     
             editingTool.style.opacity = "1";
             editingTool.style.cursor = "pointer";

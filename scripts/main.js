@@ -33,18 +33,18 @@ menuBtn.addEventListener("click", () => {
     }
 });
 
-const section = document.querySelector("footer section");
+const footerSec = document.querySelector("footer section");
 const heartBtn = document.querySelector("#heartBtn");
 heartBtn.addEventListener("click", () => {
     if (heartBtn.getAttribute("aria-expanded") === "false") {
         heartBtn.setAttribute("aria-expanded", "true");
         const para = document.createElement("p");
         para.textContent = "1";
-        section.appendChild(para);
+        footerSec.appendChild(para);
         
     } else {
         heartBtn.setAttribute("aria-expanded", "false");
         const para = document.querySelector("footer section p");
-        section.removeChild(para);
+        footerSec.removeChild(para);
     }
 })

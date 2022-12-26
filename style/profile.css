@@ -11,8 +11,8 @@ main .full-img {
 
 main aside section {
     font-style: normal;
-    width: 37.5px;
-    height: 37.5px;
+    width: 23%;
+    height: 50%;
     margin: 2px;
     padding: 0px;
     border-radius: 6px;
@@ -45,7 +45,7 @@ section .shop, .forgetBtn {
 
 .thumb-bar {
     display: block;
-    max-width: 166px;
+    max-width: 216px;
     margin: auto;
     margin-top: 10px;
 }

@@ -9,8 +9,13 @@ header #menuNavigator ul#list {
     text-align: left;
 }
 
+header h1 {
+    margin-left: 45px;
+}
+
 header #profile-img-link {
     position: absolute;
+    display: block;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #f9e6e6;
@@ -42,11 +47,15 @@ header #profile-img-link img {
 }
 
 aside#filterField #formFilter select {
-    margin-left: calc(846px);
+    margin-left: 846px;
 }
 
-main {
+main, aside#totalCost {
     max-width: 940px;
+}
+
+section#profile-section .shop, .forgetBtn {
+    width: 223px;
 }
 
 footer {
