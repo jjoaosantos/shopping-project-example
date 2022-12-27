@@ -37,27 +37,32 @@ function initialize(products) {
   brandingGroup = [];
   finalGroup = [];
 
+  const mySuggestion = [];
+  let finalSuggestion = [];
+  // updateSuggestion();
+  
   searchTerm.addEventListener("keyup", getSuggestion);
 
   function getSuggestion() {
+   if (searchTerm.value.trim() === '') {
+      finalSuggestion = [];
+   } else {
+    mySuggestion.unshift(searchTerm.value.trim().toLowerCase());
+    finalSuggestion = products.filter( product => product.name.includes(mySuggestion[0]));
+   }
+    updateSuggestion();
+  }
 
-    if (searchTerm.value.trim() === '') {
-      while (ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-      }
+  function updateSuggestion() {
+    while (ul.firstChild) {
+      ul.removeChild(ul.firstChild);
+    }
+    
+    if (finalSuggestion.length === 0) {
       resultsWrapper.style.display = "none";
     } else {
-      const mySuggestion = [];
-      mySuggestion.unshift(searchTerm.value.trim().toLowerCase());
 
-      finalGroup = products.filter( product => product.name.includes(mySuggestion));
-      console.log(finalGroup)
-  
-      if (ul.childElementCount >= 1) {
-        return
-      } else {
-
-        let content = finalGroup.map( item => {
+        let content = finalSuggestion.map( item => {
           return item.name;
         });
   
@@ -65,8 +70,6 @@ function initialize(products) {
           selectItem(item);
         }
         resultsWrapper.style.display = "block";
-        
-      }
     }
   }
 
