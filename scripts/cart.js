@@ -21,6 +21,7 @@ function initialize() {
     const cartIcon = document.querySelector(".cart-icon");
     const main = document.querySelector("main");
     const aside = document.querySelector("#totalCost");
+
     const h2 = document.createElement('h2');
     aside.appendChild(h2);
 
@@ -169,9 +170,7 @@ function initialize() {
         para.textContent = 'No results to display!';
         main.appendChild(para);
 
-        while (aside.firstChild) {
-          aside.removeChild(aside.firstChild);
-        }
+        getTotal();
       } else {
         for (const product of temp) {
           fetchBlob(product);
@@ -211,8 +210,8 @@ function initialize() {
         return prev + next;
       }, 0);
 
+      // aside.style.display = "block";
       cartIcon.textContent = sum;
       h2.textContent = `Total cost $${total}`;
-      
     }
 }
