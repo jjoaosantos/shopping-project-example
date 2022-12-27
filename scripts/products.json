@@ -2,16 +2,16 @@
     {
         "id" : 1,
         "name" : "iphone 4",
-        "price" : "50",
+        "price" : "199",
         "image" : "iphone-4.png",
         "branding" : "iphone",
         "quantity" : 1
     },
     {   
         "id" : 2,
-        "name" : "iphone 6",
-        "price" : "50",
-        "image" : "iphone-6.png",
+        "name" : "iphone 5",
+        "price" : "649",
+        "image" : "iphone-5.png",
         "branding" : "iphone",
         "quantity" : 1
     },
@@ -49,7 +49,7 @@
     },
     {   "id" : 7,
         "name" : "iphone se",
-        "price" : "50.00",
+        "price" : "96",
         "image" : "iphone-se.png",
         "branding" : "iphone",
         "quantity" : 1

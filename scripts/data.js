@@ -39,7 +39,6 @@ function initialize(products) {
 
   const mySuggestion = [];
   let finalSuggestion = [];
-  // updateSuggestion();
   
   searchTerm.addEventListener("keyup", getSuggestion);
 

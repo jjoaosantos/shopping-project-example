@@ -205,7 +205,11 @@ for (const image of images) {
         } else {
             displayedImage.setAttribute("src", "../images/profile-icon.png")
             displayedImage.setAttribute("alt", "Profile Icon");
-
+            
+            profileImgLink.setAttribute("alt", "Profile Icon");
+            profileImgLink.setAttribute("href", "#");
+            profileImgLink.style.backgroundImage = "url('../images/profile-icon.png')";
+            
             editingTool.style.opacity = "0.6";
             editingTool.style.cursor = "auto";
             editingTool.style.display = "block";
