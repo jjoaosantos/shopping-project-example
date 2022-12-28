@@ -20,9 +20,12 @@ function initialize() {
     const cart = JSON.parse(localStorage.getItem("cart"));
     const cartIcon = document.querySelector(".cart-icon");
     const main = document.querySelector("main");
+    const h1 = document.createElement('h1');
     const aside = document.querySelector("#totalCost");
-
     const h2 = document.createElement('h2');
+    
+    h1.textContent = "Shopping cart";
+    main.appendChild(h1);
     aside.appendChild(h2);
 
     let finalGroup = [];
@@ -36,10 +39,14 @@ function initialize() {
       }
   
       if (finalGroup.length === 0) {
+        // const h1 = document.createElement('h1');
         const para = document.createElement('p');
         para.textContent = 'No results to display!';
+
+        main.appendChild(h1);
         main.appendChild(para);
       } else {
+        main.appendChild(h1);
         for (const product of finalGroup) {
           fetchBlob(product);
         }
@@ -166,8 +173,11 @@ function initialize() {
       }
 
       if (cart.length === 0) {
+        const h1 = document.createElement('h1');
         const para = document.createElement('p');
+        h1.textContent = 'Shopping cart';
         para.textContent = 'No results to display!';
+        main.appendChild(h1);
         main.appendChild(para);
 
         getTotal();

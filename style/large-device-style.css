@@ -1,5 +1,4 @@
 header #menuNavigator {
-    
     width: 400px;
     z-index: 3;
     transition: left .4s ease-in-out;
@@ -38,7 +37,6 @@ header #profile-img-link img {
     height: 100vh;
     top: 52px;
     z-index: 2;
-    /* transition: 1s ease; */
 }
 
 #formFilter {
@@ -50,7 +48,7 @@ aside#filterField #formFilter select {
     margin-left: 846px;
 }
 
-main, aside#totalCost {
+main, aside#totalCost, section#special-thanks {
     max-width: 940px;
 }
 
