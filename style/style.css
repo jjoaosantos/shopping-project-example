@@ -7,7 +7,7 @@
     --paper-color: #ffa899;
     --bright-color: #f9e6e6;
     --footer-color: rgb(15, 15, 15);
-    --shadow-color: #2400119e;
+    --shadow-color: #24001157;
 
     --text-font: "Noto Sans", sans-serif;
 }
@@ -21,6 +21,7 @@
 
 html, body {
     background-color: var(--paper-color);
+    font-size: 100%;
     width: 100vw;
     height: 100vh;
 }
@@ -30,163 +31,297 @@ header {
     background-color: var(--color-theme);
     width: 100vw;
     height: 51px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px var(--shadow-color);
 }
 
-header button#menuBtn {
+header #menuBtn {
     position: absolute;
     background-color: transparent;
     background-image: url("../images/menu-bar.svg");
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 87%;
-    width: 40px;
-    height: 40px;
+    background-size: contain;
+    background-position: center;
+    width: 28px;
+    height: 28px;
     border: none;
     cursor: pointer;
     top: 50%;
-    transform: translate(0%, -50%);
+    transform: translate(6%, -50%);
 }
 
-header ul {
+header #menuNavigator {
     position: absolute;
     background-color: var(--bright-color);
-    width: 100vw;
-    padding-bottom: 4px;
+    color: var(--contrast-color);
+    font-size: 1.2em;
+    width: calc(100vw);
+    height: 100vh;
+    box-shadow: inset 0px 1px 2px var(--shadow-color);
     top: 51px;
-    /* z-index: 1; */
+    z-index: 2;
+    transition: left .5s ease;
 }
 
-header ul li.enter-account {
-    background-color: var(--contrast-color);
-    padding: 6px;
+header #menuNavigator ul#list {
+    list-style-type: none;
+    text-align: center;
 }
 
-header ul li.enter-account button {
+header #menuNavigator ul#list li {
+    padding: 0px 10px 6px;
+}
+
+header #menuNavigator ul#list li a {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+header #menuNavigator ul#list li a:hover {
+    color: var(--color-theme);
+}
+
+header #menuNavigator ul#list li.enter-name {
+    padding: .625em;
+}
+
+header #menuNavigator ul#list li.enter-name h2 {
+    font-size: 1.2em;
+}
+
+header ul .remember label {
+    display: block;
+}
+
+header #menuNavigator ul#list li.enter-account input[type="submit"], input[type="reset"] {
     background-color: transparent;
-    color: white;
-    font-size: medium;
+    color: var(--complementary-color);
+    padding: 0px 3px;
     border: none;
     cursor: pointer;
 }
 
-header ul li {
-    padding: 4px;
+header #menuNavigator ul#list .forget input[type="reset"] {
+    background-image: url("../images/logout-icon.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1.4em;
+    padding-right: 20px;
+}
+
+header #menuNavigator ul#list .main-menu-list input[type="button"] {
+    background-color: var(--contrast-color);
+    /* background-image: url("../images/moon-dark-mode-icon.png");
+    background-repeat: no-repeat;
+    background-position: contain; */
+    color: white;
+    /* width: 24px;
+    height: 24px; */
+    padding: 6px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+header #menuNavigator ul#list .main-menu-list select {
+    width: 81.55px;
+    padding: 2px;
 }
 
 header h1 {
-    margin-left: 40px;
-    width: fit-content;
+    width: 144px;
+    margin: auto;
+}
+
+header #profile-img-link {
+    display: none;
 }
 
 header a.cart-icon {
     position: absolute;
     background-image: url("../images/cart-icon.png");
     background-repeat: no-repeat;
-    background-size: 90%;
-    width: 40px;
+    background-size: contain;
+    color: white;
+    font-size: large;
+    text-align: right;
+    text-decoration: none;
+
+    width: 51px;
     height: 40px;
     top: 50%;
-    left: calc(100% - 46px);
+    left: calc(100% - 56px);
     transform: translate(0%, -50%);
 }
 
-header button#profileIcon {
+aside#filterField {
+    text-align: center;
+    width: 94vw;
+    margin: 0px auto 20px;
+}
+
+aside#filterField #formFilter {
+    position: relative;
+    z-index: 1;
+}
+
+aside#filterField #formFilter #searchBtn {
     position: absolute;
-    background-color: var(--bright-color);
-    background-image: url("../images/profile-icon.png");
+    background-color: #ff684de7;
+    background-image: url("../images/search-icon.svg");
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 71%;
     background-position: center;
     width: 30px;
     height: 30px;
     border: none;
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 2px 0px var(--shadow-color);
-    cursor: pointer;
-    top: 2px;
-    left: 6px;
-    /* top: 50%;
-    left: calc(100% - 46px);
-    transform: translate(0%, -50%); */
-}
-
-form.callout {
-    position: absolute;
-    background-color: var(--color-theme);
-    width: 80vw;
     border-radius: 4px;
-    top: 40%;
-    left: 50%;
+    box-shadow: 0px 0px 2px var(--shadow-color);
+    cursor: pointer;
+    top: 50%;
+    left: 18px;
+    transition: box-shadow .2s;
     transform: translate(-50%, -50%);
 }
 
-form.callout > div.heading-log-group {
+aside#filterField #formFilter #searchBtn:hover {
     background-color: var(--complementary-color);
-    padding: 9px;
-    border-radius: 4px 4px 0px 0px;
+    box-shadow: 0px 0px 4px var(--shadow-color);
 }
 
-button#closeBtn {
+aside#filterField #formFilter div.wrapper {
     position: absolute;
-    background-color: transparent;
-    color: var(--contrast-color);
-    outline-color: var(--color-theme);
-    text-decoration: none;
-    transition: .1s;
-}
-
-#navigator-list ul li a:hover {
-    color: var(--color-theme);
-    text-decoration: underline;
-}
-
-form#navigator-filter {
+    display: inline-block;
     background-color: white;
-    text-align: right;
-    width: 94vw;
-    margin: 20px auto 0px auto;
-    padding: 8px 12px;
-    border-radius: 20px 20px 0px 0px;
-    box-shadow: 0px 1px 2px 0px var(--shadow-color);
+    width: calc(100% - 135px);
+    margin-left: 38px;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px var(--shadow-color);
+    left: 0px;
 }
 
-form span {
-    position: relative;
-    left: 0px;
-    top: 6px;
+aside#filterField #formFilter div.wrapper input#searchTerm {
+    width: 100%;
+}
+
+aside#filterField #formFilter div.wrapper div.results {
+    /* background-color: white; */
+    /* position: absolute; */
+    text-align: left;
+    width: 100%;
+    padding: 4px 9px;
+    /* border: 1px solid black;
+    box-shadow: -1px -1px -4px var(--shadow-color); */
+}
+
+aside#filterField #formFilter div.wrapper div.results ul {
+    list-style-type: none;
+}
+
+aside#filterField #formFilter div.wrapper div.results ul li {
+    padding: 4px;
+}
+
+aside#filterField #formFilter div.wrapper div.results ul li:hover {
+    background-color: #ffb3a4bd;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+aside#filterField #formFilter input { /**/
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    /* box-shadow: 0px 0px 2px var(--shadow-color); */
+}
+
+aside#filterField #formFilter select {
+    padding: 5px;
+    border-radius: 4px;
+    margin-left: calc(94vw - 94px);
+    border: none;
+    box-shadow: 0px 0px 2px var(--shadow-color);
+}
+
+aside#filterField #formFilter div.wrapper:hover, select#brand:hover {
+    box-shadow: 0px 0px 4px var(--shadow-color);
 }
 
 main {
     position: relative;
     background-color: white;
     text-align: center;
-    width: 94vw;
-    min-height: 200px;
+    max-width: 94vw;
+    min-height: 100%;
     margin: auto;
-    padding: 80px 0px 35px 0px;
-    border-radius: 0px 0px 6px 6px;
+    padding: 35px 0px;
+    border-radius: 4px;
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
-    z-index: 1;
+}
+
+main > p {
+    position: absolute;
+    font-size: large;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 main section {
     display: inline-block;
-    text-align: left;
-    width: 200px;
-    height: 200px;
+    font-style: italic;
+    width: 220px;
+    height: 284px;
+    margin: 20px 0px;
+}
+
+main section .container {
+    position: relative;
+    width: 220px;
+    height: 220px;
 }
 
 main section img {
     width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 
-main section p {
-    font-size: larger;
-    font-weight: bold;
+main section .middle {
+    background-color: transparent;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: opacity .5s ease;
+}
+
+main section .add-cart, .remove-cart {
+    position: absolute;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
     border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
-    top: 0px;
-    left: calc(100% - 21px);
+}
+
+main > section > p {
+    background-color: var(--color-theme);
+    font-style: normal;
+    font-size: larger;
+    width: fit-content;
+    margin: auto;
+    padding: 2px 8px;
+    transform: skew(-20deg);
 }
 
 footer {
@@ -198,15 +333,67 @@ footer {
     padding: 9px;
 }
 
-input#accountName {
-    width: 100%;
-    margin: 2px 0px;
+footer > div {
+    width: fit-content;
+    margin: auto;
 }
 
-footer aside {
-    text-align: right;
+footer section {
+    position: relative;
+    width: fit-content;
+    margin-right: 20px;
 }
 
-footer aside p {
+footer section button {
+    background-color: transparent;
+    background-image: url("../images/heart-icon.png");
+    background-size: contain;
+    width: 48px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+}
+
+footer section p {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer section, footer nav, footer aside {
     display: inline-block;
+}
+
+footer nav {
+    font-size: small;
+    margin-right: 20px;
+}
+
+footer nav ul {
+    list-style-type: none;
+}
+
+footer nav ul li {
+    padding: 3px 0px;
+}
+
+footer nav ul li a {
+    color: white;
+}
+
+footer aside ul {
+    /* color: white; */
+    text-align: center;
+    list-style-type: none;
+}
+
+footer aside ul li {
+    display: inline-block;
+}
+
+footer > p {
+    text-align: center;
+    margin-top: 20px;
 }

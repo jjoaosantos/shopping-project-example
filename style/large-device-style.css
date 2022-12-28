@@ -1,0 +1,63 @@
+header #menuNavigator {
+    
+    width: 400px;
+    z-index: 3;
+    transition: left .4s ease-in-out;
+}
+
+header #menuNavigator ul#list {
+    text-align: left;
+}
+
+header h1 {
+    margin-left: 45px;
+}
+
+header #profile-img-link {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f9e6e6;
+    text-decoration: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    top: 50%;
+    left: 92%;
+    transform: translate(0%, -50%);
+}
+
+header #profile-img-link img {
+    width: 100%;
+}
+
+.menu-expanded {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 52px;
+    z-index: 2;
+    /* transition: 1s ease; */
+}
+
+#formFilter {
+    max-width: 940px;
+    margin: auto;
+}
+
+aside#filterField #formFilter select {
+    margin-left: 846px;
+}
+
+main, aside#totalCost {
+    max-width: 940px;
+}
+
+section#profile-section .shop, .forgetBtn {
+    width: 223px;
+}
+
+footer {
+    text-align: left;
+}

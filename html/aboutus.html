@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchFor</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/large-device-style.css" media="screen and (min-width: 992px)">
+    <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script src="../scripts/index.js" defer></script>
+    <script src="../scripts/cart-index.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="menuBtn" aria-label="Menu Bar" aria-expanded="false"></button>
+        <nav id="menuNavigator">
+            <ul id="list">
+                <li class="enter-name">
+                    <form class="callout">
+                        <div class="remember">
+                            <label for="entername">Want to join us?</label>
+                            <input type="text" id="entername" placeholder="Enter a name" aria-required="true" required>
+                            <input type="submit" id="submitname" value="Say hello">
+                        </div>
+                        <div class="forget">
+                            <h2 class="personal-greeting"></h2>
+                            <input id="forgetname" type="reset" aria-label="Want me to forget you?" title="Want me to forget you?" value="Forget">
+                        </div>
+                    </form>
+                </li>
+                <div class="main-menu-list">
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Issues</a></li>
+                    <li><input type="button" aria-label="Dark mode" title="Dark mode" value="Dark mode"></li>
+                    <li><select name="changeLang" id="changeLang" aria-label="Select a language" title="Select a language">
+                        <option value="en">En (US)</option>
+                        <option value="pt">Potuguese (BR)</option>
+                    </select></li>
+                </div>
+            </ul>
+        </nav>
+        <a href="index.html">
+            <h1><img src="../images/searchfor-logo.png" alt="Home page"></h1>
+        </a>
+        <a href="" id="profile-img-link"></a>
+        <a href="nav-cart.html" class="cart-icon"></a>
+    </header>
+    <main>
+        <h1>About Us</h1>
+        <p>We're selling products since 2022 bringing more technology for the people. We hope you enjoy staying here.</p>
+    </main>
+    <footer>
+        <div>
+            <section><button id="heartBtn" aria-expanded="false"></button></section>
+            <nav>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Issues</a></li>
+                    <li><a href="nav-cart.html">Cart</a></li>
+                    <li style="background-color: white; width: 80px; height: fit-content;"><a href="index.html"><img src="../images/searchfor-logo.png" alt="Home page" style="width: 100%;"></a></li>
+                </ul>
+            </nav>
+            <aside><ul>
+                <li><a href="#"><img src="../images/instagram-logo.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="../images/facebook-logo.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="../images/whatsapp-logo.png" alt="Whatsapp"></a></li>
+            </ul></aside>
+        </div>
+        <p><em>@Copyright nobody</em>. Use the code as you like.</p>
+    </footer>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
