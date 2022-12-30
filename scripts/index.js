@@ -17,6 +17,7 @@ submitBtn.addEventListener("click", () => {
 forgetBtn.addEventListener("click", () => {
     localStorage.removeItem("name");
     nameDisplayCheck();
+    imgDisplayCheck();
 });
 
 function nameDisplayCheck() {
@@ -26,6 +27,7 @@ function nameDisplayCheck() {
         personalGreeting.style.display = "block";
         forgetDiv.style.display = "block";
         rememberDiv.style.display = "none";
+        profileImgLink.setAttribute("href", "profile.html");
 
         if (document.querySelector("a").getAttribute("class") === "profile-disabled") {
             document.querySelector("a").setAttribute("class", "profile-active");
@@ -35,6 +37,7 @@ function nameDisplayCheck() {
         personalGreeting.style.display = "none";
         forgetDiv.style.display = "none";
         rememberDiv.style.display = "block";
+        profileImgLink.setAttribute("href", "#");
 
         document.querySelector("a").setAttribute("class", "profile-disabled");
         document.querySelector("a").setAttribute("href", "#");
@@ -55,7 +58,6 @@ function imgDisplayCheck() {
     } else {
         profileImgLink.style.backgroundImage = "url('../images/profile-icon.png')";
         profileImgLink.setAttribute("alt", "Profile Icon");
-        profileImgLink.setAttribute("href", "#");
     }
 }
 

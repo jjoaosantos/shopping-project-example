@@ -23,7 +23,7 @@ header #profile-img-link {
     height: 38px;
     border-radius: 50%;
     top: 50%;
-    left: 92%;
+    left: calc(100% - 110px);
     transform: translate(0%, -50%);
 }
 
@@ -42,10 +42,6 @@ header #profile-img-link img {
 #formFilter {
     max-width: 940px;
     margin: auto;
-}
-
-aside#filterField #formFilter select {
-    margin-left: 846px;
 }
 
 main, aside#totalCost, section#special-thanks {

@@ -239,7 +239,7 @@ aside#filterField #formFilter input { /**/
 aside#filterField #formFilter select {
     padding: 5px;
     border-radius: 4px;
-    margin-left: calc(94vw - 94px);
+    margin-left: calc(100% - 95px);
     border: none;
     box-shadow: 0px 0px 2px var(--shadow-color);
 }

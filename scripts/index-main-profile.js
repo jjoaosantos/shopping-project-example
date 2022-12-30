@@ -29,6 +29,7 @@ forgetProfile.addEventListener("click", () => {
     }
 
     nameDisplayCheck();
+    imgDisplayCheck();
 });
 
 forgetBtn.addEventListener("click", () => {
@@ -37,6 +38,7 @@ forgetBtn.addEventListener("click", () => {
     localStorage.removeItem("alt");
     localStorage.removeItem("info");
     nameDisplayCheck();
+    imgDisplayCheck();
 });
 
 function nameDisplayCheck() {
