@@ -125,7 +125,12 @@ function initialize() {
       minusBtn.setAttribute('class', 'minus-btn');
       minusBtn.addEventListener('click', () => {
         let productId = product.id;
-        let quantity = Number(input.value) - 1;
+        let quantity;
+        quantity = Number(input.value) - 1;
+        if (quantity < 0) {
+          return
+        }
+        
         updateQuantity(productId, quantity);
 
         input.value = product.quantity;
