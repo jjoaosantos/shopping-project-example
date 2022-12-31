@@ -5,40 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/large-device-style.css">
     <title>Facebook</title>
     <style>
-        html, body {
-            background-color: blue;
+
+        main > .fbk-container {
+            width: 100%;
         }
 
-        main {
-            max-width: 940px;
+        main > .fbk-container > .social-container {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            margin-bottom: 9px;
         }
+
+        main > .fbk-container > .social-container > .banner {
+            background-color: aqua;
+            width: 100%;
+            height: 200px;
+        }
+
+        main > .fbk-container  > .social-container > .profile {
+            position: absolute;
+            /* background-color: crimson; */
+            width: 200px;
+            border-radius: 50%;
+            /* border: 2px solid white; */
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0%);
+        }
+
+        main > .fbk-container  > .social-container > .profile > img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        main > .fbk-container  > .social-container > .profile > p {
+            padding: 4px 0px;
+        }
+
+        main > .fbk-container > .social-bar > button {
+            font-weight: bold;
+            padding: 8px 34px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        main > .fbk-container > .social-bar > #followBtn {
+            background-color: blue;
+            color: white;
+            
+        }
+
+        /* main > .fbk-container > .social-bar > #sendMessageBtn {
+            
+        } */
+
     </style>
 </head>
 <body>
     
     <main>
-
-    </main>
-    <footer>
-        <div>
-            <section><button id="heartBtn" aria-expanded="false"></button></section>
-            <nav>
-                <ul>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">Issues</a></li>
-                    <li><a href="nav-cart.html">Cart</a></li>
-                    <li style="background-color: white; width: 80px; height: fit-content;"><a href="index.html"><img src="../images/searchfor-logo.png" alt="Home page" style="width: 100%;"></a></li>
-                </ul>
-            </nav>
-            <aside><ul>
-                <li><a href="#"><img src="../images/instagram-logo.png" alt="Instagram"></a></li>
-                <li><a href="facebook.html"><img src="../images/facebook-logo.png" alt="Facebook"></a></li>
-                <li><a href="#"><img src="../images/whatsapp-logo.png" alt="Whatsapp"></a></li>
-            </ul></aside>
+        <div class="fbk-container">
+            <div class="social-container">
+                <div class="banner"></div>
+                <div class="profile"><img src="/images/sf-profile-logo.png" alt=""><h1>SearchFor</h1><p><em>@searchfor_oficial</em></p><p><strong>14.7k</strong>followers <strong>3</strong> following</p></div>
+            </div>
+            <div class="social-bar">
+                <button id="followBtn">Follow</button>
+                <button id="sendMessageBtn">Message</button>
+            </div>
         </div>
-        <p><em>@Copyright nobody</em>. Use the code as you like.</p>
-    </footer>
+    </main>
+
 </body>
 </html>
