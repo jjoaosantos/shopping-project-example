@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="/style/large-device-style.css">
     <title>Whatsapp</title>
     <style>
+
+        html, body {
+            background-color: white;
+        }
+
+        .divHeader {
+            position: absolute;
+            width: 100vw;
+            height: 200px;
+            background-color: #128c7e;
+        }
+
+        main {
+            min-height: calc(100vh - 85px);
+            top: 85px;
+        }
+
         main div.wts-container {
             width: fit-content;
             margin: 10% auto 0px;
@@ -35,9 +52,18 @@
             border: none;
             cursor: pointer;
         }
+
+        main > section {
+            position: absolute;
+            height: fit-content;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0%);
+        }
     </style>
 </head>
 <body>
+    <div class="divHeader"></div>
     
     <main>
         <div class="wts-container">
@@ -47,6 +73,7 @@
             </div>
             <button>Continue to Chat</button>
         </div>
+        <section><a href="index.html">Home</a></section>
     </main>
 
 </body>
