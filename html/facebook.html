@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/large-device-style.css">
+    <script src="/scripts/social-index.js" defer></script>
     <title>Facebook</title>
     <style>
 
@@ -37,17 +38,13 @@
 
         main > .fbk-container  > .social-container > .profile {
             position: absolute;
-            /* background-color: crimson; */
-            /* width: 200px; */
             border-radius: 50%;
-            /* border: 2px solid white; */
             left: 50%;
             bottom: 0px;
             transform: translate(-50%, 0%);
         }
 
         main > .fbk-container  > .social-container > .profile > img {
-            /* width: 100%; */
             border-radius: 50%;
         }
 
@@ -55,17 +52,14 @@
             padding: 4px 0px;
         }
 
-        main > .fbk-container > .social-bar > button {
+        main > .fbk-container > button {
+            background-color: blue;
+            color: white;
             font-weight: bold;
             padding: 8px 34px;
             border-radius: 4px;
             border: none;
-        }
-
-        main > .fbk-container > .social-bar > #followBtn {
-            background-color: blue;
-            color: white;
-            
+            cursor: pointer;
         }
 
         main > section {
@@ -84,11 +78,9 @@
         <div class="fbk-container">
             <div class="social-container">
                 <div class="banner"></div>
-                <div class="profile"><img src="/images/sf-profile-logo-inverse.png" alt=""><h1>SearchFor</h1><p><em>@searchfor_oficial</em></p><p><strong>3.4k</strong> followers <strong>3</strong> following</p></div>
+                <div class="profile"><img src="/images/sf-profile-logo.png" alt=""><h1>SearchFor</h1><p><em>@searchfor_oficial</em></p><p><strong>3.4k</strong> followers <strong>3</strong> following</p></div>
             </div>
-            <div class="social-bar">
-                <button id="followBtn">Follow</button>
-            </div>
+            <button class="socialBtn">Follow</button>
         </div>
         <section><a href="index.html">Home</a></section>
     </main>
