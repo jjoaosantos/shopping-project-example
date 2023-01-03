@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/large-device-style.css">
-    <script src="/scripts/social-index.js" defer></script>
+    <script src="/scripts/chat-index.js" defer></script>
     <title>Whatsapp</title>
     <style>
 
@@ -26,6 +26,11 @@
             top: 85px;
         }
 
+        main > p {
+            position: unset;
+            transform: none;
+        }
+
         main div.wts-container {
             width: fit-content;
             margin: 10% auto 0px;
@@ -43,7 +48,7 @@
             font-size: larger;
         }
 
-        main > div.wts-container > button {
+        main > div.wts-container > .chatBtn {
             background-color: rgb(56, 151, 56);
             color: white;
             width: 140px;
@@ -71,7 +76,7 @@
             <div class="para">
                 <h2>SearchFor</h2>
             </div>
-            <button class="socialBtn">Continue to Chat</button>
+            <button class="chatBtn">Continue to Chat</button>
         </div>
         <section><a href="index.html">Home</a></section>
     </main>

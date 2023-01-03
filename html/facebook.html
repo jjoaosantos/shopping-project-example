@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/large-device-style.css">
-    <script src="/scripts/social-index.js" defer></script>
+    <script src="/scripts/fbk-index.js" defer></script>
     <title>Facebook</title>
     <style>
 
@@ -52,14 +52,24 @@
             padding: 4px 0px;
         }
 
-        main > .fbk-container > button {
-            background-color: blue;
-            color: white;
+        main > div.fbk-container > button {
+            display: block;
             font-weight: bold;
             padding: 8px 34px;
+            margin: auto;
             border-radius: 4px;
             border: none;
             cursor: pointer;
+        }
+
+        main > div.fbk-container > .followingBtn {
+            background-color: #f0f0f0;
+            color: black;
+        }
+
+        main > div.fbk-container > .unfollowingBtn {
+            background-color:#1877f2;
+            color: white;
         }
 
         main > section {
@@ -80,7 +90,8 @@
                 <div class="banner"></div>
                 <div class="profile"><img src="/images/sf-profile-logo.png" alt=""><h1>SearchFor</h1><p><em>@searchfor_oficial</em></p><p><strong>3.4k</strong> followers <strong>3</strong> following</p></div>
             </div>
-            <button class="socialBtn">Follow</button>
+            <button class="unfollowingBtn">Follow</button>  
+            <button class="followingBtn">Folowing</button> 
         </div>
         <section><a href="index.html">Home</a></section>
     </main>
