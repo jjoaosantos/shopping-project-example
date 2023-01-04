@@ -325,12 +325,8 @@ main > section > p {
 }
 
 #special-thanks {
-    background-color: white;
-    width: 94vw;
-    margin: 20px auto;
+    width: 100%;
     padding: 6px;
-    border-radius: 4px;
-    box-shadow: 0px 1px 2px 0px var(--shadow-color);
 }
 
 #special-thanks ul {
