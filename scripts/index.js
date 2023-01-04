@@ -16,6 +16,9 @@ submitBtn.addEventListener("click", () => {
 
 forgetBtn.addEventListener("click", () => {
     localStorage.removeItem("name");
+    localStorage.removeItem("image");
+    localStorage.removeItem("alt");
+    localStorage.removeItem("info");
     nameDisplayCheck();
     imgDisplayCheck();
 });
