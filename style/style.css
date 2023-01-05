@@ -53,10 +53,10 @@ header #menuBtn {
 
 header #menuNavigator {
     position: absolute;
-    background-color: var(--bright-color);
-    color: var(--contrast-color);
+    background-color: #2b2b2b;
+    color: #FAFAFC;
     font-size: 1.2em;
-    width: calc(100vw);
+    width: 100vw;
     height: 100vh;
     box-shadow: inset 0px 1px 2px var(--shadow-color);
     top: 51px;
@@ -74,7 +74,7 @@ header #menuNavigator ul#list li {
 }
 
 header #menuNavigator ul#list li a {
-    color: var(--contrast-color);
+    color: #FAFAFC;
     text-decoration: none;
 }
 
@@ -96,14 +96,14 @@ header ul .remember label {
 
 header #menuNavigator ul#list li.enter-account input[type="submit"], input[type="reset"] {
     background-color: transparent;
-    color: var(--complementary-color);
+    color: #FAFAFC;
     padding: 0px 3px;
     border: none;
     cursor: pointer;
 }
 
 header #menuNavigator ul#list .forget input[type="reset"] {
-    background-image: url("../images/logout-icon.png");
+    background-image: url("../images/logout-icon.svg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 1.4em;
@@ -111,11 +111,11 @@ header #menuNavigator ul#list .forget input[type="reset"] {
 }
 
 header #menuNavigator ul#list .main-menu-list input[type="button"] {
-    background-color: var(--contrast-color);
+    background-color: #FAFAFC;
     /* background-image: url("../images/moon-dark-mode-icon.png");
     background-repeat: no-repeat;
     background-position: contain; */
-    color: white;
+    color: black;
     /* width: 24px;
     height: 24px; */
     padding: 6px;
@@ -264,14 +264,6 @@ main {
     box-shadow: 0px 1px 2px 0px var(--shadow-color);
 }
 
-main > p {
-    position: absolute;
-    font-size: large;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 main section {
     display: inline-block;
     font-style: italic;
@@ -323,7 +315,7 @@ main > section > h2 {
 }
 
 main > section > p {
-    background-color: var(--color-theme);
+    background-color: #FAFAFC;
     font-style: normal;
     font-size: larger;
     width: fit-content;
