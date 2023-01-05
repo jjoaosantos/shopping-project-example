@@ -51,7 +51,7 @@ section .shop, .forgetBtn {
 
 .thumb-bar {
     display: block;
-    max-width: 216px;
+    max-width: 256px;
     margin: auto;
     margin-top: 10px;
 }
