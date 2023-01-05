@@ -168,7 +168,7 @@ aside#filterField #formFilter {
 
 aside#filterField #formFilter #searchBtn {
     position: absolute;
-    background-color: red;
+    background-color: #FA4547;
     background-image: url("../images/search-icon.svg");
     background-repeat: no-repeat;
     background-size: 71%;
@@ -315,7 +315,7 @@ main > section > h2 {
 }
 
 main > section > p {
-    background-color: #FAFAFC;
+    background-color: var(--color-theme);
     font-style: normal;
     font-size: larger;
     width: fit-content;

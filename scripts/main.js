@@ -24,7 +24,7 @@ menuBtn.addEventListener("click", () => {
     } else {
         const blur = document.querySelector(".menu-expanded");
         menuBtn.setAttribute("aria-expanded", "false");
-        menuBtn.style.backgroundImage = "url('../images/menu-bar.svg')";
+        menuBtn.style.backgroundImage = "url('../images/bars-icon.svg')";
         menuBtn.style.backgroundSize = "contain";
         navBar.style.left = "-100vw";
         html.style.overflow = "auto";

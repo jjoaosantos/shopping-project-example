@@ -13,6 +13,17 @@
     <script src="../scripts/cart.js" defer></script>
     <style>
 
+        main {
+            color: #fafafc;
+        }
+
+        main > p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         main section {
             height: 430px;
             /* margin: 45px 0px; */
@@ -89,13 +100,17 @@
         }
 
         aside#totalCost {
-            background-color: white;
+            background-color: #121212;
             text-align: center;
             width: 94vw;
             margin: 10px auto;
             padding: 12px 0px;
             border-radius: 4px;
             box-shadow: 0px 1px 2px 0px var(--shadow-color);
+        }
+
+        aside#totalCost h2 {
+            color: #fafafc;
         }
         
     </style>
@@ -123,7 +138,7 @@
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="special-thanks.html">#special thanks</a></li>
                     <li><a href="#">Issues</a></li>
-                    <li><input type="button" aria-label="Dark mode" title="Dark mode" value="Dark mode"></li>
+                    <li><input type="button" aria-label="Light mode" title="Light mode" value="Light mode"></li>
                     <li><select name="changeLang" id="changeLang" aria-label="Select a language" title="Select a language">
                         <option value="en">En (US)</option>
                         <option value="pt">Potuguese (BR)</option>
@@ -132,12 +147,11 @@
             </ul>
         </nav>
         <a href="index.html">
-            <h1><img src="../images/searchfor-logo.png" alt="Home page"></h1>
+            <h1><img src="../images/searchfor-dark-logo.png" alt="Home page"></h1>
         </a>
         <a href="" id="profile-img-link"></a>
         <a href="nav-cart.html" class="cart-icon"></a>
     </header>
-    <!-- <h2>Shopping cart</h2> -->
     <main>
         
     </main>
@@ -150,7 +164,7 @@
                     <li><a href="#">Issues</a></li>
                     <li><a href="nav-cart.html">Cart</a></li>
                     <li><a href="special-thanks.html">#special thanks</a></li>
-                    <li style="background-color: white; width: 80px; height: fit-content;"><a href="index.html"><img src="../images/searchfor-logo.png" alt="Home page" style="width: 100%;"></a></li>
+                    <li style="width: 80px; height: fit-content;"><a href="index.html"><img src="../images/searchfor-dark-logo.png" alt="Home page" style="width: 100%;"></a></li>
                 </ul>
             </nav>
             <aside><ul>

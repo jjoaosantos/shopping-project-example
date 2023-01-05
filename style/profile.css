@@ -24,6 +24,10 @@ main aside section img {
     cursor: pointer;
 }
 
+main h2.user-name {
+    color: #fafafc;
+}
+
 section {
     width: 94vw;
     margin-top: 20px;
@@ -32,8 +36,8 @@ section {
 
 section .shop, .forgetBtn {
     display: block;
-    background-color: #f9e6e6;
-    color: black;
+    background-color: #121212;
+    color: #fafafc;
     font-size: small;
     text-decoration: none;
     text-align: center;
@@ -41,7 +45,7 @@ section .shop, .forgetBtn {
     margin: 12px auto;
     padding: 8px;
     border-radius: 20px;
-    border: 1px solid #240011;
+    border: 1px solid black;
     cursor: pointer;
 }
 
@@ -70,7 +74,7 @@ form .edit, .rememberInfo, .reset {
 
 form #editingTool {
     background-color: transparent;
-    background-image: url("../images/editor-icon.png");
+    background-image: url("../images/edit-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 24px;
@@ -81,7 +85,7 @@ form #editingTool {
 
 form #rememberCheck {
     background-color: transparent;
-    background-image: url("../images/check-icon.png");
+    background-image: url("../images/check-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 24px;
