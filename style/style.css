@@ -20,7 +20,7 @@
 }
 
 html, body {
-    background-color: #2b2b2b;
+    background-color: var(--paper-color);
     font-size: 100%;
     width: 100vw;
     height: 100vh;
@@ -28,7 +28,7 @@ html, body {
 
 header {
     position: relative;
-    background-color: #121212;
+    background-color: var(--color-theme);
     width: 100vw;
     height: 51px;
     margin-bottom: 20px;
@@ -53,7 +53,7 @@ header #menuBtn {
 
 header #menuNavigator {
     position: absolute;
-    background-color: #2b2b2b;
+    background-color: #ffa899;
     color: #FAFAFC;
     font-size: 1.2em;
     width: 100vw;
