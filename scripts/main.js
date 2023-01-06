@@ -14,6 +14,7 @@ menuBtn.addEventListener("click", () => {
         blur.setAttribute("class", "menu-expanded");
         blur.style.backgroundColor = "rgba(0, 0, 0, 0.808)";
         menuBtn.setAttribute("aria-expanded", "true");
+        menuBtn.setAttribute("title", "Close menu");
         menuBtn.style.backgroundImage = "url('../images/x-icon.svg')";
         menuBtn.style.backgroundSize = "80%";
         navBar.style.left = "0px";
@@ -24,6 +25,7 @@ menuBtn.addEventListener("click", () => {
     } else {
         const blur = document.querySelector(".menu-expanded");
         menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("title", "Open menu");
         menuBtn.style.backgroundImage = "url('../images/bars-icon.svg')";
         menuBtn.style.backgroundSize = "contain";
         navBar.style.left = "-100vw";
