@@ -65,6 +65,16 @@ main {
     color: var(--contrast-color);
 }
 
+main > section > p {
+    background-color: #FD887A;
+    color: black;
+}
+
+main > section > div.product-footer {
+    background-color: #FD887A;
+    color: black;
+}
+
 main section#special-thanks ul li a {
     color: var(--contrast-color);
 }
