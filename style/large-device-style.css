@@ -8,8 +8,10 @@ header #menuNavigator ul#list {
     text-align: left;
 }
 
-header h1 {
-    margin-left: 51.2px;
+header #homeLogo {
+    top: 0%;
+    left: 51.2px;
+    transform: none;
 }
 
 header #profile-img-link {

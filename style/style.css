@@ -6,7 +6,7 @@
     --complementary-color: #FF674D;
     --paper-color: #ffa899;
     --bright-color: #f9e6e6;
-    --footer-color: rgb(15, 15, 15);
+    --footer-color: #121212;
     --shadow-color: #24001157;
 
     --text-font: "Noto Sans", sans-serif;
@@ -35,10 +35,10 @@ header {
     box-shadow: 0px 1px 3px var(--shadow-color);
 }
 
-header #menuBtn {
+header .barsBtn, .xBtn {
     position: absolute;
     background-color: transparent;
-    background-image: url("../images/bars-icon.svg");
+    
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -51,10 +51,18 @@ header #menuBtn {
     transform: translate(50%, -50%);
 }
 
+header .barsBtn {
+    background-image: url("../images/bars-b-icon.svg");
+}
+
+header .xBtn {
+    background-image: url("../images/x-b-icon.svg");
+}
+
 header #menuNavigator {
     position: absolute;
-    background-color: #ffa899;
-    color: #FAFAFC;
+    background-color: var(--bright-color);
+    color: var(--contrast-color);
     font-size: 1.2em;
     width: 100vw;
     height: 100vh;
@@ -74,7 +82,7 @@ header #menuNavigator ul#list li {
 }
 
 header #menuNavigator ul#list li a {
-    color: #FAFAFC;
+    color: var(--contrast-color);
     text-decoration: none;
 }
 
@@ -96,14 +104,14 @@ header ul .remember label {
 
 header #menuNavigator ul#list li.enter-account input[type="submit"], input[type="reset"] {
     background-color: transparent;
-    color: #FAFAFC;
+    color: var(--complementary-color);
     padding: 0px 3px;
     border: none;
     cursor: pointer;
 }
 
 header #menuNavigator ul#list .forget input[type="reset"] {
-    background-image: url("../images/logout-icon.svg");
+    background-image: url("../images/logout-b-icon.svg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 1.4em;
@@ -111,11 +119,11 @@ header #menuNavigator ul#list .forget input[type="reset"] {
 }
 
 header #menuNavigator ul#list .main-menu-list input[type="button"] {
-    background-color: #FAFAFC;
+    background-color: var(--contrast-color);
     /* background-image: url("../images/moon-dark-mode-icon.png");
     background-repeat: no-repeat;
     background-position: contain; */
-    color: black;
+    color: white;
     /* width: 24px;
     height: 24px; */
     padding: 6px;
@@ -129,9 +137,17 @@ header #menuNavigator ul#list .main-menu-list select {
     padding: 2px;
 }
 
-header h1 {
+header #homeLogo {
+    position: absolute;
+    background-image: url("/images/searchfor-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 144px;
+    height: 42px;
     margin: auto;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 header #profile-img-link {
@@ -140,7 +156,7 @@ header #profile-img-link {
 
 header a.cart-icon {
     position: absolute;
-    background-image: url("../images/cart-icon.svg");
+    background-image: url("../images/cart-b-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
@@ -168,7 +184,7 @@ aside#filterField #formFilter {
 
 aside#filterField #formFilter #searchBtn {
     position: absolute;
-    background-color: #FA4547;
+    background-color: #ff684de7;
     background-image: url("../images/search-icon.svg");
     background-repeat: no-repeat;
     background-size: 71%;
@@ -203,7 +219,6 @@ aside#filterField #formFilter div.wrapper {
 }
 
 aside#filterField #formFilter div.wrapper input#searchTerm {
-    background-color: #121212;
     width: 100%;
 }
 
@@ -239,8 +254,6 @@ aside#filterField #formFilter input { /**/
 }
 
 aside#filterField #formFilter select {
-    background-color: #121212;
-    color: #FAFAFC;
     padding: 5px;
     border-radius: 4px;
     margin-left: calc(100% - 95px);
@@ -254,7 +267,7 @@ aside#filterField #formFilter div.wrapper:hover, select#brand:hover {
 
 main {
     position: relative;
-    background-color: #121212;
+    background-color: white;
     text-align: center;
     width: 94vw;
     min-height: 100%;
@@ -310,10 +323,6 @@ main section .add-cart, .remove-cart {
     cursor: pointer;
 }
 
-main > section > h2 {
-    color: #FAFAFC;
-}
-
 main > section > p {
     background-color: var(--color-theme);
     font-style: normal;
@@ -336,7 +345,7 @@ main > section > p {
 
 footer {
     display: block;
-    background-color: #121212;
+    background-color: var(--footer-color);
     color: white;
     width: 100vw;
     margin-top: 20px;

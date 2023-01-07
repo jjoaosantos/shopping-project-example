@@ -94,6 +94,15 @@ form #rememberCheck {
     cursor: pointer;
 }
 
+footer .home-footer-link {
+    display: block;
+    background-color: white;
+    background-image: url("/images/searchfor-logo.png");
+    background-size: contain;
+    width: 80px;
+    height: 23.33px;
+}
+
 footer > div {
     width: fit-content;
     margin: auto;

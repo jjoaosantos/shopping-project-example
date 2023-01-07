@@ -12,10 +12,12 @@
     <script src="../scripts/index.js" defer></script>
     <script src="../scripts/data.js" defer></script>
     <script src="/scripts/index-page-mode.js" defer></script>
+    <script src="../scripts/main.js" defer></script>
 </head>
 <body>
     <header>
-        <button id="menuBtn" title="Open menu" aria-label="Menu Bar" aria-expanded="false"></button>
+        <button class="barsBtn" title="Open menu" aria-label="Menu Bar" aria-expanded="false"></button>
+        <button class="xBtn" title="Close menu" aria-label="Menu Bar" aria-expanded="false"></button>
         <nav id="menuNavigator">
             <ul id="list">
                 <li class="enter-name">
@@ -36,8 +38,7 @@
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="special-thanks.html">#special thanks</a></li>
                     <li><a href="#">Issues</a></li>
-                    <li><input type="button" id="darkModeBtn" aria-label="Dark mode" title="Dark mode" value="Dark mode"></li>
-                    <li><input type="button" id="lightModeBtn" aria-label="Light mode" title="Light mode" value="Light mode"></li>
+                    <li><input type="button" id="darkModeBtn" aria-label="Dark mode" title="Dark mode" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Light mode" title="Light mode" value="Light mode"></li>
                     <li><select name="changeLang" id="changeLang" aria-label="Select a language" title="Select a language">
                         <option value="en">En (US)</option>
                         <option value="pt">Potuguese (BR)</option>
@@ -45,9 +46,7 @@
                 </div>
             </ul>
         </nav>
-        <a href="index.html" title="Home page" aria-label="Home page">
-            <h1><img src="../images/searchfor-dark-logo.png" alt="Home page"></h1>
-        </a>
+        <a href="index.html" id="homeLogo" title="Home page" aria-label="Home page"></a>
         <a href="" id="profile-img-link" title="Profile" aria-label="Open profile page"></a>
         <a href="nav-cart.html" class="cart-icon" title="Cart" aria-label="Open cart page"></a>
     </header>
@@ -82,7 +81,7 @@
                     <li><a href="#">Issues</a></li>
                     <li><a href="nav-cart.html">Cart</a></li>
                     <li><a href="special-thanks.html">#special thanks</a></li>
-                    <li style="width: 80px; height: fit-content;"><a href="index.html"><img src="../images/searchfor-dark-logo.png" alt="Home page" style="width: 100%;"></a></li>
+                    <li><a href="index.html" class="home-footer-link"></a></li>
                 </ul>
             </nav>
             <aside><ul>
@@ -93,6 +92,5 @@
         </div>
         <p><em>@Copyright nobody</em>. Use the code as you like.</p>
     </footer>
-    <script src="../scripts/main.js"></script>
 </body>
 </html>
