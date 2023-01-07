@@ -1,9 +1,9 @@
 [
     {
         "id" : 1,
-        "name" : "iphone 4",
+        "name" : "iphone 4s",
         "price" : "199",
-        "image" : "iphone-4.png",
+        "image" : "iphone-4s.png",
         "branding" : "iphone",
         "quantity" : 1
     },
@@ -18,7 +18,7 @@
     {   
         "id" : 3,
         "name" : "iphone 6s",
-        "price" : "199",
+        "price" : "559",
         "image" : "iphone-6s.png",
         "branding" : "iphone",
         "quantity" : 1
@@ -34,7 +34,7 @@
     {   
         "id" : 5,
         "name" : "iphone 8 plus",
-        "price" : "699",
+        "price" : "799",
         "image" : "iphone-8-plus.png",
         "branding" : "iphone",
         "quantity" : 1
@@ -48,7 +48,7 @@
         "quantity" : 1
     },
     {   "id" : 7,
-        "name" : "iphone se",
+        "name" : "iphone 11",
         "price" : "96",
         "image" : "iphone-se.png",
         "branding" : "iphone",
@@ -64,9 +64,9 @@
     },
     {   
         "id" : 9,
-        "name" : "iphone xs dual-pro",
-        "price" : "379",
-        "image" : "iphone-xs-dualpro.png",
+        "name" : "iphone x",
+        "price" : "475",
+        "image" : "iphone-x.png",
         "branding" : "iphone",
         "quantity" : 1
     },
@@ -87,24 +87,24 @@
     },
     {   "id" : 12,
         "name" : "motorola moto c plus",
-        "price" : "99",
+        "price" : "79",
         "image" : "motorola-moto-c-plus.png",
         "branding" : "motorola",
         "quantity" : 1
     },
     {   
         "id" : 13,
-        "name" : "motorola moto e",
-        "price" : "50",
-        "image" : "motorola-moto-e.png",
+        "name" : "motorola moto z3 play",
+        "price" : "499",
+        "image" : "motorola-moto-z3-play.png",
         "branding" : "motorola",
         "quantity" : 1
     },
     {   
         "id" : 14,
-        "name" : "motorola moto e6 plus",
-        "price" : "50",
-        "image" : "motorola-moto-e6-plus.png",
+        "name" : "motorola moto x style",
+        "price" : "189",
+        "image" : "motorola-moto-x-style.png",
         "branding" : "motorola",
         "quantity" : 1
     },
@@ -118,16 +118,16 @@
     },
     {   
         "id" : 16,
-        "name" : "motorola moto g5 s plus",
+        "name" : "motorola moto g7 plus",
         "price" : "279",
-        "image" : "motorola-moto-g5-s-plus.png",
+        "image" : "motorola-moto-g7-plus.png",
         "branding" : "motorola",
         "quantity" : 1
     },
     {   
         "id" : 17,
         "name" : "motorola moto g6 play",
-        "price" : "50",
+        "price" : "299",
         "image" : "motorola-moto-g6-play.png",
         "branding" : "motorola",
         "quantity" : 1
@@ -143,16 +143,16 @@
     {   
         "id" : 19,
         "name" : "motorola moto z2 force",
-        "price" : "50",
+        "price" : "720",
         "image" : "motorola-moto-z2-force.png",
         "branding" : "motorola",
         "quantity" : 1
     },
     {   
         "id" : 20,
-        "name" : "motorola moto one vision action",
-        "price" : "50",
-        "image" : "motorola-moto-one-vision-action.png",
+        "name" : "motorola one vision action",
+        "price" : "499",
+        "image" : "motorola-one-vision-action.png",
         "branding" : "motorola",
         "quantity" : 1
     },
@@ -191,7 +191,7 @@
     {   
         "id" : 25,
         "name" : "nokia 2720",
-        "price" : "90",
+        "price" : "89",
         "image" : "nokia-2720.png",
         "branding" : "nokia",
         "quantity" : 1
@@ -199,7 +199,7 @@
     {   
         "id" : 26,
         "name" : "nokia 8110",
-        "price" : "60",
+        "price" : "69",
         "image" : "nokia-8110.png",
         "branding" : "nokia",
         "quantity" : 1
@@ -238,9 +238,9 @@
     },
     {   
         "id" : 31,
-        "name" : "samsung galaxy j5",
+        "name" : "samsung galaxy j5 prime",
         "price" : "60",
-        "image" : "samsung-galaxy-j5.png",
+        "image" : "samsung-galaxy-j5-prime.png",
         "branding" : "samsung",
         "quantity" : 1
     },
@@ -263,7 +263,7 @@
     {   
         "id" : 34,
         "name" : "samsung galaxy note 8",
-        "price" : "400",
+        "price" : "399",
         "image" : "samsung-galaxy-note-8.png",
         "branding" : "samsung",
         "quantity" : 1
@@ -271,7 +271,7 @@
     {   
         "id" : 35,
         "name" : "samsung galaxy note 9",
-        "price" : "50.00",
+        "price" : "889",
         "image" : "samsung-galaxy-note-9.png",
         "branding" : "samsung",
         "quantity" : 1
@@ -294,9 +294,9 @@
     },
     {   
         "id" : 38,
-        "name" : "samsung galaxy s4",
-        "price" : "90",
-        "image" : "samsung-galaxy-s4.png",
+        "name" : "samsung galaxy j8",
+        "price" : "229",
+        "image" : "samsung-galaxy-j8.png",
         "branding" : "samsung",
         "quantity" : 1
     },
@@ -310,16 +310,16 @@
     },
     {   
         "id" : 40,
-        "name" : "samsung galaxy s6 edge",
+        "name" : "samsung galaxy s6",
         "price" : "140",
-        "image" : "samsung-galaxy-s6-edge.png",
+        "image" : "samsung-galaxy-s6.png",
         "branding" : "samsung",
         "quantity" : 1
     },
     {   
         "id" : 41,
         "name" : "samsung galaxy s7",
-        "price" : "599",
+        "price" : "339",
         "image" : "samsung-galaxy-s7.png",
         "branding" : "samsung",
         "quantity" : 1

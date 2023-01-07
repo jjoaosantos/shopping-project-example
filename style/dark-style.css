@@ -22,6 +22,10 @@ header #menuNavigator {
     background-color: var(--dark-color);
 }
 
+header #menuNavigator ul#list .forget input[type="reset"] {
+    background-image: url("../images/logout-d-icon.svg");
+}
+
 header #menuNavigator ul#list li a {
     color: var(--contrast-color);
 }
