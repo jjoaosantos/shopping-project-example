@@ -50,7 +50,7 @@
     {   "id" : 7,
         "name" : "iphone 11",
         "price" : "739",
-        "image" : "iphone-se.png",
+        "image" : "iphone-11.png",
         "branding" : "iphone",
         "quantity" : 1
     },
@@ -110,9 +110,9 @@
     },
     {   
         "id" : 15,
-        "name" : "motorola moto g6",
+        "name" : "motorola moto g5 s plus",
         "price" : "249",
-        "image" : "motorola-moto-e6-t.png",
+        "image" : "motorola-moto-g5-s-plus.png",
         "branding" : "motorola",
         "quantity" : 1
     },

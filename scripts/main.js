@@ -43,3 +43,5 @@ select.addEventListener("change", () => {
     const lang = localStorage.getItem("lang");
     select.value = lang;
 });
+
+console.log(select.textContent);
