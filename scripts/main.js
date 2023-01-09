@@ -36,3 +36,10 @@ xBtn.addEventListener("click", () => {
     list.style.display = "none";
     body.removeChild(blur);
 });
+
+const select = document.querySelector("#changeLang");
+select.addEventListener("change", () => {
+    localStorage.setItem("lang", select.value);
+    const lang = localStorage.getItem("lang");
+    select.value = lang;
+});
