@@ -39,9 +39,22 @@ xBtn.addEventListener("click", () => {
 
 const select = document.querySelector("#changeLang");
 select.addEventListener("change", () => {
-    localStorage.setItem("lang", select.value);
-    const lang = localStorage.getItem("lang");
-    select.value = lang;
+    if (select.value === '/html/index.html') {
+        localStorage.setItem("lang", "en-us");
+        selectDisplayCheck();
+        // console.log();
+    } else if (select.value === '/html/br/index.html') {
+        localStorage.setItem("lang", "pt-br");
+        selectDisplayCheck();
+    }
 });
 
-console.log(select.textContent);
+function selectDisplayCheck() {
+    if (localStorage.getItem("en-us")) {
+        document.getElementById("enLang").selected = true;
+    } else if (localStorage.getItem("pt-br")) {
+        document.getElementById("ptLang").selected = true;
+    }
+}
+
+selectDisplayCheck();
