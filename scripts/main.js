@@ -38,9 +38,10 @@ xBtn.addEventListener("click", () => {
 });
 
 const select = document.querySelector("#changeLang");
-select.addEventListener("change", updateLang);
+const ptLang = document.querySelector("#ptLang");
+const enLang = document.querySelector("#enLang");
 
-console.log(select.selectedOptions);
+select.addEventListener("change", updateLang);
 
 function updateLang() {
     let collection = select.selectedOptions;
@@ -48,23 +49,24 @@ function updateLang() {
     for (let i = 0; i < collection.length; i++) {
         if (collection[i].label === 'EN (US)') {
             localStorage.setItem("lang", "en-us");
-            collection[i].defaultSelected = true;
+            window.location = enLang.value;
         } else if (collection[i].label === 'PT (BR)') {
             localStorage.setItem("lang", "pt-br");
-            collection[i].defaultSelected = true;
+            window.location = ptLang.value;
         }
     }
     selectDisplayCheck();
 }
 
-updateLang();
-
 function selectDisplayCheck() {
-    if (localStorage.getItem("en-us")) {
-        document.querySelector("#ptLang").defaultSelected = false;
-        // window.location = this.value;
-    } else if (localStorage.getItem("pt-br")) {
-        document.querySelector("#enLang").defaultSelected = false;
-        // window.location = this.value;
+    if (localStorage.getItem("lang") === "en-us") {
+        enLang.defaultSelected = true;
+        ptLang.defaultSelected = false;
+        
+    } else if (localStorage.getItem("lang") === "pt-br") {
+        ptLang.defaultSelected = true;
+        enLang.defaultSelected = false;
     }
 }
+
+selectDisplayCheck();

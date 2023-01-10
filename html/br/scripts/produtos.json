@@ -1,0 +1,367 @@
+[
+    {
+        "id" : 1,
+        "name" : "iphone 4s",
+        "price" : "199",
+        "image" : "iphone-4s.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 2,
+        "name" : "iphone 5",
+        "price" : "649",
+        "image" : "iphone-5.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 3,
+        "name" : "iphone 6s",
+        "price" : "559",
+        "image" : "iphone-6s.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 4,
+        "name" : "iphone 7 plus",
+        "price" : "769",
+        "image" : "iphone-7-plus.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 5,
+        "name" : "iphone 8 plus",
+        "price" : "799",
+        "image" : "iphone-8-plus.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 6,
+        "name" : "iphone 11 pro",
+        "price" : "899",
+        "image" : "iphone-11-pro.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   "id" : 7,
+        "name" : "iphone 11",
+        "price" : "739",
+        "image" : "iphone-11.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 8,
+        "name" : "iphone xr",
+        "price" : "499",
+        "image" : "iphone-xr.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 9,
+        "name" : "iphone x",
+        "price" : "475",
+        "image" : "iphone-x.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   "id" : 10,
+        "name" : "iphone xs max",
+        "price" : "565",
+        "image" : "iphone-xs-max.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   
+        "id" : 11,
+        "name" : "iphone 6",
+        "price" : "199",
+        "image" : "iphone-6.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {   "id" : 12,
+        "name" : "motorola moto c plus",
+        "price" : "79",
+        "image" : "motorola-moto-c-plus.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 13,
+        "name" : "motorola moto z3 play",
+        "price" : "499",
+        "image" : "motorola-moto-z3-play.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 14,
+        "name" : "motorola moto x style",
+        "price" : "189",
+        "image" : "motorola-moto-x-style.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 15,
+        "name" : "motorola moto g5 s plus",
+        "price" : "249",
+        "image" : "motorola-moto-g5-s-plus.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 16,
+        "name" : "motorola moto g7 plus",
+        "price" : "279",
+        "image" : "motorola-moto-g7-plus.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 17,
+        "name" : "motorola moto g6 play",
+        "price" : "299",
+        "image" : "motorola-moto-g6-play.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 18,
+        "name" : "motorola moto g8",
+        "price" : "230",
+        "image" : "motorola-moto-g8.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 19,
+        "name" : "motorola moto z2 force",
+        "price" : "720",
+        "image" : "motorola-moto-z2-force.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 20,
+        "name" : "motorola one vision action",
+        "price" : "499",
+        "image" : "motorola-one-vision-action.png",
+        "branding" : "motorola",
+        "quantity" : 1
+    },
+    {   
+        "id" : 21,
+        "name" : "Nokia 2.2",
+        "price" : "140",
+        "image" : "nokia-2.2.png",
+        "branding" : "nokia",
+        "quantity" : 1
+    },
+    {   
+        "id" : 22,
+        "name" : "Nokia 4.2",
+        "price" : "189",
+        "image" : "nokia-4.2.png",
+        "branding" : "nokia",
+        "quantity" : 1
+    },
+    {   
+        "id" : 23,
+        "name" : "nokia 7 plus",
+        "price" : "180",
+        "image" : "nokia-7-plus.png",
+        "branding" : "iphone",
+        "quantity" : 1
+    },
+    {
+        "id" : 24,
+        "name" : "nokia 9 pure-view",
+        "price" : "494",
+        "image" : "nokia-9-pureview.png",
+        "branding" : "nokia",
+        "quantity" : 1
+    },
+    {   
+        "id" : 25,
+        "name" : "nokia 2720",
+        "price" : "89",
+        "image" : "nokia-2720.png",
+        "branding" : "nokia",
+        "quantity" : 1
+    },
+    {   
+        "id" : 26,
+        "name" : "nokia 8110",
+        "price" : "69",
+        "image" : "nokia-8110.png",
+        "branding" : "nokia",
+        "quantity" : 1
+    },
+    {   
+        "id" : 27,
+        "name" : "nokia c2 03",
+        "price" : "55",
+        "image" : "nokia-c2-03.png",
+        "branding" : "nokia",
+        "quantity" : 1
+    },
+    {   
+        "id" : 28,
+        "name" : "samsung galaxy a20",
+        "price" : "180",
+        "image" : "samsung-galaxy-a20.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 29,
+        "name" : "samsung galaxy a50",
+        "price" : "235",
+        "image" : "samsung-galaxy-a50.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 30,
+        "name" : "samsung galaxy a70",
+        "price" : "330",
+        "image" : "samsung-galaxy-a70.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 31,
+        "name" : "samsung galaxy j5 prime",
+        "price" : "60",
+        "image" : "samsung-galaxy-j5-prime.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 32,
+        "name" : "samsung galaxy j7 pro",
+        "price" : "220",
+        "image" : "samsung-galaxy-j7-pro.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 33,
+        "name" : "samsung galaxy note 7",
+        "price" : "695",
+        "image" : "samsung-galaxy-note-7.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 34,
+        "name" : "samsung galaxy note 8",
+        "price" : "399",
+        "image" : "samsung-galaxy-note-8.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 35,
+        "name" : "samsung galaxy note 9",
+        "price" : "889",
+        "image" : "samsung-galaxy-note-9.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 36,
+        "name" : "samsung galaxy note 10 plus",
+        "price" : "1099",
+        "image" : "samsung-galaxy-note-10-plus.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 37,
+        "name" : "samsung galaxy s3 mini",
+        "price" : "36",
+        "image" : "samsung-galaxy-s3-mini.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 38,
+        "name" : "samsung galaxy j8",
+        "price" : "229",
+        "image" : "samsung-galaxy-j8.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 39,
+        "name" : "samsung galaxy s5",
+        "price" : "137",
+        "image" : "samsung-galaxy-s5.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 40,
+        "name" : "samsung galaxy s6",
+        "price" : "140",
+        "image" : "samsung-galaxy-s6.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 41,
+        "name" : "samsung galaxy s7",
+        "price" : "339",
+        "image" : "samsung-galaxy-s7.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 42,
+        "name" : "samsung galaxy s8 plus",
+        "price" : "819",
+        "image" : "samsung-galaxy-s8-plus.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 43,
+        "name" : "samsung galaxy s9 plus",
+        "price" : "840",
+        "image" : "samsung-galaxy-s9-plus.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 44,
+        "name" : "samsung galaxy s10",
+        "price" : "599",
+        "image" : "samsung-galaxy-s10.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 45,
+        "name" : "samsung galaxy tab s3 sm t825",
+        "price" : "690",
+        "image" : "samsung-galaxy-tab-s3-sm-t825.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    },
+    {   
+        "id" : 46,
+        "name" : "samsung galaxy tab s10",
+        "price" : "159",
+        "image" : "samsung-galaxy-tab-s10.png",
+        "branding" : "samsung",
+        "quantity" : 1
+    }
+]
