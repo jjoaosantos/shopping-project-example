@@ -38,23 +38,33 @@ xBtn.addEventListener("click", () => {
 });
 
 const select = document.querySelector("#changeLang");
-select.addEventListener("change", () => {
-    if (select.value === '/html/index.html') {
-        localStorage.setItem("lang", "en-us");
-        selectDisplayCheck();
-        // console.log();
-    } else if (select.value === '/html/br/index.html') {
-        localStorage.setItem("lang", "pt-br");
-        selectDisplayCheck();
+select.addEventListener("change", updateLang);
+
+console.log(select.selectedOptions);
+
+function updateLang() {
+    let collection = select.selectedOptions;
+
+    for (let i = 0; i < collection.length; i++) {
+        if (collection[i].label === 'EN (US)') {
+            localStorage.setItem("lang", "en-us");
+            collection[i].defaultSelected = true;
+        } else if (collection[i].label === 'PT (BR)') {
+            localStorage.setItem("lang", "pt-br");
+            collection[i].defaultSelected = true;
+        }
     }
-});
+    selectDisplayCheck();
+}
+
+updateLang();
 
 function selectDisplayCheck() {
     if (localStorage.getItem("en-us")) {
-        document.getElementById("enLang").selected = true;
+        document.querySelector("#ptLang").defaultSelected = false;
+        // window.location = this.value;
     } else if (localStorage.getItem("pt-br")) {
-        document.getElementById("ptLang").selected = true;
+        document.querySelector("#enLang").defaultSelected = false;
+        // window.location = this.value;
     }
 }
-
-selectDisplayCheck();
