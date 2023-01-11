@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="/style/large-device-style.css" media="screen and (min-width: 768px)">
     <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <script src="/html/br/scripts/index-perfil.js" defer></script>
-    <script src="../scripts/cart-index.js" defer></script>
+    <!-- <script src="../scripts/cart-index.js" defer></script> -->
     <!-- <script src="/scripts/index-page-mode.js" defer></script> -->
-    <!-- <script src="/scripts/main.js" defer></script> -->
+    <script src="/scripts/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -40,8 +40,8 @@
                     <li><a href="#">Issues</a></li>
                     <li><input type="button" id="darkModeBtn" aria-label="Dark mode" title="Dark mode" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Light mode" title="Light mode" value="Light mode"></li>
                     <li><select name="changeLang" id="changeLang" aria-label="Selecione uma linguagem" title="Selecione uma linguagem">
-                        <option value="en">EN (US)</option>
-                        <option value="pt">PT (BR)</option>
+                        <option id="enLang" value="/html/index.html">EN (US)</option>
+                        <option id="ptLang" value="/html/br/index.html">PT (BR)</a></option>
                     </select></li>
                 </div>
             </ul>
@@ -84,13 +84,13 @@
                     <li><a href="#">Issues</a></li>
                     <li><a href="nav-carrinho.html">Carrinho</a></li>
                     <li><a href="agradecimentos.html">#agradecimentos</a></li>
-                    <li><a href="index.html" class="home-footer-link"></a></li>
+                    <li><a href="/html/br/index.html" class="home-footer-link"></a></li>
                 </ul>
             </nav>
             <aside><ul>
-                <li><a href="instagram.html"><img src="../images/instagram-logo.png" alt="Instagram"></a></li>
-                <li><a href="facebook.html"><img src="../images/facebook-logo.png" alt="Facebook"></a></li>
-                <li><a href="whatsapp.html"><img src="../images/whatsapp-logo.png" alt="Whatsapp"></a></li>
+                <li><a href="instagram.html" title="Instagram"><img src="/images/instagram-logo.png" alt="Instagram"></a></li>
+                <li><a href="facebook.html" title="Facebook"><img src="/images/facebook-logo.png" alt="Facebook"></a></li>
+                <li><a href="whatsapp.html" title="Whatsapp"><img src="/images/whatsapp-logo.png" alt="Whatsapp"></a></li>
             </ul></aside>
         </div>
         <p><em>@Copyright nobody</em>. Use o código como preferir.</p>
