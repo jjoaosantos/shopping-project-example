@@ -67,8 +67,8 @@ main div.product-main button.minus-btn {
 main div.product-footer {
     background-color: var(--color-theme);
     text-align: center;
-    width: 80%;
-    margin: auto;
+    width: fit-content;
+    margin: 0px 4px;
     transform: skew(-20deg);
 }
 

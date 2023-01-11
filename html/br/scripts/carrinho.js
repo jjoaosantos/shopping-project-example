@@ -115,7 +115,8 @@ function initialize() {
         updateQuantity(productId, quantity);
 
         input.value = product.quantity;
-        paraTValue.textContent = `$${product.price * product.quantity}`;
+        const price = product.price * 5.2 * product.quantity;
+        paraPValue.textContent = `R$${price.toLocaleString('pt-BR')}`;
       });
       
       minusBtn.setAttribute('class', 'minus-btn');
@@ -123,19 +124,21 @@ function initialize() {
         let productId = product.id;
         let quantity;
         quantity = Number(input.value) - 1;
-        if (quantity < 0) {
+        if (quantity < 1) {
           return
         }
         
         updateQuantity(productId, quantity);
 
         input.value = product.quantity;
-        paraTValue.textContent = `$${product.price * product.quantity}`;
+        const price = product.price * 5.2 * product.quantity;
+        paraPValue.textContent = `R$${price.toLocaleString('pt-BR')}`;
       });
 
       footerDiv.setAttribute('class', 'product-footer');
       paraP.textContent = 'Preço';
-      paraPValue.textContent = `$${product.price}`;
+      const price = product.price * 5.2;
+      paraPValue.textContent = `R$${price.toLocaleString('pt-BR')}`;
       paraT.textContent = 'Total';
       updateTotal();
 
@@ -177,7 +180,7 @@ function initialize() {
         const h1 = document.createElement('h1');
         const para = document.createElement('p');
         h1.textContent = 'Carrinho de Compras';
-        para.textContent = 'Nenhum resultado para exibir!!';
+        para.textContent = 'Nenhum resultado para exibir!';
         main.appendChild(h1);
         main.appendChild(para);
 
@@ -222,6 +225,6 @@ function initialize() {
       }, 0);
 
       cartIcon.textContent = sum;
-      h2.textContent = `Custo total R$${total}`;
+      h2.textContent = `Custo total R$${total.toLocaleString('pt-BR')}`;
     }
 }

@@ -215,7 +215,8 @@ function initialize(products) {
 
     heading.textContent = product.name.replace(product.name.charAt(0), product.name.charAt(0).toUpperCase());
 
-    para.textContent = `R$${product.price * 5.2}`;
+    const price = product.price * 5.2;
+    para.textContent = `R$${price.toLocaleString('pt-BR')}`;
  
     main.appendChild(section);
     section.appendChild(container);
