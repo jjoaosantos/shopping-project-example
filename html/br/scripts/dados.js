@@ -128,7 +128,7 @@ function initialize(products) {
 
     if (finalGroup.length === 0) {
       const para = document.createElement('p');
-      para.textContent = 'No results to display!';
+      para.textContent = 'nenhum resultado para exibir!';
       main.appendChild(para);
     } else {
       for (const product of finalGroup) {
@@ -215,7 +215,7 @@ function initialize(products) {
 
     heading.textContent = product.name.replace(product.name.charAt(0), product.name.charAt(0).toUpperCase());
 
-    para.textContent = `R$${product.price}`;
+    para.textContent = `R$${product.price * 5.2}`;
  
     main.appendChild(section);
     section.appendChild(container);

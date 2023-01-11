@@ -1,4 +1,4 @@
-fetch("../scripts/products.json")
+fetch("/html/br/scripts/produtos.json")
   .then( response => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -24,7 +24,7 @@ function initialize() {
     const aside = document.querySelector("#totalCost");
     const h2 = document.createElement('h2');
     
-    h1.textContent = "Shopping cart";
+    h1.textContent = "Carrinho de Compras";
     main.appendChild(h1);
     aside.appendChild(h2);
 
@@ -40,7 +40,7 @@ function initialize() {
   
       if (finalGroup.length === 0) {
         const para = document.createElement('p');
-        para.textContent = 'No results to display!';
+        para.textContent = 'Nenhum resultado para exibir!';
 
         main.appendChild(h1);
         main.appendChild(para);
@@ -53,7 +53,7 @@ function initialize() {
     }
 
     function fetchBlob(product) {
-      const url = `../images/${product.image}`;
+      const url = `/images/${product.image}`;
       fetch(url)
         .then( response => {
           if (!response.ok) {
@@ -100,7 +100,7 @@ function initialize() {
       heading.textContent = product.name.replace(product.name.charAt(0), product.name.charAt(0).toUpperCase());
 
       form.addEventListener('submit', (e) => e.preventDefault());
-      label.textContent = "Quantity";
+      label.textContent = "Quantidade";
       input.setAttribute('type', 'text');
       input.value = product.quantity;
       input.addEventListener("change", () => {
@@ -108,8 +108,6 @@ function initialize() {
       });
 
       mainDiv.setAttribute('class', 'product-main');
-
-      // plusBtn.setAttribute('type', 'button');
       plusBtn.setAttribute('class', 'plus-btn');
       plusBtn.addEventListener('click', () => {
         let productId = product.id;
@@ -120,7 +118,6 @@ function initialize() {
         paraTValue.textContent = `$${product.price * product.quantity}`;
       });
       
-      // minusBtn.setAttribute('type', 'button');
       minusBtn.setAttribute('class', 'minus-btn');
       minusBtn.addEventListener('click', () => {
         let productId = product.id;
@@ -137,7 +134,7 @@ function initialize() {
       });
 
       footerDiv.setAttribute('class', 'product-footer');
-      paraP.textContent = 'Price';
+      paraP.textContent = 'Preço';
       paraPValue.textContent = `$${product.price}`;
       paraT.textContent = 'Total';
       updateTotal();
@@ -147,7 +144,7 @@ function initialize() {
         let quantity = input.value;
         updateQuantity(productId, quantity);
 
-        paraTValue.textContent = `$${product.price * product.quantity}`;
+        paraTValue.textContent = `R$${(product.price * 5.2) * product.quantity}`;
       }
 
       main.appendChild(section);
@@ -179,8 +176,8 @@ function initialize() {
       if (cart.length === 0) {
         const h1 = document.createElement('h1');
         const para = document.createElement('p');
-        h1.textContent = 'Shopping cart';
-        para.textContent = 'No results to display!';
+        h1.textContent = 'Carrinho de Compras';
+        para.textContent = 'Nenhum resultado para exibir!!';
         main.appendChild(h1);
         main.appendChild(para);
 
@@ -217,15 +214,14 @@ function initialize() {
       }, 0);
 
       const temp = cart.map( item => {
-        return parseInt(item.price * item.quantity);
+        return parseInt((item.price * 5.2) * item.quantity);
       });
 
       const total = temp.reduce( function(prev, next) {
         return prev + next;
       }, 0);
 
-      // aside.style.display = "block";
       cartIcon.textContent = sum;
-      h2.textContent = `Total cost $${total}`;
+      h2.textContent = `Custo total R$${total}`;
     }
 }

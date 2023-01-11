@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SearchFor</title>
-    <link rel="stylesheet" href="/style/style.css" >
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/large-device-style.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="/style/nav-cart.css">
     <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="/html/br/scripts/index-br.js" defer></script>
-    <script src="/html/br/scripts/dados.js" defer></script>
+    <script src="/html/br/scripts/carrinho.js"></script>
+    <!-- <script src="/scripts/index-page-mode.js" defer></script> -->
     <script src="/scripts/main.js" defer></script>
 </head>
 <body>
@@ -49,29 +51,10 @@
         <a href="" id="profile-img-link" title="Pefil" aria-label="Abra a página de perfil"></a>
         <a href="nav-carrinho.html" class="cart-icon" title="Carrinho" aria-label="Abra a página do carrinho"></a>
     </header>
-    <aside id="filterField">
-        <form id="formFilter">
-            <button id="searchBtn"></button>
-            <div class="wrapper">
-                <input type="text" name="searchTerm" id="searchTerm" aria-label="Enter search term" placeholder="Insira um termo de pesquisa">
-                <div class="results">
-                    <ul>
-                        
-                    </ul>
-                </div>
-            </div>
-            <select aria-label="Select a brand" name="brand" id="brand">
-                <option aria-selected="true" selected>Todos</option>
-                <option>Iphone</option>
-                <option>Motorola</option>
-                <option>Nokia</option>
-                <option>Samsung</option>
-            </select>
-        </form>
-    </aside>
     <main>
-
+        
     </main>
+    <aside id="totalCost"></aside>
     <footer>
         <div>
             <nav>
