@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/large-device-style.css">
+    <script src="/html/br/scripts/chat-index-br.js" defer></script>
+    <title>Whatsapp</title>
+    <style>
+
+        html, body {
+            background-color: white;
+        }
+
+        .divHeader {
+            position: absolute;
+            width: 100vw;
+            height: 200px;
+            background-color: #00A884;
+        }
+
+        main {
+            min-height: calc(100vh - 85px);
+            top: 85px;
+        }
+
+        main > p {
+            position: unset;
+            transform: none;
+        }
+
+        main div.wts-container {
+            width: fit-content;
+            margin: 10% auto 0px;
+        }
+
+        main > div.wts-container > img {
+            border-radius: 50%;
+        }
+
+        main > div.wts-container > div.para {
+            margin: 20px auto;
+        }
+
+        main > div.para > p {
+            font-size: larger;
+        }
+
+        main > div.wts-container > .chatBtn {
+            background-color: rgb(56, 151, 56);
+            color: white;
+            width: 155px;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+
+        main > section {
+            position: absolute;
+            height: fit-content;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+</head>
+<body>
+    <div class="divHeader"></div>
+    
+    <main>
+        <div class="wts-container">
+            <img src="/images/sf-profile-logo.png" alt="">
+            <div class="para">
+                <h2>SearchFor</h2>
+            </div>
+            <button class="chatBtn">INICIAR CONVERSA</button>
+        </div>
+        <section><a href="index.html">Página inicial</a></section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/large-device-style.css">
+    <script src="/scripts/insta-index.js" defer></script>
+    <title>Instagram</title>
+    <style>
+        html, body {
+            background-image: linear-gradient(24deg, #ffdc80, #fcaf45, #f77737, #f56040, #fd1d1d, #e1306c, #c13584, #833ab4, #5b51d8, #405de6);
+        }
+
+        main div.insta-container {
+            width: fit-content;
+            margin: 10% auto 0px;
+        }
+
+        main > div.insta-container > img {
+            border-radius: 50%;
+        }
+
+        main > div.insta-container > div p {
+            display: inline-block;
+            margin: 0px 4px;
+        }
+
+        main > div.insta-container > p {
+            margin: 4px 0px;
+        }
+
+        main > div.insta-container > button {
+            display: block;
+            font-weight: bold;
+            padding: 8px 34px;
+            margin: auto;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        main > div.insta-container > .followingBtn {
+            background-color: #f0f0f0;
+            color: black;
+        }
+
+        main > div.insta-container > .unfollowingBtn {
+            background-color:#1877f2;
+            color: white;
+        }
+
+        main > section {
+            position: absolute;
+            height: fit-content;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div class="insta-container">
+            <img src="/images/sf-profile-logo.png" alt="">
+            <h1>searchfor_oficial</h1>
+            
+            <div>
+                <p><strong>45</strong><br>Publicações</p>
+                <p><strong>14.7k</strong><br> Seguidores </p>
+                <p><strong>3</strong><br> Seguindo</p>
+            </div>
+            <p><strong>SearchFor</strong></p>
+            <button class="unfollowingBtn">Seguir</button>  
+            <button class="followingBtn">Seguindo</button>  
+        </div>
+        <section><a href="index.html" aria-label="Vá à página inicial.">Página incial</a></section>
+    </main>
+    
+</body>
+</html>
