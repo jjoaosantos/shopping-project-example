@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SearchFor</title>
-    <link rel="stylesheet" href="/style/style.css" >
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/large-device-style.css" media="screen and (min-width: 768px)">
     <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="/html/br/scripts/index-br.js" defer></script>
-    <script src="/html/br/scripts/dados.js" defer></script>
+    <script src="../scripts/cart-index.js" defer></script>
+    <script src="/scripts/index-page-mode.js" defer></script>
     <script src="/scripts/main.js" defer></script>
 </head>
 <body>
     <header>
-        <button class="barsBtn" title="Menu" aria-label="Menu Bar" aria-expanded="false"></button>
-        <button class="xBtn" title="Fechar" aria-label="Fechar menu, ícone 'X'" aria-expanded="false"></button>
+        <button class="barsBtn" title="Open menu" aria-label="Menu Bar" aria-expanded="false"></button>
+        <button class="xBtn" title="Close menu" aria-label="Menu Bar" aria-expanded="false"></button>
         <nav id="menuNavigator">
             <ul id="list">
                 <li class="enter-name">
@@ -33,44 +34,25 @@
                     </form>
                 </li>
                 <div class="main-menu-list">
-                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="perfil.html" class="profile-disabled">Profile</a></li>
                     <li><a href="sobre-nos.html">Sobre nós</a></li>
                     <li><a href="agradecimentos.html">#agradecimentos</a></li>
                     <li><a href="#">Issues</a></li>
                     <li><input type="button" id="darkModeBtn" aria-label="Dark mode" title="Dark mode" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Light mode" title="Light mode" value="Light mode"></li>
                     <li><select name="changeLang" id="changeLang" aria-label="Selecione uma linguagem" title="Selecione uma linguagem">
-                    <option id="enLang" value="/html/index.html">EN (US)</option>
-                    <option id="ptLang" value="/html/br/index.html">PT (BR)</a></option>
+                        <option value="en">EN (US)</option>
+                        <option value="pt">PT (BR)</option>
                     </select></li>
                 </div>
             </ul>
         </nav>
-        <a href="index.html" id="homeLogo" title="Home page" aria-label="Home page"></a>
-        <a href="" id="profile-img-link" title="Profile" aria-label="Open profile page"></a>
-        <a href="nav-cart.html" class="cart-icon" title="Cart" aria-label="Open cart page"></a>
+        <a href="index.html" id="homeLogo" title="Página inicial" aria-label="Página inicial"></a>
+        <a href="" id="profile-img-link" title="Pefil" aria-label="Abra a página de perfil"></a>
+        <a href="nav-cart.html" class="cart-icon" title="Carrinho" aria-label="Abra a página do carrinho"></a>
     </header>
-    <aside id="filterField">
-        <form id="formFilter">
-            <button id="searchBtn"></button>
-            <div class="wrapper">
-                <input type="text" name="searchTerm" id="searchTerm" aria-label="Enter search term" placeholder="Insira um termo de pesquisa">
-                <div class="results">
-                    <ul>
-                        
-                    </ul>
-                </div>
-            </div>
-            <select aria-label="Select a brand" name="brand" id="brand">
-                <option aria-selected="true" selected>Todos</option>
-                <option>Iphone</option>
-                <option>Motorola</option>
-                <option>Nokia</option>
-                <option>Samsung</option>
-            </select>
-        </form>
-    </aside>
     <main>
-
+        <h1>Sobre nós</h1>
+        <p>Estamos desde 2022 vendendo produtos trazendo mais tecnologia para a população. Esperamos que você goste de ficar aqui.</p>
     </main>
     <footer>
         <div>
