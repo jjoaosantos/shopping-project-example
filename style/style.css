@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Open Sans";
-    src: url("/fonts/OpenSans-Regular.ttf");
+    src: url("/fonts/OpenSans-Medium.ttf");
 }
 
 :root {
@@ -11,8 +11,6 @@
     --bright-color: #f9e6e6;
     --footer-color: #121212;
     --shadow-color: #24001157;
-
-    /* --text-font: "Open Sans", sans-serif; */
 }
 
 * {
@@ -123,12 +121,7 @@ header #menuNavigator ul#list .forget input[type="reset"] {
 
 header #menuNavigator ul#list .main-menu-list input[type="button"] {
     background-color: var(--contrast-color);
-    /* background-image: url("../images/moon-dark-mode-icon.png");
-    background-repeat: no-repeat;
-    background-position: contain; */
     color: white;
-    /* width: 24px;
-    height: 24px; */
     padding: 6px;
     border-radius: 2px;
     border: none;
@@ -226,8 +219,8 @@ aside#filterField #formFilter div.wrapper input#searchTerm {
 }
 
 aside#filterField #formFilter div.wrapper div.results {
-    /* background-color: white; */
-    /* position: absolute; */
+    background-color: white;
+    position: absolute;
     text-align: left;
     width: 100%;
     padding: 4px 9px;
