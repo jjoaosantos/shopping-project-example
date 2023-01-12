@@ -26,11 +26,16 @@ header #menuNavigator ul#list .forget input[type="reset"] {
     background-image: url("../images/logout-d-icon.svg");
 }
 
+
 header #menuNavigator ul#list li a {
     color: var(--contrast-color);
 }
 
-header #menuNavigator ul#list li.enter-account input[type="submit"], input[type="reset"] {
+header #menuNavigator ul#list li a:hover, .forget input[type="reset"]:hover {
+    color: var(--complementary-color);
+}
+
+header #menuNavigator ul#list li.enter-account input[type="submit"], .forget input[type="reset"] {
     color: var(--contrast-color);
 }
 
@@ -57,6 +62,7 @@ aside#filterField #formFilter #searchBtn:hover {
 
 aside#filterField #formFilter div.wrapper input#searchTerm {
     background-color: var(--color-theme);
+    color: var(--contrast-color);
 }
 
 aside#filterField #formFilter select {
