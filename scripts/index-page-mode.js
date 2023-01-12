@@ -1,32 +1,30 @@
-const head = document.querySelector("head");
+// const head = document.querySelector("head");
 const lightModeBtn = document.querySelector("#lightModeBtn");
 const darkModeBtn = document.querySelector("#darkModeBtn");
+const darkStyleLink = document.querySelector("#darkStyle");
 
 darkModeBtn.addEventListener("click", () => {
-    localStorage.setItem("dark mode", true);
+    localStorage.setItem("dark-mode", true);
     darkModeDisplayCheck();
 });
 
 lightModeBtn.addEventListener("click", () => {
-    localStorage.removeItem("dark mode");
+    localStorage.removeItem("dark-mode");
     darkModeDisplayCheck();
 })
 
 function darkModeDisplayCheck() {
 
-    if (localStorage.getItem("dark mode")) {
-        const link = document.createElement("link");
-        link.setAttribute("id", "darkStyle");
-        head.appendChild(link);
+    if (localStorage.getItem("dark-mode")) {
+        darkStyleLink.setAttribute("href", "/style/dark-style.css");
+        darkStyleLink.style.display = "block";
         darkModeBtn.style.display = "none";
         lightModeBtn.style.display = "block";
-        link.setAttribute("rel", "stylesheet");
-        link.setAttribute("href", "../style/dark-style.css");
     } else {
+        darkStyleLink.setAttribute("href", "");
+        darkStyleLink.style.display = "none";
         darkModeBtn.style.display = "block";
         lightModeBtn.style.display = "none";
-        const link = document.querySelector("#darkStyle");
-        head.removeChild(link);
     }
 }
 

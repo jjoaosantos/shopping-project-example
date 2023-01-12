@@ -55,7 +55,7 @@ function imgDisplayCheck() {
     if (localStorage.getItem("image")) {
         const currentImage = localStorage.getItem("image");
         const currentAlt = localStorage.getItem("alt");
-        profileImgLink.style.backgroundImage = `url('${currentImage.slice(2)}')`;
+        profileImgLink.style.backgroundImage = `url('${currentImage}')`;
         profileImgLink.setAttribute("alt", `${currentAlt}`);
         profileImgLink.setAttribute("href", "perfil.html");
     } else {

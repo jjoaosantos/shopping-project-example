@@ -93,34 +93,34 @@ const reset = document.querySelector(".reset");
 
 formProfile.addEventListener("submit", (e) => e.preventDefault());
 
-const images = ["david-profile-icon.png", "josh-profile-icon.png", "john-profile-icon.png", "steve-profile-icon.png", "rebeca-profile-icon.png", "miranda-profile-icon.png", "jennifer-profile-icon.png", "julia-profile-icon.png"];
+const images = ["user-dave-icon.png", "user-josh-icon.png", "user-john-icon.png", "user-jeff-icon.png", "user-gina-icon.png", "user-anne-icon.png", "user-jenn-icon.png", "user-gaby-icon.png"];
 
 const alts = {
-    "david-profile-icon.png" : "Bearded man with glasses smiling",
-    "josh-profile-icon.png" : "Green haired nerdy boy smiling",
-    "john-profile-icon.png" : "Orange hair man with glasses smiling",
-    "steve-profile-icon.png" : "Brown haired man wearing a lab coat smiling",
-    "rebeca-profile-icon.png" : "Nerdy girl with glasses smiling",
-    "miranda-profile-icon.png" : "Orange long hair woman smiling",
-    "jennifer-profile-icon.png" : "Girl with long dark hair smiling",
-    "julia-profile-icon.png" : "Girl with pink ponytail hair smiling"
+    "user-dave-icon.png.png" : "Bearded man with glasses smiling",
+    "user-josh-icon.png" : "Green haired nerdy boy smiling",
+    "user-john-icon.png" : "Orange hair man with glasses smiling",
+    "user-jeff-icon.png" : "Brown haired man wearing a lab coat smiling",
+    "user-gina-icon.png" : "Nerdy girl with glasses smiling",
+    "user-anne-icon.png" : "Orange long hair woman smiling",
+    "user-jenn-icon.png" : "Girl with long dark hair smiling",
+    "user-gaby-icon.png" : "Girl with pink ponytail hair smiling"
 }
 
 const info = {
-    "david-profile-icon.png" : "I'm 23 years old. I work as a salesman at a guitar shop and have a YouTube channel that I use for cellphone reviews.",
-    "josh-profile-icon.png" : "I'm studying IT in college and I'm usually looking for good priced electronics to update my twitch live setup.",
-    "john-profile-icon.png" : "I'm a programmer and I'm continually learning more about digital content to maintain my knowledge of features and accessibility.",
-    "steve-profile-icon.png" : "I'm a fan of cell phones, my father used to sell them when I was a child and now I always have the newest one in my clinic as a way of remembering my father's work to help me complete my studies.",
-    "rebeca-profile-icon.png" : "I'm studying photography and I usually see how the new cameras are performing.",
-    "miranda-profile-icon.png" : "I'm a programmer who likes to know about new electronics and how they will contribute to our wonderful world!",
-    "jennifer-profile-icon.png" : "I'm studying music and I already have my own songs posted on YouTube. The internet is getting faster and faster and I need to know the best prices to keep my home studio up to date.",
-    "julia-profile-icon.png" : "I am a journalism student and I always watch reviews and study technology content to improve my professional knowledge. I'm actually working on a site specializing in technology."
+    "user-dave-icon.png" : "I'm 23 years old. I work as a salesman at a guitar shop and have a YouTube channel that I use for cellphone reviews.",
+    "user-josh-icon.png" : "I'm studying IT in college and I'm usually looking for good priced electronics to update my twitch live setup.",
+    "user-john-icon.png" : "I'm a programmer and I'm continually learning more about digital content to maintain my knowledge of features and accessibility.",
+    "user-jeff-icon.png.png" : "I'm a fan of cell phones, my father used to sell them when I was a child and now I always have the newest one in my clinic as a way of remembering my father's work to help me complete my studies.",
+    "user-geni-icon.png" : "I'm studying photography and I usually see how the new cameras are performing.",
+    "user-anne-icon.png" : "I'm a programmer who likes to know about new electronics and how they will contribute to our wonderful world!",
+    "user-jenn-icon.png" : "I'm studying music and I already have my own songs posted on YouTube. The internet is getting faster and faster and I need to know the best prices to keep my home studio up to date.",
+    "user-gaby-icon.png" : "I am a journalism student and I always watch reviews and study technology content to improve my professional knowledge. I'm actually working on a site specializing in technology."
 }
 
 for (const image of images) {
     const newImage = document.createElement("img");
     const section = document.createElement("section");
-    newImage.setAttribute("src", `../images/${image}`);
+    newImage.setAttribute("src", `/images/${image}`);
     newImage.setAttribute("alt", alts[image]);
     newImage.setAttribute("role", "button");
     newImage.setAttribute("tabindex", "0");
@@ -128,7 +128,7 @@ for (const image of images) {
     section.appendChild(newImage);
 
     newImage.addEventListener("click", () => {
-        localStorage.setItem("image", `../images/${image}`);
+        localStorage.setItem("image", `/images/${image}`);
         localStorage.setItem("alt", alts[image]);
         
         if (resetBtn.disabled === false) {
@@ -141,7 +141,7 @@ for (const image of images) {
     });
 
     newImage.addEventListener("keypress", () => {
-        localStorage.setItem("image", `../images/${image}`);
+        localStorage.setItem("image", `/images/${image}`);
         localStorage.setItem("alt", alts[image]);
         
         if (resetBtn.disabled === false) {
@@ -198,7 +198,7 @@ for (const image of images) {
             textArea.disabled = true;
             editingTool.disabled = false;
 
-            if (resetBtn.disabled === false && localStorage.getItem("info") !== info[currentImage.slice(10)]) {
+            if (resetBtn.disabled === false && localStorage.getItem("info") !== info[currentImage.slice(8)]) {
                 reset.style.display = "block";
             } else {
                 resetBtn.disabled = true;
