@@ -59,7 +59,7 @@ function imgDisplayCheck() {
         profileImgLink.setAttribute("alt", `${currentAlt}`);
         profileImgLink.setAttribute("href", "profile.html");
     } else {
-        profileImgLink.style.backgroundImage = "url('/images/profile-icon.png')";
+        profileImgLink.style.backgroundImage = "url('/images/profile-b-icon.svg')";
         profileImgLink.setAttribute("alt", "Profile Icon");
     }
 }

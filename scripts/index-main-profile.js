@@ -205,12 +205,12 @@ for (const image of images) {
                 reset.style.display = "none";
             }
         } else {
-            displayedImage.setAttribute("src", "../images/profile-icon.png")
+            displayedImage.setAttribute("src", "/images/profile-b-icon.svg")
             displayedImage.setAttribute("alt", "Profile Icon");
             
             profileImgLink.setAttribute("alt", "Profile Icon");
             profileImgLink.setAttribute("href", "#");
-            profileImgLink.style.backgroundImage = "url('../images/profile-icon.png')";
+            profileImgLink.style.backgroundImage = "url('/images/profile-b-icon.svg')";
             
             editingTool.style.opacity = "0.6";
             editingTool.style.cursor = "auto";
