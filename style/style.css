@@ -95,6 +95,10 @@ header #menuNavigator ul#list li.enter-name {
     padding: .625em;
 }
 
+header #menuNavigator ul#list li.enter-name .callout {
+    padding: 10px;
+}
+
 header #menuNavigator ul#list li.enter-name h2 {
     font-size: 1.2em;
 }
