@@ -32,7 +32,7 @@ header #menuNavigator ul#list li a {
 }
 
 header #menuNavigator ul#list li a:hover, .forget input[type="reset"]:hover {
-    color: var(--complementary-color);
+    color: #FD887A;
 }
 
 header #menuNavigator ul#list li.enter-account input[type="submit"], .forget input[type="reset"] {
@@ -85,7 +85,7 @@ main > section > div.product-footer {
     color: black;
 }
 
-main section#special-thanks ul li a {
+main section#special-thanks ul li a, #special-thanks > p a {
     color: var(--contrast-color);
 }
 

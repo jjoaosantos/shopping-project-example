@@ -341,6 +341,7 @@ main > section > p {
 }
 
 #special-thanks {
+    text-align: left;
     width: 100%;
     padding: 6px;
 }
