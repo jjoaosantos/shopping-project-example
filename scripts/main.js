@@ -59,19 +59,19 @@ function updateLang() {
 }
 
 function selectDisplayCheck() {
-    if (localStorage.getItem("lang") === "en-us" && window.location.pathname === enLang.value) {
+    if (localStorage.getItem("lang") === "en-us" && html.lang === "en") {
         enLang.defaultSelected = true;
         ptLang.defaultSelected = false;
         
-    } else if (localStorage.getItem("lang") === "pt-br" && window.location.pathname === ptLang.value) {
+    } else if (localStorage.getItem("lang") === "pt-br" && html.lang === "pt-br") {
         ptLang.defaultSelected = true;
         enLang.defaultSelected = false;
     } else {
-        if (window.location.pathname === enLang.value) {
+        if (html.lang === "en") {
             enLang.defaultSelected = true;
             ptLang.defaultSelected = false;
             localStorage.setItem("lang", "en-us");
-        } else if (window.location.pathname === ptLang.value) {
+        } else if (html.lang === "pt-br") {
             ptLang.defaultSelected = true;
             enLang.defaultSelected = false;
             localStorage.setItem("lang", "pt-br");
