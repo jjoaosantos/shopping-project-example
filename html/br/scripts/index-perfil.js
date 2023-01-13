@@ -96,7 +96,7 @@ formProfile.addEventListener("submit", (e) => e.preventDefault());
 const images = ["user-dave-icon.png", "user-josh-icon.png", "user-john-icon.png", "user-jeff-icon.png", "user-gina-icon.png", "user-anne-icon.png", "user-jenn-icon.png", "user-gaby-icon.png"];
 
 const alts = {
-    "user-dave-icon.png.png" : "Bearded man with glasses smiling",
+    "user-dave-icon.png" : "Bearded man with glasses smiling",
     "user-josh-icon.png" : "Green haired nerdy boy smiling",
     "user-john-icon.png" : "Orange hair man with glasses smiling",
     "user-jeff-icon.png" : "Brown haired man wearing a lab coat smiling",
@@ -110,8 +110,8 @@ const info = {
     "user-dave-icon.png" : "I'm 23 years old. I work as a salesman at a guitar shop and have a YouTube channel that I use for cellphone reviews.",
     "user-josh-icon.png" : "I'm studying IT in college and I'm usually looking for good priced electronics to update my twitch live setup.",
     "user-john-icon.png" : "I'm a programmer and I'm continually learning more about digital content to maintain my knowledge of features and accessibility.",
-    "user-jeff-icon.png.png" : "I'm a fan of cell phones, my father used to sell them when I was a child and now I always have the newest one in my clinic as a way of remembering my father's work to help me complete my studies.",
-    "user-geni-icon.png" : "I'm studying photography and I usually see how the new cameras are performing.",
+    "user-jeff-icon.png" : "I'm a fan of cell phones, my father used to sell them when I was a child and now I always have the newest one in my clinic as a way of remembering my father's work to help me complete my studies.",
+    "user-gina-icon.png" : "I'm studying photography and I usually see how the new cameras are performing.",
     "user-anne-icon.png" : "I'm a programmer who likes to know about new electronics and how they will contribute to our wonderful world!",
     "user-jenn-icon.png" : "I'm studying music and I already have my own songs posted on YouTube. The internet is getting faster and faster and I need to know the best prices to keep my home studio up to date.",
     "user-gaby-icon.png" : "I am a journalism student and I always watch reviews and study technology content to improve my professional knowledge. I'm actually working on a site specializing in technology."

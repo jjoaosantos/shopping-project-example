@@ -61,6 +61,7 @@ function imgDisplayCheck() {
     } else {
         profileImgLink.style.backgroundImage = "url('/images/profile-icon.png')";
         profileImgLink.setAttribute("alt", "Perfil ícone");
+        
     }
 }
 
