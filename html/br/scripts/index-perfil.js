@@ -96,25 +96,25 @@ formProfile.addEventListener("submit", (e) => e.preventDefault());
 const images = ["user-dave-icon.png", "user-josh-icon.png", "user-john-icon.png", "user-jeff-icon.png", "user-gina-icon.png", "user-anne-icon.png", "user-jenn-icon.png", "user-gaby-icon.png"];
 
 const alts = {
-    "user-dave-icon.png" : "Bearded man with glasses smiling",
-    "user-josh-icon.png" : "Green haired nerdy boy smiling",
-    "user-john-icon.png" : "Orange hair man with glasses smiling",
-    "user-jeff-icon.png" : "Brown haired man wearing a lab coat smiling",
-    "user-gina-icon.png" : "Nerdy girl with glasses smiling",
-    "user-anne-icon.png" : "Orange long hair woman smiling",
-    "user-jenn-icon.png" : "Girl with long dark hair smiling",
-    "user-gaby-icon.png" : "Girl with pink ponytail hair smiling"
+    "user-dave-icon.png" : "Homem barbudo com óculos sorrindo.",
+    "user-josh-icon.png" : "Menino nerd de cabelo verde sorrindo.",
+    "user-john-icon.png" : "Homem de cabelo laranja com óculos sorrindo.",
+    "user-jeff-icon.png" : "Homem de cabelo castanho vestindo um jaleco sorrindo.",
+    "user-gina-icon.png" : "Garota nerd com óculos sorrindo.",
+    "user-anne-icon.png" : "Mulher de cabelo comprido laranja sorrindo.",
+    "user-jenn-icon.png" : "Garota com longos cabelos escuros sorrindo.",
+    "user-gaby-icon.png" : "Menina com cabelo rabo de cavalo rosa sorrindo."
 }
 
 const info = {
-    "user-dave-icon.png" : "I'm 23 years old. I work as a salesman at a guitar shop and have a YouTube channel that I use for cellphone reviews.",
-    "user-josh-icon.png" : "I'm studying IT in college and I'm usually looking for good priced electronics to update my twitch live setup.",
-    "user-john-icon.png" : "I'm a programmer and I'm continually learning more about digital content to maintain my knowledge of features and accessibility.",
-    "user-jeff-icon.png" : "I'm a fan of cell phones, my father used to sell them when I was a child and now I always have the newest one in my clinic as a way of remembering my father's work to help me complete my studies.",
-    "user-gina-icon.png" : "I'm studying photography and I usually see how the new cameras are performing.",
-    "user-anne-icon.png" : "I'm a programmer who likes to know about new electronics and how they will contribute to our wonderful world!",
-    "user-jenn-icon.png" : "I'm studying music and I already have my own songs posted on YouTube. The internet is getting faster and faster and I need to know the best prices to keep my home studio up to date.",
-    "user-gaby-icon.png" : "I am a journalism student and I always watch reviews and study technology content to improve my professional knowledge. I'm actually working on a site specializing in technology."
+    "user-dave-icon.png" : "Tenho 23 anos, trabalho como vendedor em uma loja de violões e tenho um canal no YouTube que utilizo para fazer avaliações de celulares.",
+    "user-josh-icon.png" : "Estou estudando TI na faculdade e geralmente busco por eletrônicos na internet com bom custo-benefício para melhorar minhas lives da Twitch.",
+    "user-john-icon.png" : "Sou programador e estou continuamente aprendendo mais sobre conteúdo digital para manter meu conhecimento de recursos e acessibilidade.",
+    "user-jeff-icon.png" : "Sou fã de celulares, meu pai vendia quando eu era criança e agora sempre tenho o mais novo em minha clínica como forma de lembrar do trabalho de meu pai para me ajudar a concluir meus estudos.",
+    "user-gina-icon.png" : "Estou estudando fotografia e costumo procurar saber do desempenho das novas câmeras.",
+    "user-anne-icon.png" : "Sou uma programadora que gosta de saber sobre novos eletrônicos e como eles irão contribuir para o nosso mundo maravilhoso!",
+    "user-jenn-icon.png" : "Estou estudando música e já tenho minhas próprias músicas postadas no YouTube. A internet está cada vez mais rápida e preciso saber os melhores preços para manter meu home studio em dia.",
+    "user-gaby-icon.png" : "Sou estudante de jornalismo e sempre assisto as avaliações de novos aparelhos e estudo conteúdos de tecnologia para aprimorar meus conhecimentos profissionais. Na verdade, estou trabalhando em um site especializado em tecnologia."
 }
 
 for (const image of images) {
@@ -144,7 +144,7 @@ for (const image of images) {
         localStorage.setItem("image", `/images/${image}`);
         localStorage.setItem("alt", alts[image]);
         
-        if (resetBtn.disabled === false) {
+        if (resetBtn.disabled !== false) {
             localStorage.setItem("info", textArea.value);
         } else {
             localStorage.setItem("info", info[image]);
