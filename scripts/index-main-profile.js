@@ -120,7 +120,7 @@ const info = {
 for (const image of images) {
     const newImage = document.createElement("img");
     const section = document.createElement("section");
-    newImage.setAttribute("src", `/images/${image}`);
+    newImage.setAttribute("src", `../images/${image}`);
     newImage.setAttribute("alt", alts[image]);
     newImage.setAttribute("role", "button");
     newImage.setAttribute("tabindex", "0");
@@ -181,14 +181,13 @@ for (const image of images) {
             const currentAlt = localStorage.getItem("alt");
             const currentInfo = localStorage.getItem("info");
     
-            displayedImage.setAttribute("src", currentImage);
+            displayedImage.setAttribute("src", `..${currentImage}`);
             displayedImage.setAttribute("alt", currentAlt);
             textArea.textContent = currentInfo;
-
            
             profileImgLink.setAttribute("alt", `${currentAlt}`);
             profileImgLink.setAttribute("href", "profile.html");
-            profileImgLink.style.backgroundImage = `url('${currentImage}')`;
+            profileImgLink.style.backgroundImage = `url('..${currentImage}')`;
     
             editingTool.style.opacity = "1";
             editingTool.style.cursor = "pointer";

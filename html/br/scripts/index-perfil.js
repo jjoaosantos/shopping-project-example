@@ -96,14 +96,14 @@ formProfile.addEventListener("submit", (e) => e.preventDefault());
 const images = ["user-dave-icon.png", "user-josh-icon.png", "user-john-icon.png", "user-jeff-icon.png", "user-gina-icon.png", "user-anne-icon.png", "user-jenn-icon.png", "user-gaby-icon.png"];
 
 const alts = {
-    "user-dave-icon.png" : "Homem barbudo com óculos sorrindo.",
-    "user-josh-icon.png" : "Menino nerd de cabelo verde sorrindo.",
-    "user-john-icon.png" : "Homem de cabelo laranja com óculos sorrindo.",
-    "user-jeff-icon.png" : "Homem de cabelo castanho vestindo um jaleco sorrindo.",
+    "user-dave-icon.png" : "Homem barbudo com óculos sorrindo",
+    "user-josh-icon.png" : "Menino nerd de cabelo verde sorrindo",
+    "user-john-icon.png" : "Homem de cabelo laranja com óculos sorrindo",
+    "user-jeff-icon.png" : "Homem de cabelo castanho vestindo um jaleco sorrindo",
     "user-gina-icon.png" : "Garota nerd com óculos sorrindo.",
-    "user-anne-icon.png" : "Mulher de cabelo comprido laranja sorrindo.",
-    "user-jenn-icon.png" : "Garota com longos cabelos escuros sorrindo.",
-    "user-gaby-icon.png" : "Menina com cabelo rabo de cavalo rosa sorrindo."
+    "user-anne-icon.png" : "Mulher de cabelo comprido laranja sorrindo",
+    "user-jenn-icon.png" : "Garota com longos cabelos escuros sorrindo",
+    "user-gaby-icon.png" : "Menina com cabelo rabo de cavalo rosa sorrindo"
 }
 
 const info = {
@@ -144,7 +144,7 @@ for (const image of images) {
         localStorage.setItem("image", `/images/${image}`);
         localStorage.setItem("alt", alts[image]);
         
-        if (resetBtn.disabled !== false) {
+        if (resetBtn.disabled === false) {
             localStorage.setItem("info", textArea.value);
         } else {
             localStorage.setItem("info", info[image]);
