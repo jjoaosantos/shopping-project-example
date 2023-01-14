@@ -65,6 +65,10 @@ aside#filterField #formFilter div.wrapper input#searchTerm {
     color: var(--contrast-color);
 }
 
+aside#filterField #formFilter div.wrapper div.results {
+    background-color: var(--contrast-color);
+}
+
 aside#filterField #formFilter select {
     background-color: var(--color-theme);
     color: var(--contrast-color);

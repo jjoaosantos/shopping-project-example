@@ -109,7 +109,6 @@ function initialize() {
 
       mainDiv.setAttribute('class', 'product-main');
 
-      // plusBtn.setAttribute('type', 'button');
       plusBtn.setAttribute('class', 'plus-btn');
       plusBtn.addEventListener('click', () => {
         let productId = product.id;
@@ -120,13 +119,12 @@ function initialize() {
         paraTValue.textContent = `$${product.price * product.quantity}`;
       });
       
-      // minusBtn.setAttribute('type', 'button');
       minusBtn.setAttribute('class', 'minus-btn');
       minusBtn.addEventListener('click', () => {
         let productId = product.id;
         let quantity;
         quantity = Number(input.value) - 1;
-        if (quantity < 0) {
+        if (quantity < 1) {
           return
         }
         
