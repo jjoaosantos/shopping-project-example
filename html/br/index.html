@@ -16,8 +16,8 @@
 </head>
 <body>
     <header>
-        <button class="barsBtn" title="Menu" aria-label="Menu Bar" aria-expanded="false"></button>
-        <button class="xBtn" title="Fechar" aria-label="Fechar menu, ícone 'X'" aria-expanded="false"></button>
+        <button class="barsBtn" title="Menu" aria-label="Acessar o menu." aria-expanded="false"></button>
+        <button class="xBtn" title="Fechar" aria-label="Fechar o menu." aria-expanded="false"></button>
         <nav id="menuNavigator">
             <ul id="list">
                 <li class="enter-name">
@@ -25,11 +25,11 @@
                         <div class="remember">
                             <label for="entername">Quer se juntar a gente?</label>
                             <input type="text" id="entername" placeholder="Insira um nome" aria-required="true" required>
-                            <input type="submit" id="submitname" value="Diga olá">
+                            <input type="submit" id="submitname" aria-label="Envie um nome para ter acesso ao seu perfil." value="Diga olá">
                         </div>
                         <div class="forget">
                             <h2 class="personal-greeting"></h2>
-                            <input id="forgetname" type="reset" aria-label="Devo esquece-lo?" title="Já está indo?" value="Esquecer">
+                            <input id="forgetname" type="reset" aria-label="Devo esquece-lo? Redefina o seu perfil." title="Já está indo?" value="Esquecer">
                         </div>
                     </form>
                 </li>
@@ -38,30 +38,30 @@
                     <li><a href="sobre-nos.html">Sobre nós</a></li>
                     <li><a href="agradecimentos.html">#agradecimentos</a></li>
                     <li><a href="#">Issues</a></li>
-                    <li><input type="button" id="darkModeBtn" aria-label="Dark mode" title="Dark mode" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Light mode" title="Light mode" value="Light mode"></li>
-                    <li><select name="changeLang" id="changeLang" aria-label="Selecione uma linguagem" title="Selecione uma linguagem">
-                    <option id="enLang" value="/html/index.html">EN (US)</option>
-                    <option id="ptLang" value="/html/br/index.html">PT (BR)</a></option>
+                    <li><input type="button" id="darkModeBtn" aria-label="Ative o modo escuro da página." title="Escurecer" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Ative o modo claro da página." title="Acender" value="Light mode"></li>
+                    <li><select name="changeLang" id="changeLang" aria-label="Selecione uma linguagem." title="Selecione uma linguagem">
+                        <option id="enLang" value="/html/index.html">EN (US)</option>
+                        <option id="ptLang" value="/html/br/index.html">PT (BR)</a></option>
                     </select></li>
                 </div>
             </ul>
         </nav>
-        <a href="index.html" id="homeLogo" title="Página inicial" aria-label="Página inicial"></a>
-        <a href="" id="profile-img-link" title="Pefil" aria-label="Abra a página de perfil"></a>
-        <a href="nav-carrinho.html" class="cart-icon" title="Carrinho" aria-label="Abra a página do carrinho"></a>
+        <a href="index.html" id="homeLogo" title="Página inicial" aria-label="Abra a página inicial."></a>
+        <a href="" id="profile-img-link" title="Pefil" aria-label="Abra a página de perfil."></a>
+        <a href="nav-carrinho.html" class="cart-icon" title="Carrinho" aria-label="Abra a página do carrinho."></a>
     </header>
     <aside id="filterField">
         <form id="formFilter">
             <button id="searchBtn"></button>
             <div class="wrapper">
-                <input type="text" name="searchTerm" id="searchTerm" aria-label="Enter search term" placeholder="Insira um termo de pesquisa">
+                <input type="text" name="searchTerm" id="searchTerm" aria-label="Insira um termo de pesquisa." placeholder="Insira um termo de pesquisa">
                 <div class="results">
                     <ul>
                         
                     </ul>
                 </div>
             </div>
-            <select aria-label="Select a brand" name="brand" id="brand">
+            <select aria-label="Selecione uma marca." name="brand" id="brand">
                 <option aria-selected="true" selected>Todos</option>
                 <option>Iphone</option>
                 <option>Motorola</option>
@@ -81,13 +81,13 @@
                     <li><a href="#">Issues</a></li>
                     <li><a href="nav-carrinho.html">Carrinho</a></li>
                     <li><a href="agradecimentos.html">#agradecimentos</a></li>
-                    <li><a href="/html/br/index.html" class="home-footer-link"></a></li>
+                    <li><a href="index.html" class="home-footer-link"></a></li>
                 </ul>
             </nav>
             <aside><ul>
-                <li><a href="instagram.html" title="Instagram"><img src="/images/instagram-logo.png" alt="Instagram"></a></li>
-                <li><a href="facebook.html" title="Facebook"><img src="/images/facebook-logo.png" alt="Facebook"></a></li>
-                <li><a href="whatsapp.html" title="Whatsapp"><img src="/images/whatsapp-logo.png" alt="Whatsapp"></a></li>
+                <li><a href="instagram.html" aria-label="Abra a página social do Instagram" title="Instagram"><img src="/images/instagram-logo.png" alt="Logo do Instagram"></a></li>
+                <li><a href="facebook.html" aria-label="Abra a página social do Facebook" title="Facebook"><img src="/images/facebook-logo.png" alt="Logo do Facebook"></a></li>
+                <li><a href="whatsapp.html" aria-label="Abra a página social do Whatsapp" title="Whatsapp"><img src="/images/whatsapp-logo.png" alt="Logo do Whatsapp"></a></li>
             </ul></aside>
         </div>
         <p><em>@Copyright nobody</em>. Use o código como preferir.</p>

@@ -17,8 +17,8 @@
 </head>
 <body>
     <header>
-        <button class="barsBtn" title="Open menu" aria-label="Menu Bar" aria-expanded="false"></button>
-        <button class="xBtn" title="Close menu" aria-label="Menu Bar" aria-expanded="false"></button>
+        <button class="barsBtn" title="Menu" aria-label="Acessar o menu." aria-expanded="false"></button>
+        <button class="xBtn" title="Fechar" aria-label="Fechar o menu." aria-expanded="false"></button>
         <nav id="menuNavigator">
             <ul id="list">
                 <li class="enter-name">
@@ -26,30 +26,30 @@
                         <div class="remember">
                             <label for="entername">Quer se juntar a gente?</label>
                             <input type="text" id="entername" placeholder="Insira um nome" aria-required="true" required>
-                            <input type="submit" id="submitname" value="Diga olá">
+                            <input type="submit" id="submitname" aria-label="Envie um nome para ter acesso ao seu perfil." value="Diga olá">
                         </div>
                         <div class="forget">
                             <h2 class="personal-greeting"></h2>
-                            <input id="forgetname" type="reset" aria-label="Devo esquece-lo?" title="Já está indo?" value="Esquecer">
+                            <input id="forgetname" type="reset" aria-label="Devo esquece-lo? Redefina o seu perfil." title="Já está indo?" value="Esquecer">
                         </div>
                     </form>
                 </li>
                 <div class="main-menu-list">
-                    <li><a href="perfil.html" class="profile-disabled">Profile</a></li>
+                    <li><a href="perfil.html" class="profile-disabled">Perfil</a></li>
                     <li><a href="sobre-nos.html">Sobre nós</a></li>
                     <li><a href="agradecimentos.html">#agradecimentos</a></li>
                     <li><a href="#">Issues</a></li>
-                    <li><input type="button" id="darkModeBtn" aria-label="Dark mode" title="Dark mode" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Light mode" title="Light mode" value="Light mode"></li>
-                    <li><select name="changeLang" id="changeLang" aria-label="Selecione uma linguagem" title="Selecione uma linguagem">
+                    <li><input type="button" id="darkModeBtn" aria-label="Ative o modo escuro da página." title="Escurecer" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Ative o modo claro da página." title="Acender" value="Light mode"></li>
+                    <li><select name="changeLang" id="changeLang" aria-label="Selecione uma linguagem." title="Selecione uma linguagem">
                         <option id="enLang" value="/html/index.html">EN (US)</option>
                         <option id="ptLang" value="/html/br/index.html">PT (BR)</a></option>
                     </select></li>
                 </div>
             </ul>
         </nav>
-        <a href="index.html" id="homeLogo" title="Página inicial" aria-label="Página inicial"></a>
-        <a href="" id="profile-img-link" title="Pefil" aria-label="Abra a página de perfil"></a>
-        <a href="nav-carrinho.html" class="cart-icon" title="Carrinho" aria-label="Abra a página do carrinho"></a>
+        <a href="index.html" id="homeLogo" title="Página inicial" aria-label="Abra a página inicial."></a>
+        <a href="" id="profile-img-link" title="Pefil" aria-label="Abra a página de perfil."></a>
+        <a href="nav-carrinho.html" class="cart-icon" aria-label="Abra a página do carrinho." title="Carrinho" ></a>
     </header>
     <main>
         <form id="profilePage">
@@ -63,19 +63,19 @@
             </aside>
             <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Escreva algo sobre você." aria-disabled="true"></textarea>
             <div class="edit">
-                <input type="button" id="editingTool" aria-label="Defina uma nova mensagem sobre você." value="">
+                <input type="button" id="editingTool" aria-label="Defina uma nova mensagem sobre você.">
             </div>
             <div class="rememberInfo">
-            <input type="submit" id="rememberCheck" aria-label="Encaminhe esta mensagem para ser lembrada." value="">
+            <input type="submit" id="rememberCheck" aria-label="Encaminhe esta mensagem para ser lembrada.">
             </div>
             <div class="reset">
-                <input type="reset" id="resetinfo" aria-label="Desfaça todas alterações" value="Reset">
+                <input type="reset" id="resetinfo" aria-label="Desfaça todas alterações." value="Redefenir">
             </div>
         </form>
     </main>
     <section id="profile-section">
-        <a href="index.html" class="shop" aria-label="Volte à página inicial">Vá as compras</a>
-        <button class="forgetBtn" aria-label="Devo esquece-lo?">Esquecer</button>
+        <a href="index.html" class="shop" aria-label="Volte à página inicial.">Vá as compras</a>
+        <button class="forgetBtn" aria-label="Devo esquecê-lo? Redefina o seu perfil.">Esquecer</button>
     </section>
     <footer>
         <div>
@@ -85,13 +85,13 @@
                     <li><a href="#">Issues</a></li>
                     <li><a href="nav-carrinho.html">Carrinho</a></li>
                     <li><a href="agradecimentos.html">#agradecimentos</a></li>
-                    <li><a href="/html/br/index.html" class="home-footer-link"></a></li>
+                    <li><a href="index.html" class="home-footer-link"></a></li>
                 </ul>
             </nav>
             <aside><ul>
-                <li><a href="instagram.html" title="Instagram"><img src="/images/instagram-logo.png" alt="Instagram"></a></li>
-                <li><a href="facebook.html" title="Facebook"><img src="/images/facebook-logo.png" alt="Facebook"></a></li>
-                <li><a href="whatsapp.html" title="Whatsapp"><img src="/images/whatsapp-logo.png" alt="Whatsapp"></a></li>
+                <li><a href="instagram.html" aria-label="Abra a página social do Instagram" title="Instagram"><img src="/images/instagram-logo.png" alt="Logo do Instagram"></a></li>
+                <li><a href="facebook.html" aria-label="Abra a página social do Facebook" title="Facebook"><img src="/images/facebook-logo.png" alt="Logo do Facebook"></a></li>
+                <li><a href="whatsapp.html" aria-label="Abra a página social do Whatsapp" title="Whatsapp"><img src="/images/whatsapp-logo.png" alt="Logo do Whatsapp"></a></li>
             </ul></aside>
         </div>
         <p><em>@Copyright nobody</em>. Use o código como preferir.</p>
