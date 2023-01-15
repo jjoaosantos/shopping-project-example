@@ -243,11 +243,10 @@ aside#filterField #formFilter div.wrapper div.results ul li:hover {
     border-radius: 10px;
 }
 
-aside#filterField #formFilter input { /**/
+aside#filterField #formFilter input {
     padding: 6px;
     border: none;
     border-radius: 4px;
-    /* box-shadow: 0px 0px 2px var(--shadow-color); */
 }
 
 aside#filterField #formFilter select {

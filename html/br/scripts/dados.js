@@ -128,7 +128,7 @@ function initialize(products) {
 
     if (finalGroup.length === 0) {
       const para = document.createElement('p');
-      para.textContent = 'nenhum resultado para exibir!';
+      para.textContent = 'Nenhum resultado para exibir!';
       main.appendChild(para);
     } else {
       for (const product of finalGroup) {

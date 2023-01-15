@@ -66,7 +66,7 @@ function nameDisplayCheck() {
 
         document.querySelector("#profilePage").style.display = "none";
         const p = document.createElement("p");
-        p.textContent = "nenhum resultado para exibir!";
+        p.textContent = "Nenhum resultado para exibir!";
         main.appendChild(p);
 
         document.querySelector("a").setAttribute("class", "profile-disabled");

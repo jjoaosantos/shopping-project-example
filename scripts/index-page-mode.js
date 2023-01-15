@@ -1,4 +1,3 @@
-// const head = document.querySelector("head");
 const lightModeBtn = document.querySelector("#lightModeBtn");
 const darkModeBtn = document.querySelector("#darkModeBtn");
 const darkStyleLink = document.querySelector("#darkStyle");

@@ -221,8 +221,7 @@ function initialize() {
       const total = temp.reduce( function(prev, next) {
         return prev + next;
       }, 0);
-
-      // aside.style.display = "block";
+      
       cartIcon.textContent = sum;
       h2.textContent = `Total cost $${total}`;
     }
