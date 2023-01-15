@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Open Sans";
-    src: url("/fonts/OpenSans-Medium.ttf");
+    src: url("../fonts/OpenSans-Medium.ttf");
 }
 
 :root {
@@ -53,11 +53,11 @@ header .barsBtn, .xBtn {
 }
 
 header .barsBtn {
-    background-image: url("/images/bars-b-icon.svg");
+    background-image: url("../images/bars-b-icon.svg");
 }
 
 header .xBtn {
-    background-image: url("/images/x-b-icon.svg");
+    background-image: url("../images/x-b-icon.svg");
 }
 
 header #menuNavigator {
@@ -116,7 +116,7 @@ header #menuNavigator ul#list li.enter-account input[type="submit"], input[type=
 }
 
 header #menuNavigator ul#list .forget input[type="reset"] {
-    background-image: url("/images/logout-b-icon.svg");
+    background-image: url("../images/logout-b-icon.svg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 1.4em;
@@ -139,7 +139,7 @@ header #menuNavigator ul#list .main-menu-list select {
 
 header #homeLogo {
     position: absolute;
-    background-image: url("/images/searchfor-logo.png");
+    background-image: url("../images/searchfor-logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 144px;
@@ -156,7 +156,7 @@ header #profile-img-link {
 
 header a.cart-icon {
     position: absolute;
-    background-image: url("/images/cart-b-icon.svg");
+    background-image: url("../images/cart-b-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
@@ -185,7 +185,7 @@ aside#filterField #formFilter {
 aside#filterField #formFilter #searchBtn {
     position: absolute;
     background-color: #ff684de7;
-    background-image: url("/images/search-icon.svg");
+    background-image: url("../images/search-icon.svg");
     background-repeat: no-repeat;
     background-size: 71%;
     background-position: center;
@@ -359,7 +359,7 @@ footer {
 footer .home-footer-link {
     display: block;
     background-color: white;
-    background-image: url("/images/searchfor-logo.png");
+    background-image: url("../images/searchfor-logo.png");
     background-size: contain;
     width: 80px;
     height: 23.33px;
