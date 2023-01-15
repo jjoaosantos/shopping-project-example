@@ -53,7 +53,7 @@ function initialize() {
     }
 
     function fetchBlob(product) {
-      const url = `/images/${product.image}`;
+      const url = `/shopping-project-example/images/${product.image}`;
       fetch(url)
         .then( response => {
           if (!response.ok) {
