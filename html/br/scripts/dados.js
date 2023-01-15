@@ -138,7 +138,7 @@ function initialize(products) {
   }
 
   function fetchBlob(product) {
-    const url = `/images/${product.image}`;
+    const url = `/shopping-project-example/images/${product.image}`;
     fetch(url)
       .then( response => {
         if (!response.ok) {
@@ -181,7 +181,7 @@ function initialize(products) {
       middle.style.display = "none";
       image.style.opacity = "1";
       cartBtn.setAttribute('class', 'add-cart');
-      cartBtn.style.backgroundImage = "url('/images/add-cart.svg')";
+      cartBtn.style.backgroundImage = "url('/shopping-project-example/images/add-cart.svg')";
       cartBtn.setAttribute('aria-label', `Click to add ${product.name} to cart`);
       cartBtn.setAttribute('title', `Click to add ${product.name} to cart`);
     });
@@ -205,7 +205,7 @@ function initialize(products) {
         middle.style.display = "block";
         image.style.opacity = "0.3";
         cartBtn.setAttribute('class', 'remove-cart');
-        cartBtn.style.backgroundImage = "url('/images/remove-from-basket.svg')";
+        cartBtn.style.backgroundImage = "url('/shopping-project-example/images/remove-from-basket.svg')";
         cartBtn.setAttribute('aria-label', `Click to remove ${product.name} to cart`);
         cartBtn.setAttribute('title', `Click to remove ${product.name} to cart`);
       }

@@ -120,7 +120,7 @@ const info = {
 for (const image of images) {
     const newImage = document.createElement("img");
     const section = document.createElement("section");
-    newImage.setAttribute("src", `/images/${image}`);
+    newImage.setAttribute("src", `/shopping-project-example/images/${image}`);
     newImage.setAttribute("alt", alts[image]);
     newImage.setAttribute("role", "button");
     newImage.setAttribute("tabindex", "0");

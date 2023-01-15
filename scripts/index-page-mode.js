@@ -15,7 +15,7 @@ lightModeBtn.addEventListener("click", () => {
 function darkModeDisplayCheck() {
 
     if (localStorage.getItem("dark-mode")) {
-        darkStyleLink.setAttribute("href", "../style/dark-style.css");
+        darkStyleLink.setAttribute("href", "/shopping-project-example/style/dark-style.css");
         darkStyleLink.style.display = "block";
         darkModeBtn.style.display = "none";
         lightModeBtn.style.display = "block";
