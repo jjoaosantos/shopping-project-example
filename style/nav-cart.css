@@ -41,7 +41,7 @@ main div.product-main {
 }
 
 main div.product-main button.plus-btn {
-    background-image: url("/images/plus-icon.svg");
+    background-image: url("../images/plus-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 30px;
@@ -53,7 +53,7 @@ main div.product-main button.plus-btn {
 }
 
 main div.product-main button.minus-btn {
-    background-image: url("/images/minus-icon.svg");
+    background-image: url("../images/minus-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 30px;
