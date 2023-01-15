@@ -60,6 +60,7 @@ function imgDisplayCheck() {
         profileImgLink.setAttribute("href", "perfil.html");
     } else {
         profileImgLink.style.backgroundImage = "url('/images/profile-icon.png')";
+        profileImgLink.setAttribute("href", "#");
         profileImgLink.setAttribute("alt", "Perfil ícone");
         
     }

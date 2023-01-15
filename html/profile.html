@@ -16,8 +16,8 @@
 </head>
 <body>
     <header>
-        <button class="barsBtn" title="Menu" aria-label="Menu Bar" aria-expanded="false"></button>
-        <button class="xBtn" title="Close menu" aria-label="Menu Bar" aria-expanded="false"></button>
+        <button class="barsBtn" title="Menu" aria-label="Open menu." aria-expanded="false"></button>
+        <button class="xBtn" title="Close menu" aria-label="Close menu." aria-expanded="false"></button>
         <nav id="menuNavigator">
             <ul id="list">
                 <li class="enter-name">
@@ -25,30 +25,32 @@
                         <div class="remember">
                             <label for="entername">Want to join us?</label>
                             <input type="text" id="entername" placeholder="Enter a name" aria-required="true" required>
-                            <input type="submit" id="submitname" value="Say hello">
+                            <input type="submit" id="submitname" aria-label="Submit a name to get access to your profile." value="Say hello">
                         </div>
                         <div class="forget">
                             <h2 class="personal-greeting"></h2>
-                            <input id="forgetname" type="reset" aria-label="Want me to forget you?" title="Want me to forget you?" value="Forget">
+                            <input id="forgetname" type="reset" aria-label="Want me to forget you? Reset your profile." title="Want me to forget you?" value="Forget">
                         </div>
                     </form>
                 </li>
                 <div class="main-menu-list">
-                    <li><a href="profile.html" class="profile-disabled">Profile</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="special-thanks.html">#special thanks</a></li>
-                    <li><a href="#">Issues</a></li>
-                    <li><input type="button" id="darkModeBtn" aria-label="Dark mode" title="Dark mode" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Light mode" title="Light mode" value="Light mode"></li>
-                    <li><select name="changeLang" id="changeLang" aria-label="Select a language" title="Select a language">
-                        <option id="enLang" value="/html/index.html">EN (US)</option>
-                        <option id="ptLang" value="/html/br/index.html">PT (BR)</a></option>
-                    </select></li>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="special-thanks.html">#special thanks</a></li>
+                        <li><a href="#">Issues</a></li>
+                        <li><input type="button" id="darkModeBtn" aria-label="Turn on dark mode." title="Dark mode" value="Dark mode"><input type="button" id="lightModeBtn" aria-label="Turn on light mode." title="Light mode" value="Light mode"></li>
+                        <li><select name="changeLang" id="changeLang" aria-label="Select a language." title="Select a language">
+                            <option id="enLang" value="/html/index.html">EN (US)</option>
+                            <option id="ptLang" value="/html/br/index.html">PT (BR)</a></option>
+                        </select></li>
+                    </ul>
                 </div>
             </ul>
         </nav>
-        <a href="index.html" id="homeLogo" title="Home page" aria-label="Home page"></a>
-        <a href="" id="profile-img-link"></a>
-        <a href="nav-cart.html" class="cart-icon"></a>
+        <a href="index.html" id="homeLogo" title="Home page" aria-label="Open home page."></a>
+        <a href="profile.html" id="profile-img-link" title="Profile" aria-label="Open profile page."></a>
+        <a href="nav-cart.html" class="cart-icon" title="Cart" aria-label="Open cart page."></a>
     </header>
     <main>
         <form id="profilePage">
@@ -60,21 +62,21 @@
             <aside class="thumb-bar">
 
             </aside>
-            <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Write down something about yourself." aria-disabled="true"></textarea>
+            <textarea name="textarea" id="textarea" cols="33" rows="5" maxlength="200" placeholder="Write something about yourself." aria-disabled="true"></textarea>
             <div class="edit">
-                <input type="button" id="editingTool" aria-label="Set a new profile message about yourself" value="">
+                <input type="button" id="editingTool" aria-label="Set a new profile message about yourself.">
             </div>
             <div class="rememberInfo">
-            <input type="submit" id="rememberCheck" aria-label="submit this message to be remembered" value="">
+            <input type="submit" id="rememberCheck" aria-label="Submit this message to be remembered.">
             </div>
             <div class="reset">
-                <input type="reset" id="resetinfo" aria-label="Reset all changes" value="Reset">
+                <input type="reset" id="resetinfo" aria-label="Reset all changes." value="Reset">
             </div>
         </form>
     </main>
     <section id="profile-section">
-        <a href="index.html" class="shop" aria-label="Go back to home page">Go shopping</a>
-        <button class="forgetBtn" aria-label="Forget my profile">Forget</button>
+        <a href="index.html" class="shop" aria-label="Go back to home page.">Go shopping</a>
+        <button class="forgetBtn" aria-label="Want me to forget you? Reset your profile.">Forget</button>
     </section>
     <footer>
         <div>
@@ -84,13 +86,13 @@
                     <li><a href="#">Issues</a></li>
                     <li><a href="nav-cart.html">Cart</a></li>
                     <li><a href="special-thanks.html">#special thanks</a></li>
-                    <li><a href="index.html" class="home-footer-link"></a></li>
+                    <li><a href="index.html" class="home-footer-link" aria-label="Open home page." title="SearchFor"></a></li>
                 </ul>
             </nav>
             <aside><ul>
-                <li><a href="instagram.html"><img src="../images/instagram-logo.png" alt="Instagram"></a></li>
-                <li><a href="facebook.html"><img src="../images/facebook-logo.png" alt="Facebook"></a></li>
-                <li><a href="whatsapp.html"><img src="../images/whatsapp-logo.png" alt="Whatsapp"></a></li>
+                <li><a href="instagram.html" aria-label="Open Instagram social page." title="Instagram"><img src="../images/instagram-logo.png" alt="Instagram social page"></a></li>
+                <li><a href="facebook.html" aria-label="Open Facebook social page." title="Facebook"><img src="../images/facebook-logo.png" alt="Facebook social page"></a></li>
+                <li><a href="whatsapp.html" aria-label="Open Whatsapp social page." title="Whatsapp"><img src="../images/whatsapp-logo.png" alt="Whatsapp social page"></a></li>
             </ul></aside>
         </div>
         <p><em>@Copyright nobody</em>. Use the code as you like.</p>
