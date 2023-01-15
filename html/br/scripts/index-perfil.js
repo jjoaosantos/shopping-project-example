@@ -181,14 +181,14 @@ for (const image of images) {
             const currentAlt = localStorage.getItem("alt");
             const currentInfo = localStorage.getItem("info");
     
-            displayedImage.setAttribute("src", currentImage);
+            displayedImage.setAttribute("src", `/shopping-project-example${currentImage}`);
             displayedImage.setAttribute("alt", currentAlt);
             textArea.textContent = currentInfo;
 
            
             profileImgLink.setAttribute("alt", `${currentAlt}`);
             profileImgLink.setAttribute("href", "perfil.html");
-            profileImgLink.style.backgroundImage = `url('${currentImage}')`;
+            profileImgLink.style.backgroundImage = `url('/shopping-project-example${currentImage}')`;
     
             editingTool.style.opacity = "1";
             editingTool.style.cursor = "pointer";
@@ -205,12 +205,12 @@ for (const image of images) {
                 reset.style.display = "none";
             }
         } else {
-            displayedImage.setAttribute("src", "/images/profile-icon.png")
+            displayedImage.setAttribute("src", "/shopping-project-example/images/profile-icon.png")
             displayedImage.setAttribute("alt", "Perfil ícone");
             
             profileImgLink.setAttribute("alt", "Perfil ícone");
             profileImgLink.setAttribute("href", "#");
-            profileImgLink.style.backgroundImage = "url('/images/profile-icon.png')";
+            profileImgLink.style.backgroundImage = "url('/shopping-project-example/images/profile-icon.png')";
             
             editingTool.style.opacity = "0.6";
             editingTool.style.cursor = "auto";

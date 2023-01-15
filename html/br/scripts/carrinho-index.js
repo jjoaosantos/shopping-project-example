@@ -1,4 +1,4 @@
-fetch("/html/br/scripts/produtos.json")
+fetch("../br/scripts/produtos.json")
   .then( response => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
