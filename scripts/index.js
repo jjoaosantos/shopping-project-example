@@ -55,11 +55,11 @@ function imgDisplayCheck() {
     if (localStorage.getItem("image")) {
         const currentImage = localStorage.getItem("image");
         const currentAlt = localStorage.getItem("alt");
-        profileImgLink.style.backgroundImage = `url('${currentImage}')`;
+        profileImgLink.style.backgroundImage = `url('..${currentImage}')`;
         profileImgLink.setAttribute("alt", `${currentAlt}`);
         profileImgLink.setAttribute("href", "profile.html");
     } else {
-        profileImgLink.style.backgroundImage = "url('/images/profile-icon.png')";
+        profileImgLink.style.backgroundImage = "url('../images/profile-icon.png')";
         profileImgLink.setAttribute("href", "#");
         profileImgLink.setAttribute("alt", "Profile Icon");
     }
