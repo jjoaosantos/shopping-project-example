@@ -3,7 +3,7 @@ const chat = document.querySelector(".chatBtn");
 chat.addEventListener("click", nameDisplayCheck);
 
 function nameDisplayCheck() {
-    const personalGreeting = document.querySelector("#personalGreeting");
+    const personalGreeting = document.querySelector(".personalGreeting");
     const d = new Date();
     let hour = d.getHours();
     
