@@ -32,7 +32,7 @@
         }
 
         main div.wts-container {
-            max-width: 170px;
+            max-width: 400px;
             margin: 10% auto 0px;
         }
 
@@ -59,11 +59,19 @@
         }
 
         main > section {
-            position: absolute;
-            height: fit-content;
-            left: 50%;
-            bottom: 0px;
-            transform: translate(-50%, 0%);
+            height: 22px;
+        }
+
+        @media screen and (max-width: 768px) {
+            html, body {
+                background-color: #00A884;
+            }
+
+            main {
+                min-height: 90vh;
+                border-radius: 20px;
+                top: 5%;
+            }
         }
     </style>
 </head>
@@ -77,9 +85,9 @@
                 <h2>SearchFor</h2>
             </div>
             <button class="chatBtn">CONTINUE TO CHAT</button>
+            <p id="personalGreeting"></p>
         </div>
         <section><a href="index.html">Home</a></section>
     </main>
-
 </body>
 </html>

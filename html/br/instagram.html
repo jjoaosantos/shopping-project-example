@@ -52,11 +52,15 @@
         }
 
         main > section {
-            position: absolute;
-            height: fit-content;
-            left: 50%;
-            bottom: 0px;
-            transform: translate(-50%, 0%);
+            height: 22px;
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                min-height: 90vh;
+                border-radius: 20px;
+                top: 5%;
+            }
         }
     </style>
 </head>
@@ -76,7 +80,7 @@
             <button class="unfollowingBtn">Seguir</button>  
             <button class="followingBtn">Seguindo</button>  
         </div>
-        <section><a href="index.html" aria-label="Vá à página inicial.">Página incial</a></section>
+        <section><a href="index.html" aria-label="Vá à página inicial.">Página inicial</a></section>
     </main>
     
 </body>

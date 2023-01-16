@@ -8,6 +8,10 @@ header #menuNavigator ul#list {
     text-align: left;
 }
 
+header #menuNavigator ul#list .main-menu-list input[type="button"] {
+    margin: 0px;
+}
+
 header #homeLogo {
     top: 0%;
     left: 51.2px;

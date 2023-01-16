@@ -66,7 +66,7 @@ header #menuNavigator {
     color: var(--contrast-color);
     font-size: 1.2em;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 51px);
     box-shadow: inset 0px 1px 2px var(--shadow-color);
     top: 51px;
     z-index: 2;
@@ -126,6 +126,7 @@ header #menuNavigator ul#list .forget input[type="reset"] {
 header #menuNavigator ul#list .main-menu-list input[type="button"] {
     background-color: var(--contrast-color);
     color: white;
+    margin: auto;
     padding: 6px;
     border-radius: 2px;
     border: none;
