@@ -4,7 +4,7 @@ const main = document.querySelector("main");
 chat.addEventListener("click", nameDisplayCheck);
 
 function nameDisplayCheck() {
-    const personalGreeting = document.createElement("p");
+    const personalGreeting = document.querySelector("#personalGreeting");
     const d = new Date();
     let hour = d.getHours();
     
@@ -28,5 +28,4 @@ function nameDisplayCheck() {
     }
 
     chat.style.display = "none";
-    main.appendChild(personalGreeting);
 }
