@@ -1,5 +1,4 @@
 const chat = document.querySelector(".chatBtn");
-const main = document.querySelector("main");
 
 chat.addEventListener("click", nameDisplayCheck);
 
